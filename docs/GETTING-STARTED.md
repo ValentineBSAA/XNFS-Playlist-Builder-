@@ -15,7 +15,7 @@ Back up your game first, especially if you already have XNFSMusicPlayer or other
 
 ## Step 1: Install the builder
 
-When the beta release download is available, extract `XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip` and run `XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe`. The app is unsigned, so Windows may show an unknown-publisher warning. Only run files from a source you trust.
+[Download the official beta ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip), extract it and run `XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe`. The app is unsigned, so Windows may show an unknown-publisher warning. Only run files from a source you trust.
 
 **Installing the app alone won't change either game.**
 
