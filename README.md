@@ -11,7 +11,7 @@ Give **Need for Speed Carbon** and **Need for Speed Most Wanted (2005)** a sound
 ![Carbon](https://img.shields.io/badge/Carbon-Public%20Beta-33BDEA?style=for-the-badge&labelColor=101820)
 ![Most Wanted](https://img.shields.io/badge/Most%20Wanted-In%20Development-F2A826?style=for-the-badge&labelColor=101820)
 
-**Made by valentine** · [📥 Beta downloads (release pending)](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [🚀 Getting started](docs/GETTING-STARTED.md) · [💬 Report an issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+**Made by valentine** · [📥 Download Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.0-beta.1.2) · [🚀 Getting started](docs/GETTING-STARTED.md) · [💬 Report an issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
 
 </div>
 
@@ -32,36 +32,25 @@ XNFS Playlist Builder finds the songs you already own, organizes them for your g
 - **Change your mind safely.** Backup and restore options help you undo supported changes.
 - **Pick up where you left off.** Your selected music folder is remembered and scanned automatically when you reopen the app, if it is still available.
 
-## 📸 Inside the app
+## 📸 Take a look inside the app
 
-See the **Carbon blue** and **Most Wanted gold** interfaces, along with the feature installer, audio-leveling progress and save confirmation. These pictures show the developer's local beta test, not verified behavior on every computer.
+The beta includes **six real application screenshots**, showing the Carbon and Most Wanted designs, the Carbon feature selector, music leveling, the finished soundtrack and the saved files.
 
-<details>
-<summary><b>📷 View the application screenshot gallery</b></summary>
+<p align="center">
+  <a href="https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip">
+    <img alt="Download all six application screenshots" src="https://img.shields.io/badge/%F0%9F%93%B8_View_6_Real_Screenshots-Download_Gallery-33BDEA?style=for-the-badge&labelColor=101820">
+  </a>
+</p>
 
-### Carbon soundtrack builder
+| <span style="color:#33BDEA">🔵 Carbon soundtrack</span> | <span style="color:#F2A826">🟡 Most Wanted preview</span> |
+| --- | --- |
+| Menu, Muscle, Tuner and Exotic playlists | Frontend, Free Roam, Race and Pursuit categories |
+| Car-class playlist options and shuffle | Dedicated gold-themed editing interface |
+| Audio leveling, progress and save confirmation | Playlist export while in-game switching is still in development |
 
-![Carbon soundtrack editor showing Menu, Muscle, Tuner and Exotic song categories](screenshots/carbon-library.png)
+**[📥 Download the six application screenshots](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)** as a ZIP to view them at full resolution.
 
-*Blue-themed Carbon soundtrack library with car-class playlist assignments.*
-
-| Feature settings | Audio leveling |
-| :---: | :---: |
-| ![Carbon player features](screenshots/carbon-features.png) | ![Preparing leveled music copies](screenshots/leveling-progress.png) |
-
-| Save confirmation | Saved playlist files |
-| :---: | :---: |
-| ![Soundtrack saved summary](screenshots/save-summary.png) | ![Playlist, normalized audio and backups](screenshots/saved-files.png) |
-
-### Most Wanted development preview
-
-![Most Wanted gold-themed playlist builder](screenshots/most-wanted-preview.png)
-
-*Most Wanted playlists can be prepared and exported, but automatic in-game situation switching is unfinished.*
-
-</details>
-
-> **Gallery upload:** The six screenshots are prepared for this folder. Image previews will appear after the image files have been uploaded.
+> The screenshots are available in the official release archive. They are **not yet embedded individually in this README**, because their image files have not been added to the repository. See the [screenshot folder](screenshots/README.md) for details.
 
 ## 🚦 What works today?
 
@@ -88,14 +77,12 @@ Optional Carbon features include class-aware playback, shuffling with fewer rece
 
 ## 🚀 Install and play
 
-1. **[Download Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases)** when the release asset becomes available, then unzip the download.
+1. **[Download Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** from the published release, then unzip it.
 2. Open **`XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe`**. You need **Windows 10 or 11, 64-bit**. No Python installation is necessary.
 3. Open the builder, select **Carbon** or **Most Wanted**, and choose the folder containing your music.
 4. Choose **Scan**, review your songs and their categories, and adjust anything you want.
 5. For Carbon, use **Install Carbon features** if you want to add the custom player or adjust optional playback features.
 6. **Close the game** and press **Build / Save changes** to save your playlist changes.
-
-**Release upload status:** The public repository is live; the installer download has not yet been attached to a release.
 
 **Important:** Installing the *builder app* does not install Carbon gameplay features or modify your game automatically. Those changes happen only when you select the relevant install/save actions.
 
