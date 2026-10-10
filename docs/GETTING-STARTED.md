@@ -1,79 +1,73 @@
 # 🚀 Let's get your music into Need for Speed
 
-You don't need to be a computer expert. This guide explains the process from start to finish.
+**Never used a game mod before? No problem.** These steps are written for first-time users.
 
-[← Home](../README.md) · [Which game is supported?](GAMES-AND-COMPATIBILITY.md) · [I need help](TROUBLESHOOTING.md)
+[← Home](../README.md) · [Carbon guide](CARBON.md) · [Most Wanted guide](MOST-WANTED.md)
 
-> **[⬇️ Download the official Beta 1.4 Windows ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**. Choose the Clean-Public ZIP, not GitHub's source code archives.
+## What you need
 
-## Before you start
+- A computer with **Windows 10 or Windows 11 (64-bit)**.
+- Your own **Carbon (2006)** or **Most Wanted (2005)** installation.
+- Music files stored on your computer.
+- A supported game executable and compatible **ASI loader** for in-game playback.
 
-You'll need:
-- A PC with **Windows 10 or Windows 11 (64-bit)**.
-- Your own installation of **Carbon (2006)** or **Most Wanted (2005)**.
-- Some music files stored on your computer.
-- A compatible **ASI loader** in the game folder for custom in-game playback. This is a small component that allows the game to load player modifications.
+**What's an ASI loader?** It's a small part of a modded game setup that lets the game load compatible add-ons. If the game has never been modified, you may need to set one up separately. Don't overwrite an existing loader without checking compatibility.
 
-**Make a copy of your game folder** before applying game features or saving playlists. This is particularly important if you already have mods installed.
+**Before installing game features:** close your game and **make a copy of the game folder** somewhere safe, especially if you already use mods.
 
-## Step 1: Download and install
+## Step 1: Download the real installer
 
-**[Download XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**.
+**[⬇️ Download XNFS Playlist Builder 3.2 Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**
 
-Right-click the downloaded ZIP, choose **Extract All**, and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
+The file you want is **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip**.
 
-**Do not download the “Source code” ZIP** generated automatically by GitHub. It isn't a Windows installer.
+In Windows, right-click the downloaded ZIP and choose **Extract All**. Open the extracted folder and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
 
-The setup program is unsigned. Windows may ask you to confirm an unknown publisher. Double-check where you got the installer and proceed only if you trust it.
+**Avoid the “Source code” ZIPs** generated automatically by GitHub. Those are not the Windows installer.
 
-## Step 2: Select your game
+The Windows installer is unsigned, so Windows may warn about an unknown publisher. Check where you downloaded it and only proceed if you trust it.
 
-Open XNFS Playlist Builder.
+## Step 2: Choose your game
 
-Choose **Carbon** or **Most Wanted** at the top of the application.
+Open XNFS Playlist Builder and select **Carbon** or **Most Wanted**.
 
-Select **Game Folder** to show where that game is installed. You can try **Auto Detect** if you don't know the location.
+Use **Game Folder** to select the folder containing your installed game. Try **Auto Detect** if you're unsure where it's installed.
 
-Select **XNFS Folder** if the app needs help finding the game's music-player folder.
+The **XNFS Folder** control can help locate the music-player folder if necessary. Read any compatibility warning instead of forcing an unsupported game executable.
 
-The app checks whether the selected game version is compatible before installing features. If the check fails, don't force a different version; read the warning and ask for help.
+## Step 3: Scan your music
 
-## Step 3: Find your songs
+Choose **Music Folder**, select your songs, and press **Scan**.
 
-Select **Music Folder** and choose where you store your music, then click **Scan**.
+The app reads available song information, including names, artists, genres, and lengths. It can remember your folder for later.
 
-The app displays titles, artists, track lengths and genre information when available. It remembers your music folder and can scan it again in later sessions.
+## Step 4: Make your soundtrack
 
-Missing genres? Use **Review genres**, **Unclassified tracks**, or **Edit genre** to organize them.
+| In Carbon | In Most Wanted |
+| --- | --- |
+| **Menu**, **Muscle**, **Tuner**, **Exotic** | **Safe House**, **Free Roam**, **Race**, **Pursuit** |
+| Car-class music | Situation-based music |
+| Optional F9 skipping | T to skip while driving |
 
-## Step 4: Choose your playlists
+For Most Wanted, **Safe House includes the menus**, too.
 
-**Most Wanted:** **Safe House** covers both the menus and safe house. **Free Roam**, **Race**, and **Pursuit** each have their own soundtracks. The automatic driving playlists feature selects music for the active situation when enabled.
+You can try **Auto-assign tracks by genre**, review unclassified music, change individual assignments, and choose playlist order. Genre suggestions aren't always perfect.
 
-**Carbon:** **Menu**, **Muscle**, **Tuner**, and **Exotic** let you tailor the soundtrack to what you drive.
+Choose **Install game features** if you want optional in-game playback controls. Read the prompts and check that your setup is compatible.
 
-You can enable **Auto-assign tracks by genre** to get suggestions, or select music yourself. The app may balance track counts across categories, so review its suggestions.
+## Step 5: Save and play
 
-Open **Install game features** to choose optional playback settings. Read the options before installing them. Most Wanted lets you use **T** to skip while driving; Carbon offers optional **F9** skipping.
+1. **Close your game.**
+2. Click **Build / Save**.
+3. Let optional music-volume leveling finish if you enabled it. This creates separate copies and can take time.
+4. Read the save summary and launch the game.
 
-## Step 5: Build and save
+**Installing the builder alone doesn't immediately modify the game.** Installing game features or saving playlists can change game files. Keep that backup.
 
-**Close the game first.**
+## If you need help
 
-Click **Build / Save**.
+[**Troubleshooting and frequently asked questions**](TROUBLESHOOTING.md) · [**Backups and restoration**](BACKUPS-AND-RESTORE.md) · [**All screenshots**](../screenshots/README.md)
 
-Wait for any optional loudness leveling to finish. Leveling makes separate playback copies; your original music stays unchanged.
+**Beta testing reminder:** Not all game versions or mod combinations have been verified. The latest Most Wanted menu/Safe House change still needs a new live-game test.
 
-Read the save summary, then start your game.
-
-## Need to restore your game?
-
-Choose **Restore original game** to attempt to return tracked files to the state before the first builder installation. Choose **Restore backup** for a saved player/playlist setup, which may still include mods.
-
-These options work only when the required restore records are intact. [Read the restore guide](BACKUPS-AND-RESTORE.md) before proceeding.
-
-## If something doesn't work
-
-Check the selected folders, installed game features, compatible game version and completed Build / Save. The [common questions](TROUBLESHOOTING.md) page has more help.
-
-[← Back to the homepage](../README.md)
+[← Home](../README.md)

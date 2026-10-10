@@ -1,36 +1,83 @@
-# 📸 XNFS Playlist Builder screenshots
+# 📷 Real XNFS Playlist Builder screenshots
 
-[← Homepage](../README.md) · [Get started](../docs/GETTING-STARTED.md)
+Screens are organized by game, with shared features shown separately. Click any picture to view it full-size.
 
-## 🔵 Carbon
+[← Home](../README.md) · [⬇️ Download Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip) · [First-time guide](../docs/GETTING-STARTED.md)
 
-[![Carbon soundtrack library, captured from the earlier 3.0 Beta 1.2](carbon-library.png)](carbon-library.png)
+## 🟡 Most Wanted (2005), new Beta 1.4 screenshots
 
-*The earlier beta's Carbon editor: organize Menu, Muscle, Tuner and Exotic songs.*
+### 1. Your music library
 
-[![Carbon player feature selections, captured from the earlier 3.0 Beta 1.2](carbon-features.png)](carbon-features.png)
+[![Most Wanted Beta 1.4 soundtrack library showing Safe House, Free Roam, Race and Pursuit](most-wanted/library.png)](most-wanted/library.png)
 
-*Choose optional player features.*
+Safe House includes menus; Free Roam, Race and Pursuit have their own playlists.
+
+### 2. Choose your playback options
+
+[![Most Wanted Beta 1.4 music feature installer](most-wanted/features.png)](most-wanted/features.png)
+
+Configure automatic driving music, skipping, shuffle and other supported features.
+
+### 3. Check installation status
+
+[![Most Wanted Beta 1.4 installation status and player components](most-wanted/installation-status.png)](most-wanted/installation-status.png)
+
+Review player installation and compatibility checks.
+
+### 4. Restore your original setup
+
+[![Most Wanted Beta 1.4 original-game restore window](most-wanted/restore-original.png)](most-wanted/restore-original.png)
+
+See the restore options and tracked changes before restoring.
+
+**[Read the Most Wanted game guide →](../docs/MOST-WANTED.md)**
 
 <details>
-<summary><b>More Carbon pictures: music processing and saved playlists</b></summary>
+<summary>See the older Most Wanted Beta 1.2 interface</summary>
 
-[![Music leveling progress](leveling-progress.png)](leveling-progress.png)
+[![Most Wanted previous beta screenshot](most-wanted/previous-beta-preview.png)](most-wanted/previous-beta-preview.png)
 
-[![Playlist save summary](save-summary.png)](save-summary.png)
-
-[![Saved player files](saved-files.png)](saved-files.png)
+This is a historical screenshot, not Beta 1.4.
 
 </details>
 
-## 🟡 Most Wanted
+## 🔵 Carbon (2006), earlier Beta 1.2 screenshots
 
-[![Most Wanted editor, captured from the earlier 3.0 Beta 1.2](most-wanted-preview.png)](most-wanted-preview.png)
+### 1. Your Carbon soundtrack
 
-*This is the **previous** Most Wanted interface, not the new Beta 1.4 design.*
+[![Carbon Menu Muscle Tuner Exotic soundtrack library](carbon/library.png)](carbon/library.png)
 
-Beta 1.4 adds a revised Rockport soundtrack interface, state-specific music options, T-drive skipping, installation verification, and expanded restore screens. **Updated screenshots have been prepared for publication separately**, and will appear here when the new image files are transferred into GitHub.
+Your music follows Menu, Muscle, Tuner and Exotic categories.
 
-**These pictures show real application interfaces, not proof of compatibility with every game installation.**
+### 2. Choose Carbon features
 
-[← Homepage](../README.md)
+[![Carbon music-player feature options](carbon/features.png)](carbon/features.png)
+
+Review optional playback features such as F9 skipping and music ducking.
+
+**[Read the Carbon game guide →](../docs/CARBON.md)**
+
+## 🎵 Shared application features
+
+<details>
+<summary>See music leveling, save summaries and saved files</summary>
+
+### Preparing leveled music
+
+[![Music leveling progress](shared/leveling-progress.png)](shared/leveling-progress.png)
+
+### Confirming your saved soundtrack
+
+[![Playlist save summary](shared/save-summary.png)](shared/save-summary.png)
+
+### Your saved playlists and files
+
+[![Saved playlist and backup folder](shared/saved-files.png)](shared/saved-files.png)
+
+These shared screenshots were captured with the earlier Beta 1.2 interface.
+
+</details>
+
+*Screenshots show the developer's Windows application, not proof that every supported setup has been tested. The newest Most Wanted combined menu/Safe House behavior still needs another in-game acceptance test.*
+
+[← Home](../README.md)

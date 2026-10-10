@@ -1,59 +1,47 @@
-# 🎵 What can XNFS Playlist Builder do?
+# 🎶 Features, explained simply
 
-A closer look at the features, without needing to understand the programming behind them.
+Choose your own music, let the builder help organize it, then prepare playlists for **Carbon** or **Most Wanted**.
 
-[← Home](../README.md) · [Compare the games](GAMES-AND-COMPATIBILITY.md) · [Install guide](GETTING-STARTED.md)
+[← Home](../README.md) · [Compare both games](GAMES-AND-COMPATIBILITY.md)
 
-## 1. Build a soundtrack from your own music
+## Your own music library
 
-Choose a music folder. The app scans your songs and displays music information such as titles, artists, lengths and genres when available.
+**Scan a folder.** See available song titles, artists, lengths and genre tags. The builder remembers your selected folder when possible.
 
-It remembers the last folder you selected and can scan it again when you reopen the program.
+**Organize however you like.** Let genre suggestions help, or manually assign songs. Missing genres and unusual tags may need a little attention.
 
-You can **search, view playlist categories, review unclassified songs, change genre labels and preview playlist order**.
+**Make four playlists.** Carbon's groups match car classes; Most Wanted's groups match driving situations.
 
-## 2. Let the app help organize
+**Review before saving.** Search for songs, check unclassified tracks, inspect assignments and change the order. Balancing may place songs outside their expected genre categories. There is no fixed builder-enforced track-count cap.
 
-Turn on **Auto-assign tracks by genre** to get suggestions. It's optional: you can choose the tracks and categories yourself.
+## While driving
 
-The program can balance the four playlists so they aren't wildly uneven. That means a song might land outside the genre group you'd expect. Review assignments before saving.
+**Automatic music:** Carbon can follow Muscle, Tuner and Exotic cars. Most Wanted can follow Safe House, Free Roam, Race and Pursuit.
 
-No fixed track cap is enforced by the builder.
+**Skip a track:** Carbon offers optional F9. Most Wanted uses T while driving after installing the feature.
 
-## 3. Let the game choose a playlist
+**Shuffle:** optional playback that can avoid songs you recently heard.
 
-**Carbon:** Music can follow **Menu**, **Muscle**, **Tuner** and **Exotic** categories.
+**EA Trax:** Most Wanted can show supported song information in game notifications.
 
-**Most Wanted:** Music can follow **Safe House**, **Free Roam**, **Race** and **Pursuit**. Safe House includes main menus, too. The current game-state player has been tested, but the very latest merged menu/safe-house behavior still needs another in-game check.
+**Crew dialogue:** Carbon can optionally lower music while crew characters speak. Most Wanted radio-ducking isn't included.
 
-## 4. Enjoy playback controls
+## Make your music more consistent
 
-**Shuffle:** Optional shuffle can help avoid hearing the same few tracks too soon.
+Optional **volume leveling** creates separate playback copies with more even perceived loudness. It doesn't overwrite your original music files.
 
-**Skip:** Most Wanted uses **T while driving**; Carbon uses optional **F9**.
+Processing a large collection may take extra time and disk space; the builder shows progress.
 
-**Now Playing:** A companion window can show song information. Some games in exclusive fullscreen may cover it.
+## Manage game changes
 
-**EA Trax:** Most Wanted can show song information using game notifications.
+**Installation checks** help show whether expected game-player files and components are present.
 
-## 5. Make the volume more consistent
+**Restore backup** returns to a saved player/playlist setup when the necessary records exist. **Restore original game** tries to reverse tracked changes to the originally recorded state. Neither can guarantee restoration without intact records.
 
-Optional **audio leveling** produces additional playback copies with a more consistent perceived volume. It doesn't overwrite your original music.
+[**How restoration works**](BACKUPS-AND-RESTORE.md) · [**More technical details**](TECHNICAL-NOTES.md)
 
-Large music libraries can take time and extra disk space to prepare the first time. Progress is shown while tracks are processed.
+## A reminder about the beta
 
-In Carbon, an optional feature can lower the music during crew dialogue. **Most Wanted police-radio ducking is not available yet.** Game effects and speech volume can still be adjusted in the game's own sound settings.
+Both games are usable, but some combinations of game executables, mods, and computers have not been broadly tested. The latest Most Wanted combined menu/Safe House adjustment needs its final in-game recheck.
 
-## 6. Backup, inspect and restore
-
-The feature installer can make backed-up copies when replacing a previous player setup. Installation checks show whether expected files and playlists are in place.
-
-**Restore backup** returns to a saved setup. **Restore original game** aims to undo the changes recorded since the first tracked installation. Neither can guarantee recovery if the original files or restore records were changed or lost.
-
-[Read the full restore guide](BACKUPS-AND-RESTORE.md).
-
-## What the beta doesn't promise
-
-This isn't an online music subscription, a complete music recognition service, or a replacement for your original game. Not every game executable and mod combination has been verified. Always keep a backup of the game before making changes.
-
-[← Home](../README.md)
+[**Get started**](GETTING-STARTED.md) · [← Home](../README.md)

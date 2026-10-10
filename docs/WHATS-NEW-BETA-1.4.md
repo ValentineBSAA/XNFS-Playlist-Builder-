@@ -1,51 +1,49 @@
-# 🏁 What's new in XNFS Playlist Builder 3.2 Beta 1.4?
+# 🏁 What's new in 3.2 Beta 1.4?
 
-**Most Wanted is the big story.** The soundtrack builder for Most Wanted is now much closer to Carbon in terms of everyday use.
+**The biggest change: Most Wanted has caught up significantly with Carbon.** Both games now offer richer custom music experiences while keeping their own identity.
 
-[← Home](../README.md) · [Carbon vs. Most Wanted](GAMES-AND-COMPATIBILITY.md)
+[← Home](../README.md) · [⬇️ Download](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip) · [See the new Most Wanted screenshots](MOST-WANTED.md)
 
-## 🟡 Most Wanted upgrades
+## 🟡 Most Wanted: a major upgrade
 
-**Real driving-state playlists.** Most Wanted can select a soundtrack for **Safe House**, **Free Roam**, **Race**, and **Pursuit**. Safe House also covers the game menus, simplifying setup.
+**Four automatic driving soundtracks.** Safe House (including menus), Free Roam, Race and Pursuit.
 
-**T to skip.** Press **T** while driving to advance a song without pausing. This is different from Carbon's optional F9 key.
+**T to skip songs.** Move to the next song while driving, without opening the pause menu.
 
-**Shuffle and leveling.** Playback can shuffle without early repeats, and optional loudness leveling prepares separate copies rather than modifying your originals.
+**More playback options.** Shuffle that avoids early repeats, optional leveled music copies, automatic genre suggestions and manual playlist organization.
 
-**EA Trax notifications.** Supported song information can appear through game notifications.
+**EA Trax notifications.** Display supported song details as in-game notifications.
 
-**Installation status.** The program gives clearer feedback about compatible executables, installed music-player files and playlists.
+**Improved installation and recovery.** Better player status checks, backups for compatible existing setups, and clearer original-game restoration.
 
-**Restoring your game.** The improved original-restore flow can review tracked changes, preserve unrelated files and restore an existing player from backups when the records are intact.
+[![New Most Wanted 3.2 Beta 1.4 game features](../screenshots/most-wanted/features.png)](../screenshots/most-wanted/features.png)
 
-The developer reported successful earlier in-game routing, T skipping and restoration testing. **The newest combined Safe House/menu change still needs a fresh in-game acceptance test.** This distinction is intentional: an installation check isn't the same as hearing the game work.
+**Testing note:** Earlier Most Wanted game-state routing, T skipping and restoration were tested by the developer. The latest change merging menus into Safe House still needs a new live-game test.
 
-## 🔵 Carbon remains strong
+## 🔵 Carbon: the car-class specialist
 
-Carbon still provides **Menu, Muscle, Tuner, Exotic** playlists, genre suggestions, car-class playback, optional F9 skipping and music lowering during crew dialogue.
+- Menu, Muscle, Tuner and Exotic soundtracks.
+- Automatic playlist selection based on your car class.
+- Optional F9 skipping and shuffle with repeat protection.
+- Optional music-volume leveling.
+- Optional lowering of music during crew dialogue.
 
-Carbon 1.2 has had live testing. Carbon 1.4 still needs broader live play testing.
+[**See Carbon's feature options**](CARBON.md)
 
-## 🎶 Better in both games
+## ❤️ Improvements across the builder
 
-- Remembered music folders and rescanning
-- Balanced genre suggestions, manual adjustments and unclassified-song review
-- Playlist counts, category views and ordering
-- No fixed track-count limit
-- Optional volume-leveled music copies
-- Compatibility checks and safer restoration
-- Less waiting at the interface during saving and restoring
+- More convenient scanning and organization of your own music.
+- Genre suggestions, manual editing and unclassified-song review.
+- Playlist ordering, track counts and no fixed track limit.
+- Optional music leveling that preserves original recordings.
+- Better setup checks, status information, and restoring tracked changes.
 
-## Still on the to-do list
+## Still being tested
 
-The next checks focus on the latest Most Wanted Safe House/menu behavior, Carbon 1.4 gameplay testing, and broader feedback from other PCs and modded installations.
+- The newest Most Wanted menu/Safe House behavior.
+- Carbon 1.4 live gameplay.
+- Compatibility with additional PCs and mod configurations.
 
-Most Wanted police-radio ducking is not in Beta 1.4.
+**Most Wanted police-radio music ducking is not included in Beta 1.4.**
 
-## Testers: what feedback helps?
-
-Let us know which game you used, whether your custom music played, whether the correct playlist was active, and whether skipping worked. Backup and restore reports are especially valuable.
-
-[Get help](TROUBLESHOOTING.md) · [Report a problem](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
-
-[← Home](../README.md)
+[**Need help?**](TROUBLESHOOTING.md) · [**Report a test result**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
