@@ -88,8 +88,10 @@ jobs:
               s=s.replace("[**📸 Browse the available application screenshots →**](screenshots/README.md)","[**📸 Browse all application screenshots →**](screenshots/README.md)")
           readme.write_text(s)
           guide=Path('docs/GETTING-STARTED.md');g=guide.read_text()
-          a=g.index('> **Download status:**');b=g.index('## Before you start',a)
-          g=g[:a]+'> **[⬇️ Download the official Beta 1.4 Windows ZIP]('+download+')**. Choose the Clean-Public ZIP, not GitHub\'s source code archives.\n\n'+g[b:]
+          a=g.find('> **Download status:**')
+          if a>=0:
+              b=g.index('## Before you start',a)
+              g=g[:a]+'> **[⬇️ Download the official Beta 1.4 Windows ZIP]('+download+')**. Choose the Clean-Public ZIP, not GitHub\'s source code archives.\n\n'+g[b:]
           g=g.replace('When Beta 1.4 is published, download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** (the final release file will be labeled clearly).','**[Download XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip]('+download+')**.')
           guide.write_text(g)
           help=Path('docs/TROUBLESHOOTING.md');t=help.read_text()
