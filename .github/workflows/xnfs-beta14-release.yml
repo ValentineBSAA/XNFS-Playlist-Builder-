@@ -69,9 +69,10 @@ jobs:
           base='https://github.com/ValentineBSAA/XNFS-Playlist-Builder-'
           download=base+'/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
           readme=Path('README.md');s=readme.read_text()
-          a=s.index('> [!IMPORTANT]\n> **Version update:**')
-          b=s.index('## 🎶 What is it?',a)
-          s=s[:a]+'''> [!IMPORTANT]
+          a=s.find('> [!IMPORTANT]\n> **Version update:**')
+          if a>=0:
+              b=s.index('## 🎶 What is it?',a)
+              s=s[:a]+'''> [!IMPORTANT]
           > **Public Beta 1.4:** Both Carbon and Most Wanted work with the builder. This beta needs more testing on different PCs, so back up your game before installing music features.
 
           ### 📥 Download XNFS Playlist Builder 3.2 Beta 1.4
@@ -80,7 +81,7 @@ jobs:
 
           Download the file named **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip**, extract it, and run the Windows Setup.exe. GitHub's automatic “Source code” ZIP is **not** the installer.
 
-          '''+s[b:]
+              '''+s[b:]
           if Path('screenshots/most-wanted-1.4/most-wanted-library.png').is_file():
               s=s.replace('[![Gold Most Wanted soundtrack builder from the previous public beta](screenshots/most-wanted-preview.png)](screenshots/most-wanted-preview.png)','[![Most Wanted Beta 1.4 showing Safe House, Free Roam, Race and Pursuit](screenshots/most-wanted-1.4/most-wanted-library.png)](screenshots/most-wanted-1.4/most-wanted-library.png)')
               s=s.replace("*This image is from the **previous public beta**. Beta 1.4's new Most Wanted screens will be added to the gallery as part of the screenshot update.*","*The new Beta 1.4 Most Wanted interface with four driving soundtracks.*")
