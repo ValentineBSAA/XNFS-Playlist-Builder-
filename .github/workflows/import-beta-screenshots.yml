@@ -1,0 +1,49 @@
+# Import the six application screenshots already published with Beta 1.2.
+# Runs on first addition and can be triggered manually again.
+name: Import Beta 1.2 screenshots
+
+on:
+  push:
+    paths:
+      - ".github/workflows/import-beta-screenshots.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public repository
+        uses: actions/checkout@v4
+      - name: Download and validate official release screenshots
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p .release-gallery
+          gh release download v3.0-beta.1.2 \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern "XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip" \
+            --dir .release-gallery
+          echo "1823a7da139e6306ed696c400d14b03009f9ea90c2c3e6423bd0dc3ae978d0cb  .release-gallery/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip" | sha256sum --check
+          unzip -j .release-gallery/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip -d screenshots
+          for name in carbon-features.png carbon-library.png leveling-progress.png most-wanted-preview.png save-summary.png saved-files.png; do
+            test -s "screenshots/$name"
+          done
+          rm -rf .release-gallery
+      - name: Commit screenshot gallery
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add screenshots/*.png
+          if git diff --cached --quiet; then
+            echo "All screenshot files already match the official release."
+          else
+            git commit -m "Add six official Beta 1.2 application screenshots"
+            git push
+          fi
