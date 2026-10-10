@@ -1,4 +1,0 @@
-File: XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip
-SHA-256: 886627772f0fbf05ba768c5fb01a1e394e37548d4f11a5b9b8fc992091782089
-
-Checksum of the original Beta 1.2 release ZIP provided by the developer.
