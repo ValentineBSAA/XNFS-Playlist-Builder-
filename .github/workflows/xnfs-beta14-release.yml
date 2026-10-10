@@ -1,192 +1,150 @@
-name: Publish XNFS Beta 1.4 safely
-
+name: Finalize Beta 1.4 release and screenshots
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/xnfs-beta14-release.yml"
   release:
     types: [published]
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
-  prepare-draft:
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Prepare Beta 1.4 draft
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          set -euo pipefail
-          if gh release view v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" > /dev/null 2>&1; then
-            echo "Beta 1.4 release already exists. Leaving it unchanged."
-          else
-            gh release create v3.2-beta.1.4 \
-              --repo "$GITHUB_REPOSITORY" \
-              --target main \
-              --title "XNFS Playlist Builder 3.2 | Public Beta 1.4" \
-              --notes-file RELEASE_NOTES.md \
-              --prerelease \
-              --draft
-          fi
-
-  finish-published-release:
-    if: github.event_name == 'release' && github.event.action == 'published' && github.event.release.tag_name == 'v3.2-beta.1.4'
+  finalize:
+    if: github.event_name == 'workflow_dispatch' || github.event.release.tag_name == 'v3.2-beta.1.4'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-      - name: Download the TWO reviewed ZIPs
+      - name: Verify public installer and optional screenshots
         env:
           GH_TOKEN: ${{ github.token }}
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /tmp/xnfs-publication
-          gh release download v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --dir /tmp/xnfs-publication \
-            --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip' \
-            --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip'
-          printf '%s  %s\n' \
-            '56add4426e4a2e10ab6f86eb0ffcac04006082107ed8ecae67e531a164139957' \
-            '/tmp/xnfs-publication/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip' \
-            'd89bcb777de8f2bf12e38d66e88fb7c7dc5d1e4809708e698664d82ea0c54cad' \
-            '/tmp/xnfs-publication/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum -c
-
-      - name: Verify packages and import screenshots
-        shell: bash
-        run: |
-          set -euo pipefail
+          mkdir -p /tmp/xnfs-package
+          gh release download v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --dir /tmp/xnfs-package --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
+          echo '6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip' | sha256sum --check
           python3 - <<'PY'
           from pathlib import Path
           import zipfile,hashlib
-          root=Path('/tmp/xnfs-publication')
-          public=root/'XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
-          media=root/'XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip'
-          expected={'XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe','READ-ME-FIRST.txt','READ-ME-FIRST.html'}
-          with zipfile.ZipFile(public) as z:
-              assert set(z.namelist())==expected, 'Public ZIP contains unexpected files'
-              assert z.testzip() is None, 'Corrupt public ZIP'
-              assert hashlib.sha256(z.read('XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe')).hexdigest()=='cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a', 'Installer changed'
-          images=['most-wanted-library.png','most-wanted-features.png','most-wanted-installation-status.png','most-wanted-original-restore.png']
+          filename=Path('/tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip')
+          with zipfile.ZipFile(filename) as z:
+              assert z.testzip() is None
+              assert set(z.namelist())=={'XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe','READ-ME-FIRST.txt','READ-ME-FIRST.html'}
+              assert hashlib.sha256(z.read('XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe')).hexdigest()=='cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a'
+          print('Clean Beta 1.4 package verified')
+          PY
+          if gh release download v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --dir /tmp/xnfs-package --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip'; then
+            echo '325e327706f8fac51f254d476de9c5080e1c947bf65a38238b384f18fc674014  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum --check
+            python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          file=Path('/tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip')
+          names={'most-wanted-library.png','most-wanted-features.png','most-wanted-installation-status.png','most-wanted-original-restore.png'}
           out=Path('screenshots/most-wanted-1.4')
           out.mkdir(parents=True,exist_ok=True)
-          with zipfile.ZipFile(media) as z:
-              assert set(z.namelist())==set(images), 'Unexpected screenshot files'
-              assert z.testzip() is None, 'Corrupt screenshot ZIP'
-              for name in images:
-                  blob=z.read(name)
-                  assert blob.startswith(b'\x89PNG\r\n\x1a\n'), 'Screenshot is not PNG'
-                  (out/name).write_bytes(blob)
-          print('Verified installer package and added',len(images),'sanitized screenshots')
+          with zipfile.ZipFile(file) as z:
+              assert z.testzip() is None
+              assert set(z.namelist())==names
+              for n in names:
+                  data=z.read(n)
+                  assert data.startswith(b'\x89PNG\r\n\x1a\n')
+                  (out/n).write_bytes(data)
+          print('Imported four Beta 1.4 application screenshots')
           PY
-
-      - name: Activate Beta 1.4 public links and gallery
+            echo 'XNFS_SCREENSHOTS_IMPORTED=1' >> "$GITHUB_ENV"
+          else
+            echo 'No screenshot ZIP attached; keeping older labeled preview and awaiting artwork'
+            echo 'XNFS_SCREENSHOTS_IMPORTED=0' >> "$GITHUB_ENV"
+          fi
+      - name: Update the simple homepage and help pages
+        env:
+          XNFS_SCREENSHOTS_IMPORTED: ${{ env.XNFS_SCREENSHOTS_IMPORTED }}
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
           base='https://github.com/ValentineBSAA/XNFS-Playlist-Builder-'
-          dl=base+'/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
-          readme=Path('README.md')
-          s=readme.read_text(encoding='utf-8')
-          a=s.index('> [!IMPORTANT]\n> **Release transition:**')
+          download=base+'/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
+          readme=Path('README.md');s=readme.read_text()
+          a=s.index('> [!IMPORTANT]\n> **Version update:**')
           b=s.index('## 🎶 What is it?',a)
           s=s[:a]+'''> [!IMPORTANT]
-          > **Public Beta 1.4:** Carbon and Most Wanted both work with the builder. This is a beta, and compatibility may differ across game installs. Back up your game before installing features or saving.
+          > **Public Beta 1.4:** Both Carbon and Most Wanted work with the builder. This beta needs more testing on different PCs, so back up your game before installing music features.
 
-          ### 📥 Download Beta 1.4
+          ### 📥 Download XNFS Playlist Builder 3.2 Beta 1.4
 
-          **[⬇️ Download XNFS Playlist Builder 3.2 Beta 1.4]('''+dl+''')** · **[🚀 Easy setup guide](docs/GETTING-STARTED.md)** · **[💬 Troubleshooting](docs/TROUBLESHOOTING.md)**
+          **[⬇️ Get the Windows installer ZIP]('''+download+''')** · **[🚀 Easy setup guide](docs/GETTING-STARTED.md)** · **[💬 Common questions](docs/TROUBLESHOOTING.md)**
 
-          Choose the attached **Clean-Public.zip** containing the Windows Setup.exe, not GitHub's automatic “Source code” ZIP.
+          Download the file named **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip**, extract it, and run the Windows Setup.exe. GitHub's automatic “Source code” ZIP is **not** the installer.
 
           '''+s[b:]
-          old='[![Gold Most Wanted soundtrack builder from the previous public beta](screenshots/most-wanted-preview.png)](screenshots/most-wanted-preview.png)'
-          new='[![Most Wanted 3.2 Beta 1.4 soundtrack builder featuring Safe House, Free Roam, Race and Pursuit](screenshots/most-wanted-1.4/most-wanted-library.png)](screenshots/most-wanted-1.4/most-wanted-library.png)'
-          assert old in s, 'Old screenshot embed missing'
-          s=s.replace(old,new)
-          s=s.replace('*This image is from the **previous public beta**. Beta 1.4\'s new Most Wanted screens will be added to the gallery as part of the screenshot update.*','*Beta 1.4\'s gold Most Wanted editor, with four automatic driving playlists.*')
-          s=s.replace('[**📸 Browse the available application screenshots →**](screenshots/README.md)', '''<details>
-          <summary><b>📷 More Beta 1.4 Most Wanted screenshots</b></summary>
+          if Path('screenshots/most-wanted-1.4/most-wanted-library.png').is_file():
+              s=s.replace('[![Gold Most Wanted soundtrack builder from the previous public beta](screenshots/most-wanted-preview.png)](screenshots/most-wanted-preview.png)','[![Most Wanted Beta 1.4 showing Safe House, Free Roam, Race and Pursuit](screenshots/most-wanted-1.4/most-wanted-library.png)](screenshots/most-wanted-1.4/most-wanted-library.png)')
+              s=s.replace("*This image is from the **previous public beta**. Beta 1.4's new Most Wanted screens will be added to the gallery as part of the screenshot update.*","*The new Beta 1.4 Most Wanted interface with four driving soundtracks.*")
+              s=s.replace("[**📸 Browse the available application screenshots →**](screenshots/README.md)","[**📸 Browse all application screenshots →**](screenshots/README.md)")
+          readme.write_text(s)
+          guide=Path('docs/GETTING-STARTED.md');g=guide.read_text()
+          a=g.index('> **Download status:**');b=g.index('## Before you start',a)
+          g=g[:a]+'> **[⬇️ Download the official Beta 1.4 Windows ZIP]('+download+')**. Choose the Clean-Public ZIP, not GitHub\'s source code archives.\n\n'+g[b:]
+          g=g.replace('When Beta 1.4 is published, download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** (the final release file will be labeled clearly).','**[Download XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip]('+download+')**.')
+          guide.write_text(g)
+          help=Path('docs/TROUBLESHOOTING.md');t=help.read_text()
+          a=t.index('## Where do I download Beta 1.4?')
+          b=t.index('## What is an ASI loader?',a)
+          t=t[:a]+'## Where do I download Beta 1.4?\n\n**[Download the official Beta 1.4 Windows ZIP]('+download+')**. Extract the Clean-Public ZIP and open Setup.exe inside. Do **not** choose GitHub\'s “Source code” archives.\n\n'+t[b:]
+          help.write_text(t)
+          check=Path('docs/SHA256-OF-BETA-1.4.txt')
+          check.write_text('Official published Beta 1.4 ZIP: XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip\nSHA-256: 6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331\n\nIncluded installer: XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe\nSHA-256: cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a\n\nThe published ZIP differs in archive/HTML-guide packaging from the separately prepared local ZIP, but contains the same verified installer and the same plain-text guide.\n')
+          notes=Path('RELEASE_NOTES.md');n=notes.read_text()
+          n=n.replace("Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from this release's attached assets **when it is published**.", "Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the attached release assets.")
+          notes.write_text(n)
+          if Path('screenshots/most-wanted-1.4/most-wanted-library.png').is_file():
+              images=Path('screenshots/README.md')
+              p=images.read_text();a=p.index('## 🟡 Most Wanted')
+              p=p[:a]+'''## 🟡 Most Wanted: new in Beta 1.4
 
-          | Player options | Installation checks |
-          | --- | --- |
-          | [![Most Wanted skip, routing, shuffle and volume options](screenshots/most-wanted-1.4/most-wanted-features.png)](screenshots/most-wanted-1.4/most-wanted-features.png) | [![Most Wanted installation status checks](screenshots/most-wanted-1.4/most-wanted-installation-status.png)](screenshots/most-wanted-1.4/most-wanted-installation-status.png) |
+          ### The new soundtrack builder
 
-          [![Most Wanted original game restoration summary](screenshots/most-wanted-1.4/most-wanted-original-restore.png)](screenshots/most-wanted-1.4/most-wanted-original-restore.png)
+          [![Most Wanted Safe House, Free Roam, Race and Pursuit playlist editor](most-wanted-1.4/most-wanted-library.png)](most-wanted-1.4/most-wanted-library.png)
 
-          </details>
+          ### Music and skip features
 
-          [**📸 Browse all application screenshots →**](screenshots/README.md)''')
-          readme.write_text(s,encoding='utf-8')
+          [![Most Wanted options for skip, shuffle and driving soundtracks](most-wanted-1.4/most-wanted-features.png)](most-wanted-1.4/most-wanted-features.png)
 
-          guide=Path('docs/GETTING-STARTED.md')
-          g=guide.read_text(encoding='utf-8')
-          i=g.index('> **Which version can I download right now?**')
-          j=g.index('## Before you start',i)
-          g=g[:i]+'> **[⬇️ Download the published Beta 1.4 installer ZIP]('+dl+')**. You need the Clean-Public ZIP, not GitHub\'s source-code archives.\n\n'+g[j:]
-          g=g.replace('When Beta 1.4 is published, download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** (the final release file will be labeled clearly).','Download **[XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip]('+dl+')**.')
-          guide.write_text(g,encoding='utf-8')
+          ### What's installed
 
-          help=Path('docs/TROUBLESHOOTING.md')
-          t=help.read_text(encoding='utf-8')
-          t=t.replace("Its new public ZIP has been prepared, but **is not yet attached to the GitHub release**. The current GitHub download remains Beta 1.2 until the new file is uploaded and published.","**[Download the official Beta 1.4 Clean-Public ZIP]("+dl+")** from the published release.")
-          help.write_text(t,encoding='utf-8')
+          [![Most Wanted feature installation status and checks](most-wanted-1.4/most-wanted-installation-status.png)](most-wanted-1.4/most-wanted-installation-status.png)
 
-          photos=Path('screenshots/README.md')
-          p=photos.read_text(encoding='utf-8')
-          i=p.index('## 🟡 Most Wanted')
-          p=p[:i]+'''## 🟡 Most Wanted 3.2 Beta 1.4
+          ### Restore the original game
 
-          ### Your soundtrack library
+          [![Most Wanted original game restore summary](most-wanted-1.4/most-wanted-original-restore.png)](most-wanted-1.4/most-wanted-original-restore.png)
 
-          [![Most Wanted's new gold soundtrack editor showing Safe House, Free Roam, Race and Pursuit](most-wanted-1.4/most-wanted-library.png)](most-wanted-1.4/most-wanted-library.png)
-
-          ### Choose your driving music features
-
-          [![Most Wanted game features with T skipping, shuffle, routing and leveling](most-wanted-1.4/most-wanted-features.png)](most-wanted-1.4/most-wanted-features.png)
-
-          ### Check what's installed
-
-          [![Most Wanted game files and playlist installation checks](most-wanted-1.4/most-wanted-installation-status.png)](most-wanted-1.4/most-wanted-installation-status.png)
-
-          ### Restore the original game setup
-
-          [![Most Wanted's original-game restore review](most-wanted-1.4/most-wanted-original-restore.png)](most-wanted-1.4/most-wanted-original-restore.png)
-
-          **Earlier screenshot:** [See the previous Most Wanted interface](most-wanted-preview.png).
-
-          These captures show the program's interface, not proof of compatibility with every computer. The latest combined Safe House/menu behavior still needs a final in-game test.
+          [Earlier Most Wanted beta screenshot](most-wanted-preview.png). All images are from the developer's test system; the newest Safe House/menu combination still needs a follow-up in-game check.
 
           [← Homepage](../README.md)
           '''
-          photos.write_text(p,encoding='utf-8')
-          print('Updated public downloads and Most Wanted picture gallery')
+              images.write_text(p)
+          print('Beta 1.4 publication links updated, screenshots present:',Path('screenshots/most-wanted-1.4/most-wanted-library.png').is_file())
           PY
-
-      - name: Save the final gallery and updated links
+      - name: Commit updated public content
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md docs/GETTING-STARTED.md docs/TROUBLESHOOTING.md screenshots/
+          git add README.md RELEASE_NOTES.md docs/ screenshots/
           if ! git diff --cached --quiet; then
-            git commit -m "Publish Beta 1.4 download links and four new Most Wanted screenshots"
+            git commit -m "Activate verified Beta 1.4 public download and screenshots"
             git push origin main
           fi
-
-      - name: Remove temporary screenshot upload from release
+      - name: Update published release notes
         env:
           GH_TOKEN: ${{ github.token }}
-        shell: bash
+        run: |
+          gh release edit v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --notes-file RELEASE_NOTES.md
+      - name: Remove optional screenshot-transfer ZIP from release
+        if: env.XNFS_SCREENSHOTS_IMPORTED == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh release delete-asset v3.2-beta.1.4 XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip --repo "$GITHUB_REPOSITORY" --yes
