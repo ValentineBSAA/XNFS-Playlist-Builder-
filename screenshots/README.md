@@ -1,16 +1,30 @@
-# 📸 Application screenshots
+# 📸 XNFS Playlist Builder | Application screenshots
 
-All six official screenshots are included in the **[Beta 1.2 screenshot gallery ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)**.
+All six screenshots are taken from the developer's Beta 1.2 Windows test system. Click an image to open the full-size file.
 
-The separate PNG files are **not yet present in this repository**. To display the screenshots individually on the GitHub homepage, extract the ZIP and upload all six PNGs to this folder. The screenshots are:
+## 🔵 Carbon soundtrack
 
-- `carbon-library.png` — Carbon soundtrack library, playlists and music assignments.
-- `carbon-features.png` — Carbon game features and playback choices.
-- `leveling-progress.png` — Progress while preparing leveled song copies.
-- `save-summary.png` — Completed Carbon soundtrack with playlist totals.
-- `most-wanted-preview.png` — Gold Most Wanted interface, still in development.
-- `saved-files.png` — Saved playlists, playback copies and available backup files.
+[![Carbon library, with Menu, Muscle, Tuner and Exotic tracks](carbon-library.png)](carbon-library.png)
 
-The screenshots are from the developer's test setup. They do not establish compatibility with other PCs.
+*Build and organize your own Carbon playlists.*
 
-[← Return to project homepage](../README.md)
+## 🟡 Most Wanted preview
+
+[![Most Wanted gold-themed soundtrack builder](most-wanted-preview.png)](most-wanted-preview.png)
+
+*Most Wanted is still under development. Automatic situation-based music switching is not finished.*
+
+## More features
+
+| Feature | Screenshot |
+| --- | --- |
+| Carbon game features | [![Carbon features](carbon-features.png)](carbon-features.png) |
+| Music leveling | [![Leveling your songs](leveling-progress.png)](leveling-progress.png) |
+| Playlist completion | [![Save summary](save-summary.png)](save-summary.png) |
+| Saved playlist and backups | [![Saved music player files](saved-files.png)](saved-files.png) |
+
+[📥 Download all original screenshots as a ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)
+
+These screenshots demonstrate the application interface and one local test setup. They do not prove compatibility with other computers.
+
+[← Return to XNFS Playlist Builder](../README.md)
