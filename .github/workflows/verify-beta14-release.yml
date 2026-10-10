@@ -1,0 +1,35 @@
+name: Verify Beta 1.4 release asset
+on:
+  push:
+    paths:
+      - ".github/workflows/verify-beta14-release.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Compare published ZIP to prepared Beta 1.4 installer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/verify-beta14
+          gh release download v3.1-beta-1.4 --repo "$GITHUB_REPOSITORY" --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip' --dir /tmp/verify-beta14
+          cd /tmp/verify-beta14
+          ZIP='XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
+          echo 'ZIP SHA256:'
+          sha256sum "$ZIP"
+          echo 'Files inside publication:'
+          unzip -Z -1 "$ZIP"
+          echo 'Archive integrity:'
+          unzip -tq "$ZIP"
+          echo 'Installer SHA256:'
+          unzip -p "$ZIP" 'XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe' | sha256sum
+          echo 'Player TXT SHA256:'
+          unzip -p "$ZIP" 'READ-ME-FIRST.txt' | sha256sum
+          echo 'Player HTML SHA256:'
+          unzip -p "$ZIP" 'READ-ME-FIRST.html' | sha256sum
+          echo 'Checking exact installer against original developer ZIP:'
+          unzip -p "$ZIP" 'XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe' | sha256sum --check <(printf 'cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a  -\n')
