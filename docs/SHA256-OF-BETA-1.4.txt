@@ -4,4 +4,4 @@ SHA-256: 6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331
 Included installer: XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe
 SHA-256: cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a
 
-The published ZIP matches the independently prepared cleaned public package, with the original installer preserved byte for byte.
+The GitHub ZIP differs from the later local package in HTML-guide/archive packaging. The Windows installer inside is byte-for-byte identical in both packages.
