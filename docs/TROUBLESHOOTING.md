@@ -10,7 +10,7 @@ This guide is for **3.2 Beta 1.4**. If you're using the older **3.0 Beta 1.2**, 
 
 ## Where do I download Beta 1.4?
 
-Its new public ZIP has been prepared, but **is not yet attached to the GitHub release**. The current GitHub download remains Beta 1.2 until the new file is uploaded and published. Don't accidentally use GitHub's “Source code” ZIP as the application installer.
+A Beta 1.4 installer is available in the [currently published release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.1-beta-1.4), whose tag still says v3.1. A correctly labeled 3.2 release with the final cleaned ZIP is being prepared. Don't accidentally use GitHub's “Source code” ZIP as the application installer.
 
 ## What is an ASI loader?
 
