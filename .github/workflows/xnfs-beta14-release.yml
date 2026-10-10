@@ -97,7 +97,7 @@ jobs:
           t=t[:a]+'## Where do I download Beta 1.4?\n\n**[Download the official Beta 1.4 Windows ZIP]('+download+')**. Extract the Clean-Public ZIP and open Setup.exe inside. Do **not** choose GitHub\'s “Source code” archives.\n\n'+t[b:]
           help.write_text(t)
           check=Path('docs/SHA256-OF-BETA-1.4.txt')
-          check.write_text('Official published Beta 1.4 ZIP: XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip\nSHA-256: 6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331\n\nIncluded installer: XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe\nSHA-256: cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a\n\nThe published ZIP matches the independently prepared cleaned public package, with the original installer preserved byte for byte.\n')
+          check.write_text('Official published Beta 1.4 ZIP: XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip\nSHA-256: 6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331\n\nIncluded installer: XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe\nSHA-256: cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a\n\nThe GitHub ZIP differs from the later local package in HTML-guide/archive packaging. The Windows installer inside is byte-for-byte identical in both packages.\n')
           notes=Path('RELEASE_NOTES.md');n=notes.read_text()
           n=n.replace("Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from this release's attached assets **when it is published**.", "Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the attached release assets.")
           notes.write_text(n)
