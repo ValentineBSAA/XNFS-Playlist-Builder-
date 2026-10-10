@@ -36,7 +36,7 @@ jobs:
           print('Clean Beta 1.4 package verified')
           PY
           if gh release download v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --dir /tmp/xnfs-package --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip'; then
-            echo '325e327706f8fac51f254d476de9c5080e1c947bf65a38238b384f18fc674014  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum --check
+            echo 'd89bcb777de8f2bf12e38d66e88fb7c7dc5d1e4809708e698664d82ea0c54cad  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum --check
             python3 - <<'PY'
           from pathlib import Path
           import zipfile
