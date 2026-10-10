@@ -34,11 +34,34 @@ XNFS Playlist Builder finds the songs you already own, organizes them for your g
 
 ## 📸 Inside the app
 
-The screenshot gallery is being added separately. The interface features a **blue Carbon soundtrack library** with Menu, Muscle, Tuner and Exotic playlists, and a **gold Most Wanted preview** with Frontend, Free Roam, Race and Pursuit categories.
+See the **Carbon blue** and **Most Wanted gold** interfaces, along with the feature installer, audio-leveling progress and save confirmation. These pictures show the developer's local beta test, not verified behavior on every computer.
 
-The provided beta screenshots also show music scanning, category assignment, optional audio leveling with progress, the Carbon feature installer, the save confirmation and the playlist backup folder.
+<details>
+<summary><b>📷 View the application screenshot gallery</b></summary>
 
-> The screenshot files are prepared but are not yet hosted in this repository. The installer release and gallery will be added after the binary uploads are completed.
+### Carbon soundtrack builder
+
+![Carbon soundtrack editor showing Menu, Muscle, Tuner and Exotic song categories](screenshots/carbon-library.png)
+
+*Blue-themed Carbon soundtrack library with car-class playlist assignments.*
+
+| Feature settings | Audio leveling |
+| :---: | :---: |
+| ![Carbon player features](screenshots/carbon-features.png) | ![Preparing leveled music copies](screenshots/leveling-progress.png) |
+
+| Save confirmation | Saved playlist files |
+| :---: | :---: |
+| ![Soundtrack saved summary](screenshots/save-summary.png) | ![Playlist, normalized audio and backups](screenshots/saved-files.png) |
+
+### Most Wanted development preview
+
+![Most Wanted gold-themed playlist builder](screenshots/most-wanted-preview.png)
+
+*Most Wanted playlists can be prepared and exported, but automatic in-game situation switching is unfinished.*
+
+</details>
+
+> **Gallery upload:** The six screenshots are prepared for this folder. Image previews will appear after the image files have been uploaded.
 
 ## 🚦 What works today?
 
