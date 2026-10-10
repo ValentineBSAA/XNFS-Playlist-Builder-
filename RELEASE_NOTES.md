@@ -27,7 +27,7 @@ This is **public beta software**. Other PCs, game builds and combinations of mod
 
 ## Install
 
-1. Download `XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip` from the GitHub release **once the release asset has been uploaded**.
+1. **[Download the official Beta 1.2 ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** from the published GitHub release.
 2. Extract it and run `XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe`.
 3. Use Windows 10 or 11, 64-bit. The installer is unsigned; review any Windows warning.
 4. For Carbon, have a compatible ASI loader in place and back up your game installation before applying features.
@@ -35,6 +35,8 @@ This is **public beta software**. Other PCs, game builds and combinations of mod
 The original game and commercial music are not included. Installing the Windows program by itself does not automatically alter your game. Installing features or saving playlists can change files in your chosen game folder.
 
 For full steps see [Getting started](docs/GETTING-STARTED.md). For backup details see [Backups and restoring](docs/BACKUPS-AND-RESTORE.md). For help see [Troubleshooting](docs/TROUBLESHOOTING.md).
+
+**[Explore the six screenshots](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)** (ZIP download).
 
 **File verification:** [SHA-256 of original beta ZIP](docs/SHA256-OF-PUBLIC-BETA.txt).
 
