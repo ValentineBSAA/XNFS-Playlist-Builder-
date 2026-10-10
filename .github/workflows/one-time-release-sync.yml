@@ -1,0 +1,40 @@
+name: Final Beta 1.4 release page cleanup
+
+on:
+  push:
+    paths:
+      - ".github/workflows/one-time-release-sync.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  synchronize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public release notes
+        uses: actions/checkout@v4
+      - name: Update the live Beta 1.4 release description
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release edit v3.2-beta.1.4 \
+            --repo "$GITHUB_REPOSITORY" \
+            --title "XNFS Playlist Builder 3.2 | Public Beta 1.4" \
+            --notes-file RELEASE_NOTES.md \
+            --prerelease
+          gh release view v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --json isDraft,assets \
+            | jq -e '.isDraft == false and ([.assets[].name] | index("XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip") != null)'
+      - name: Remove finished screenshot-transfer ZIP from superseded release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release delete-asset v3.1-beta-1.4 \
+            XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip \
+            --repo "$GITHUB_REPOSITORY" --yes
+          echo "Screenshots remain safely stored as PNG files in the repository."
