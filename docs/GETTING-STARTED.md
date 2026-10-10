@@ -4,7 +4,7 @@ You don't need to be a computer expert. This guide explains the process from sta
 
 [← Home](../README.md) · [Which game is supported?](GAMES-AND-COMPATIBILITY.md) · [I need help](TROUBLESHOOTING.md)
 
-> **Download status:** A Beta 1.4 Windows installer is currently available in the [published release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.1-beta-1.4), but the release tag says v3.1. The final, correctly tagged 3.2 Beta 1.4 ZIP is being prepared.
+> **[⬇️ Download the official Beta 1.4 Windows ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**. Choose the Clean-Public ZIP, not GitHub's source code archives.
 
 ## Before you start
 
@@ -18,7 +18,7 @@ You'll need:
 
 ## Step 1: Download and install
 
-When Beta 1.4 is published, download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** (the final release file will be labeled clearly).
+**[Download XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**.
 
 Right-click the downloaded ZIP, choose **Extract All**, and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
 

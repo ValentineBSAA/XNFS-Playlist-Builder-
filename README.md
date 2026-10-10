@@ -17,13 +17,13 @@
 ---
 
 > [!IMPORTANT]
-> **Version update:** XNFS Playlist Builder **3.2 Beta 1.4** is ready for final release packaging. A Beta 1.4 installer is already available in a previously published GitHub release, but that release has an older **v3.1-beta-1.4** tag. We're preparing a correctly labeled **v3.2-beta.1.4** release with the final cleaned archive and new Most Wanted screenshots.
+> **Public Beta 1.4:** Both Carbon and Most Wanted work with the builder. This beta needs more testing on different PCs, so back up your game before installing music features.
 
-### 📥 Get the currently published beta
+### 📥 Download XNFS Playlist Builder 3.2 Beta 1.4
 
-**[⬇️ Download the available Windows installer ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.1-beta-1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)** · **[📖 Installation guide](docs/GETTING-STARTED.md)**
+**[⬇️ Get the Windows installer ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)** · **[🚀 Easy setup guide](docs/GETTING-STARTED.md)** · **[💬 Common questions](docs/TROUBLESHOOTING.md)**
 
-For the final cleaned **3.2 Beta 1.4** release, check the [Releases page](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases). Don't download GitHub's automatically generated “Source code” ZIP: it isn't the Windows installer.
+Download the file named **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip**, extract it, and run the Windows Setup.exe. GitHub's automatic “Source code” ZIP is **not** the installer.
 
 ## 🎶 What is it?
 

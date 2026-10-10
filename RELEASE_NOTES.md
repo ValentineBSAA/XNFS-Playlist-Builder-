@@ -32,7 +32,7 @@ Music scanning, remembered music folders, auto-assign by genre, manual changes, 
 
 ## 📥 Installation
 
-Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from this release's attached assets **when it is published**. Extract it, then run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
+Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the attached release assets. Extract it, then run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
 
 Choose your game and music folder, close the game before installing features or saving, review your playlists and click **Build / Save**.
 
