@@ -2,53 +2,72 @@
 
 **Your music. Your drive. Your soundtrack.**
 
-This update brings a major expansion to **Need for Speed Most Wanted (2005)**, making its music features much closer to those available in **Carbon**.
+Play your own music in **Need for Speed Carbon (2006)** and **Need for Speed Most Wanted (2005)**. Both games work with the builder. **Most Wanted received major upgrades in this release**, bringing its music controls much closer to Carbon's.
 
-Both games can use the soundtrack builder today.
+### 📥 Get started
 
-## 🟡 Most Wanted gets a major upgrade
+**[⬇️ Download the Windows installer ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**
 
-- **Four soundtracks:** Safe House (which includes the menus), Free Roam, Race and Pursuit
-- **Automatic driving playlists** choose music for the active situation
-- **T to skip** a song while driving, without opening the pause menu
-- Repeat-aware shuffle, genre sorting and optional loudness-leveled music copies
-- EA Trax song notifications
-- Clearer installation checks, player backups and original-game restoration
+1. Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the release assets. Don't use GitHub's automatic **Source code** archives.
+2. Extract the ZIP and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
+3. Choose **Carbon** or **Most Wanted**, then select your game and music folders.
+4. Scan your songs, organize the playlists and choose any optional playback features.
+5. **Close the game**, then select **Build / Save**.
 
-**Testing note:** The developer confirmed earlier Most Wanted state playback, T skipping and restoration. The newest **combined Safe House/menu** change still needs another live-game check.
+**Requires:** Windows 10 or 11 (64-bit), your own game and music, a supported game executable, and a compatible ASI loader for in-game music integration. **Back up your game before changing it.** The installer is unsigned.
 
-## 🔵 Carbon is still here
+[**Easy setup guide**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md) · [**Frequently asked questions**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/TROUBLESHOOTING.md)
 
-- Menu, Muscle, Tuner and Exotic playlists
-- Car-class-aware music playback
-- Optional F9 skipping and repeat-aware shuffle
-- Optional song leveling and crew-dialogue music ducking
+---
 
-Carbon **1.2** has had in-game testing. Carbon **1.4** needs wider gameplay testing.
+## 🔵 Carbon: music that follows your car
 
-## 🎶 Easier in both games
+| Playlist | When it's used |
+| --- | --- |
+| **Menu** | Game menus |
+| **Muscle** | Driving a Muscle car |
+| **Tuner** | Driving a Tuner car |
+| **Exotic** | Driving an Exotic car |
 
-Music scanning, remembered music folders, auto-assign by genre, manual changes, track-count balancing, playlist ordering, separate volume-leveled copies and improved backup/restore workflows.
+**Carbon extras:** automatic car-class music, optional **F9** to skip tracks, smart shuffle, volume leveling, and optional music ducking while crew members speak.
 
-## 📥 Installation
+[**See Carbon screenshots and details**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/CARBON.md)
 
-Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the attached release assets. Extract it, then run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
+## 🟡 Most Wanted: music that follows the action
 
-Choose your game and music folder, close the game before installing features or saving, review your playlists and click **Build / Save**.
+| Playlist | When it's used |
+| --- | --- |
+| **Safe House** | Both the menus and safe house |
+| **Free Roam** | Exploring Rockport |
+| **Race** | Racing |
+| **Pursuit** | Police chases |
 
-Windows **10 / 11 (64-bit)** required. Bring your own game, music, supported executable and ASI loader. **Back up your game first.**
+**Most Wanted extras:** automatic driving-situation music, **T** to skip while driving, EA Trax song notifications, smart shuffle and volume leveling.
 
-The installer is unsigned and this is a testing release. Results may vary with game versions and other mods.
+**This is the big Beta 1.4 upgrade:** Most Wanted now has much more complete in-game music controls and new installation/restore screens. Police-radio ducking is **not** included.
 
-## 📖 Help and screenshots
+[**See four new Most Wanted screenshots and details**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/MOST-WANTED.md)
 
-- [Easy installation guide](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md)
-- [Detailed feature overview](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/FEATURES.md)
-- [Compare Carbon and Most Wanted](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GAMES-AND-COMPATIBILITY.md)
-- [Backup and restoration help](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/BACKUPS-AND-RESTORE.md)
-- [Application screenshots](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/tree/main/screenshots)
-- [Report an issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+## 🎵 Both games include
 
-**Made by valentine.** Original XNFSMusicPlayer by Lovro Pleše (xan1242). Independent fan-made utility, not affiliated with or endorsed by Electronic Arts.
+- Scan your own songs and automatically suggest categories based on genre.
+- Edit assignments manually, organize playlist order and review music without genre tags.
+- Optional shuffle that can avoid recently played tracks.
+- Optional consistent-volume music copies without overwriting your original recordings.
+- Better installation-status checks, backup handling and restoration controls.
 
-**Release packaging checksum:** The cleaned ZIP SHA-256 is documented in [the verification file](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/SHA256-OF-BETA-1.4.txt).
+[**Compare both games**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GAMES-AND-COMPATIBILITY.md) · [**Browse all application screenshots**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/tree/main/screenshots)
+
+## 🧪 Public beta: what has been tested?
+
+**Carbon 1.2** has been tested in-game on the developer's computer. **Carbon 1.4** has been checked offline and needs live-game testing.
+
+Earlier **Most Wanted** driving-state playback, T skipping and restoration were tested. The **latest combined menu/Safe House change** still needs a follow-up live-game test. Different game installations and mod combinations may behave differently.
+
+If something isn't working, please [**report an issue**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Mention which game and game version you're using and what happened. Remove private information from screenshots or logs.
+
+**[Check the download SHA-256](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/SHA256-OF-BETA-1.4.txt)** · **[Backing up and restoring](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/BACKUPS-AND-RESTORE.md)**
+
+---
+
+Made by **valentine**. Original **XNFSMusicPlayer** by **Lovro Pleše (xan1242)**. Independent fan-made utility, not affiliated with or endorsed by Electronic Arts. Games and commercial music are not included.
