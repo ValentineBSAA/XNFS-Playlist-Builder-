@@ -17,13 +17,13 @@
 ---
 
 > [!IMPORTANT]
-> **Release transition:** The **3.2 Beta 1.4** upgrade is being prepared for GitHub publication. The installer currently attached to the public releases is **3.0 Beta 1.2**. Do not mistake the older download for Beta 1.4. This page explains the new Beta 1.4 features; the new installer will appear in Releases after the final upload.
+> **Version update:** XNFS Playlist Builder **3.2 Beta 1.4** is ready for final release packaging. A Beta 1.4 installer is already available in a previously published GitHub release, but that release has an older **v3.1-beta-1.4** tag. We're preparing a correctly labeled **v3.2-beta.1.4** release with the final cleaned archive and new Most Wanted screenshots.
 
-### 📥 Want to try the publicly available version?
+### 📥 Get the currently published beta
 
-**[⬇️ Download currently published Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** · **[See the GitHub releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases)**
+**[⬇️ Download the available Windows installer ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.1-beta-1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)** · **[📖 Installation guide](docs/GETTING-STARTED.md)**
 
-> The prepared **3.2 Beta 1.4** release will replace this download recommendation once its Windows installer is attached and published. Avoid GitHub's automatically generated “Source code” ZIPs: those are **not** the app.
+For the final cleaned **3.2 Beta 1.4** release, check the [Releases page](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases). Don't download GitHub's automatically generated “Source code” ZIP: it isn't the Windows installer.
 
 ## 🎶 What is it?
 
