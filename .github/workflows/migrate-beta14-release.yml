@@ -1,0 +1,43 @@
+name: Correct Beta 1.4 release tag
+on:
+  push:
+    paths:
+      - ".github/workflows/migrate-beta14-release.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  correct-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify, move and publish the correct Windows installer
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/beta14-transfer
+          ZIP='XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
+          gh release download v3.1-beta-1.4 --repo "$GITHUB_REPOSITORY" --pattern "$ZIP" --dir /tmp/beta14-transfer
+          cd /tmp/beta14-transfer
+          echo "6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331  $ZIP" | sha256sum --check
+          unzip -tq "$ZIP"
+          unzip -p "$ZIP" 'XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe' | sha256sum --check <(printf 'cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a  -\n')
+          test "$(unzip -Z -1 "$ZIP" | wc -l)" = "3"
+          echo 'Verified the public beta zip and exact original Windows installer.'
+          gh release view v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" > /dev/null
+          gh release upload v3.2-beta.1.4 "$ZIP" --repo "$GITHUB_REPOSITORY" --clobber
+          cd "$GITHUB_WORKSPACE"
+          gh release edit v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --title 'XNFS Playlist Builder 3.2 | Public Beta 1.4' --notes-file RELEASE_NOTES.md --draft=false --prerelease
+          gh release view v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --json isDraft,assets | jq -e '.isDraft == false and ([.assets[].name] | index("XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip") != null)'
+          echo 'The correctly tagged Beta 1.4 prerelease is public with the verified installer.'
+      - name: Mark old mislabeled release as superseded
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release edit v3.1-beta-1.4 --repo "$GITHUB_REPOSITORY" \
+            --title 'Superseded: use XNFS 3.2 Beta 1.4' \
+            --notes 'This was an early Beta 1.4 upload with an incorrect 3.1 version tag. The correct published release is XNFS Playlist Builder 3.2 Beta 1.4: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.2-beta.1.4. Please use that release for new downloads.'
