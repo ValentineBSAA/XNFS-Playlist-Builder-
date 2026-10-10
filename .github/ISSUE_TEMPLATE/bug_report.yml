@@ -1,0 +1,51 @@
+name: "🐛 Report a problem"
+description: Tell us what happened while using XNFS Playlist Builder
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing Beta 1.2! Carbon has been tested on just one PC. Most Wanted is still in development. Please remove private paths and personal details from screenshots and logs.
+  - type: dropdown
+    id: game
+    attributes:
+      label: Which game?
+      options:
+        - Need for Speed Carbon
+        - Need for Speed Most Wanted (2005)
+        - The playlist builder itself
+    validations:
+      required: true
+  - type: input
+    id: game_version
+    attributes:
+      label: Game version (if known)
+      placeholder: "e.g. Carbon 1.2"
+  - type: input
+    id: windows_version
+    attributes:
+      label: Windows version
+      placeholder: "e.g. Windows 11 64-bit"
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or other details (optional)
+      description: Please redact paths, usernames and other private information.
