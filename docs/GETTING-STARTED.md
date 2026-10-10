@@ -4,7 +4,7 @@ You don't need to be a computer expert. This guide explains the process from sta
 
 [← Home](../README.md) · [Which game is supported?](GAMES-AND-COMPATIBILITY.md) · [I need help](TROUBLESHOOTING.md)
 
-> **Which version can I download right now?** Beta 1.4's new Windows installer is prepared but isn't attached to a published GitHub release yet. Until that upload is finished, the public download is **[Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)**. This guide describes the updated Beta 1.4 controls; some labels may differ in the older beta.
+> **Download status:** A Beta 1.4 Windows installer is currently available in the [published release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.1-beta-1.4), but the release tag says v3.1. The final, correctly tagged 3.2 Beta 1.4 ZIP is being prepared.
 
 ## Before you start
 
