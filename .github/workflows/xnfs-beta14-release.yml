@@ -24,7 +24,7 @@ jobs:
           set -euo pipefail
           mkdir -p /tmp/xnfs-package
           gh release download v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --dir /tmp/xnfs-package --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip'
-          echo '56add4426e4a2e10ab6f86eb0ffcac04006082107ed8ecae67e531a164139957  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip' | sha256sum --check
+          echo '6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip' | sha256sum --check
           python3 - <<'PY'
           from pathlib import Path
           import zipfile,hashlib
@@ -36,7 +36,7 @@ jobs:
           print('Clean Beta 1.4 package verified')
           PY
           if gh release download v3.2-beta.1.4 --repo "$GITHUB_REPOSITORY" --dir /tmp/xnfs-package --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip'; then
-            echo 'd89bcb777de8f2bf12e38d66e88fb7c7dc5d1e4809708e698664d82ea0c54cad  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum --check
+            echo '325e327706f8fac51f254d476de9c5080e1c947bf65a38238b384f18fc674014  /tmp/xnfs-package/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum --check
             python3 - <<'PY'
           from pathlib import Path
           import zipfile
@@ -97,7 +97,7 @@ jobs:
           t=t[:a]+'## Where do I download Beta 1.4?\n\n**[Download the official Beta 1.4 Windows ZIP]('+download+')**. Extract the Clean-Public ZIP and open Setup.exe inside. Do **not** choose GitHub\'s “Source code” archives.\n\n'+t[b:]
           help.write_text(t)
           check=Path('docs/SHA256-OF-BETA-1.4.txt')
-          check.write_text('Official published Beta 1.4 ZIP: XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip\nSHA-256: 56add4426e4a2e10ab6f86eb0ffcac04006082107ed8ecae67e531a164139957\n\nIncluded installer: XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe\nSHA-256: cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a\n\nThe published ZIP matches the independently prepared cleaned public package, with the original installer preserved byte for byte.\n')
+          check.write_text('Official published Beta 1.4 ZIP: XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip\nSHA-256: 6033fac59f4f6b143eb40d5621bace38e4cde8efc0d5cfb04b0262779b3ed331\n\nIncluded installer: XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe\nSHA-256: cd501eb42ad621f4a00d963a3f714ad27de4fafd2fe31905225b1c0dfffdba5a\n\nThe published ZIP matches the independently prepared cleaned public package, with the original installer preserved byte for byte.\n')
           notes=Path('RELEASE_NOTES.md');n=notes.read_text()
           n=n.replace("Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from this release's attached assets **when it is published**.", "Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the attached release assets.")
           notes.write_text(n)
