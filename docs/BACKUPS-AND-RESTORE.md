@@ -1,41 +1,36 @@
-# 🛡️ Keeping your game safe
+# 🛡️ Backups and restoring your game
 
-Beta 1.2 includes backup and restore options, but **keeping your own copy of the game folder is still the safest first step**.
+**Save a copy of your game folder before installing player features or changing playlists.** The builder has safety features, but personal backups are important.
 
-[← Home](../README.md) · [🚀 Set up your soundtrack](GETTING-STARTED.md)
+[← Home](../README.md) · [How to install](GETTING-STARTED.md)
 
-## What's safe to do?
+## What changes your game?
 
-**Installing the Windows builder app** does not immediately make changes to your game installation.
+Installing the Windows builder **alone** doesn't immediately change game files.
 
-**Installing Carbon features or saving playlists** can change files inside your selected game folder. Always close the game before doing either.
+Choosing to install game playback features **can** replace an existing player. The program gives a replacement notice and keeps tracked backups.
 
-**Audio leveling** makes separate copies of your songs for playback. Your original recordings are not modified by that feature.
+Using **Build / Save** writes playlists and may create separate music playback copies. Your original song recordings are not overwritten by optional leveling.
 
-## Before you change the game
+## Two different restore choices
 
-1. Close the game.
-2. Copy your existing game folder to a safe location.
-3. If you already use XNFSMusicPlayer or other mods, keep a copy of those files too.
-4. Install the features you want and then save your playlists.
+**Restore backup:** Returns to a previously saved player/playlist setup. That saved setup may already include mods or earlier changes.
 
-## If you want to undo changes
+**Restore original game:** Attempts to return all tracked files to the setup recorded before the first tracked installation, and remove files added by the builder.
 
-You may see two options in the app:
+The latest Most Wanted testing reported a successful restore and reinstall using an independently checked original-game baseline. But this doesn't mean every installation can be restored perfectly.
 
-- **Restore backup:** Lets you use supported saved backups.
-- **Restore original game:** Attempts to undo changes the builder tracked starting with Beta 1.2.
+Restoration can stop when original files were edited, backup records are missing or corrupted, or the installation comes from an older untracked version.
 
-Restoring original files and cleaning up added files depends on complete, valid records. It may not work exactly if files were changed after installation, records were deleted, or modifications came from older versions.
-
-## A simple restore checklist
+## How to restore
 
 1. **Close the game.**
-2. Open the builder and choose a restore option.
-3. Carefully read what it says will change.
-4. Confirm the changes you want to undo.
-5. Try the game again before you remove older backups.
+2. Open the builder's **Library / game** area and find the restore controls.
+3. Choose the appropriate restore option.
+4. Read which original files will be restored and which builder-added files will be removed.
+5. Confirm the operation only when you're comfortable with the summary.
+6. Check the game before discarding old backups.
 
-**Uninstalling the Windows builder does not automatically reverse game modifications.** Keep the game's backup and the builder's restore records if you might need them later.
+**Keep the builder's Windows application data** if you may need its restore points. Uninstalling the builder does not automatically undo changes made to the game.
 
-[💬 Help and frequently asked questions](TROUBLESHOOTING.md) · [← Home](../README.md)
+[Questions?](TROUBLESHOOTING.md) · [← Home](../README.md)

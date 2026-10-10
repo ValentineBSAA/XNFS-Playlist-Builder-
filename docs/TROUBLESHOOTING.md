@@ -1,73 +1,63 @@
-# 💬 Common questions and help
+# 💬 Questions and help
 
-Here are the answers to the questions people are most likely to have while using **Beta 1.2**.
+This guide is for **3.2 Beta 1.4**. If you're using the older **3.0 Beta 1.2**, some game options and key bindings are different.
 
-[**⬇️ Official download**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip) · [**🚀 Setup steps**](GETTING-STARTED.md) · [← Home](../README.md)
+[← Home](../README.md) · [Installation guide](GETTING-STARTED.md)
 
-## Does it work with both games?
+## Which game works?
 
-**Yes. Both Carbon and Most Wanted (2005) are usable now.** Carbon currently has more features.
+**Both Carbon and Most Wanted (2005).** They have different playlist names and in-game options, but both can work with the builder.
 
-**Most Wanted's automatic playlist switching** between Frontend, Free Roam, Race and Pursuit is still being developed. That doesn't mean the Most Wanted part of the builder is unavailable.
+## Where do I download Beta 1.4?
 
-## Which download do I choose?
+Its new public ZIP has been prepared, but **is not yet attached to the GitHub release**. The current GitHub download remains Beta 1.2 until the new file is uploaded and published. Don't accidentally use GitHub's “Source code” ZIP as the application installer.
 
-Choose **XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip** from the [official release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.0-beta.1.2). Extract it and run the **Setup.exe** inside.
+## What is an ASI loader?
 
-**Don't choose “Source code (zip)” or “Source code (tar.gz)”.** Those are GitHub's automatic repository archives, not the Windows installer.
+An ASI loader is a small part of a modded game setup that allows supported game additions to load. This project requires a compatible one for game integration. If you aren't sure whether your game has one, check your game's existing mod installation instructions before proceeding.
 
-## Carbon isn't playing my music. What should I check?
+## Why does the installer say my game isn't compatible?
 
-- Is the game **Carbon 1.2 or 1.4**? Only those inspected versions are intended for this beta.
-- Do you already have a compatible **ASI loader**?
-- Did you choose the correct **Game Folder** and **XNFS Folder**?
-- Did you select **Install Carbon features**, if needed?
-- Did you **Build / Save changes**?
-- Is the game **closed** while you make installation changes?
+The game executable must match a supported version. Check that you selected the correct game folder. Do not try to force an unsupported executable.
 
-Carbon 1.2 has only been tested in-game on the developer's own PC. Carbon 1.4 still needs live testing.
+## Why isn't my music playing?
 
-## Why doesn't Most Wanted automatically change music during a race or pursuit?
+Check that you picked the correct **Music Folder**, scanned your songs, reviewed category assignments and completed **Build / Save**. Make sure any required player features were installed, the game was closed during changes, and your ASI loader is working.
 
-That *specific advanced feature* is still under development. You can already build and save Most Wanted playlists, but fully automatic in-game situation switching isn't finished.
+## Why don't I see a separate Menu category in Most Wanted?
 
-## Why are songs in the wrong playlist?
+Most Wanted now uses **Safe House** for both menus and the safe house. This is intentional.
 
-The automatic genre sorter makes suggestions rather than perfect decisions. Tracks without useful genre tags may require manual attention.
+## How do I skip tracks?
 
-Use **Review genres**, **Unclassified tracks**, **Edit genre**, and the song-assignment controls.
+**Most Wanted:** Press **T** while driving after installing the T-skip feature. It doesn't use F9.
 
-## Why is audio leveling taking so long?
+**Carbon:** F9 works if its optional skip feature is installed and enabled.
 
-When enabled, leveling prepares separate playback copies. First-time preparation of a large library can take time and uses extra disk space. Watch the song counts and progress window.
+## Does Most Wanted change music for pursuits?
 
-**Your original music recordings remain unchanged.**
+Automatic Safe House, Free Roam, Race and Pursuit routing is part of Beta 1.4. Prior game-state testing was successful, but the newest combined Safe House/menu routing still needs final live testing.
 
-## Does audio leveling control engines or dialogue?
+## Why is audio leveling slow?
 
-No. It makes the *music tracks* more consistent with one another. It doesn't change engine effects or voices. Crew-voice volume controls have not yet been proven in live play.
+The program creates separate copies for more consistent music loudness. Larger libraries need processing time and extra disk space. Your original songs are left unchanged.
 
-## Can I undo something?
+## Does it change voices or police-radio volume?
 
-There are backup/restore options for supported changes. Restoration depends on backup records being intact. **Back up your original game installation before changing anything.** [Read the restore guide](BACKUPS-AND-RESTORE.md).
+Audio leveling affects music copies, not engine sounds or dialogue. Carbon offers optional music ducking during crew speech. **Most Wanted police-radio ducking is not included.**
 
-## Why does Windows warn me about the installer?
+## Is Restore backup the same as Restore original game?
 
-The public beta is not digitally signed. Check that you downloaded it from the official release and make your own decision whether to run it.
+No. **Restore backup** returns to a saved player/playlist setup. **Restore original game** aims to undo tracked changes and return the game to its recorded original state. Both depend on good restore data.
 
-## Why can't I see the Now Playing window?
+[Read the full backup guide](BACKUPS-AND-RESTORE.md).
 
-It is a companion window that requires the builder to be running. Some exclusive-fullscreen games may cover it.
+## Why does Windows warn about an unknown publisher?
 
-## How do I get help or report a bug?
+The installer is currently unsigned. Make sure it came from the official project's GitHub release and only run it if you trust the source.
 
-[**Report a problem on GitHub**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Tell us:
-1. Which game you're using, and its version if known.
-2. What you tried.
-3. What happened instead.
+## How do I report a problem?
 
-You can attach screenshots. For Carbon playback problems, the **XNFSMusicPlayer.log** file inside your game's **scripts/XNFSMusicPlayer** folder may help.
-
-**Before posting logs or screenshots publicly, remove private usernames, full personal paths, addresses and other personal details.**
+[**Report it on GitHub**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Include which game and version you're using, your Windows version, what you clicked, and what happened. Remove usernames, personal paths and any other private information from logs and screenshots.
 
 [← Home](../README.md)

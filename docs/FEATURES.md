@@ -1,63 +1,59 @@
-# 🎵 What does XNFS Playlist Builder do?
+# 🎵 What can XNFS Playlist Builder do?
 
-If you've ever wanted to hear **your own songs** in Need for Speed, this is the tool for it. You choose your music; the builder helps prepare the playlists.
+A closer look at the features, without needing to understand the programming behind them.
 
-[**⬇️ Download Beta 1.2**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip) · [**🚀 How to use it**](GETTING-STARTED.md) · [← Home](../README.md)
+[← Home](../README.md) · [Compare the games](GAMES-AND-COMPATIBILITY.md) · [Install guide](GETTING-STARTED.md)
 
-## Works with both games today
+## 1. Build a soundtrack from your own music
 
-| Feature | Carbon | Most Wanted (2005) |
-| --- | --- | --- |
-| Create your own music playlists | ✅ Yes | ✅ Yes |
-| Scan music folders | ✅ Yes | ✅ Yes |
-| Review and organize songs | ✅ Yes | ✅ Yes |
-| Game-specific playlist categories | Menu / Muscle / Tuner / Exotic | Frontend / Free Roam / Race / Pursuit |
-| Car-class-aware playback choices | ✅ Available | Not a Most Wanted feature |
-| Extra shuffle and recent-repeat avoidance | ✅ Available | More playback features planned |
-| Optional leveled playback copies | ✅ Available | Not confirmed as a Most Wanted feature |
-| Automatic changes between game situations | Class-oriented options available | 🚧 Being developed |
+Choose a music folder. The app scans your songs and displays music information such as titles, artists, lengths and genres when available.
 
-**Both games work today.** The table is about which *extra options* are ready, not whether the games are usable.
+It remembers the last folder you selected and can scan it again when you reopen the program.
 
-## Your music, your choices
+You can **search, view playlist categories, review unclassified songs, change genre labels and preview playlist order**.
 
-**Scan your library.** Pick a music folder and let the builder find your songs. It displays titles, artists, durations, file sizes and genres where available.
+## 2. Let the app help organize
 
-**Let the builder help sort.** Auto-classification suggests places for songs based on genre. It isn't perfect, especially when genre information is missing. You can review unclassified songs, edit genres, assign tracks by hand, and view the song order.
+Turn on **Auto-assign tracks by genre** to get suggestions. It's optional: you can choose the tracks and categories yourself.
 
-**Save your soundtrack.** Choose **Build / Save changes** to prepare the playlists. A save summary shows your categories and song totals.
+The program can balance the four playlists so they aren't wildly uneven. That means a song might land outside the genre group you'd expect. Review assignments before saving.
 
-## Carbon's extra features
+No fixed track cap is enforced by the builder.
 
-**Music that follows your car:** Carbon offers **Menu**, **Muscle**, **Tuner** and **Exotic** playlists, along with an option to match the music to your car.
+## 3. Let the game choose a playlist
 
-**Shuffle without constant repeats:** Optional shuffling can avoid songs you just heard. You can turn it off to follow playlist order.
+**Carbon:** Music can follow **Menu**, **Muscle**, **Tuner** and **Exotic** categories.
 
-**A way to skip:** The optional playback feature supports **F9** track skipping when enabled.
+**Most Wanted:** Music can follow **Safe House**, **Free Roam**, **Race** and **Pursuit**. Safe House includes main menus, too. The current game-state player has been tested, but the very latest merged menu/safe-house behavior still needs another in-game check.
 
-**More consistent song volumes:** Optional leveling prepares separate playback copies, rather than changing your original tracks. Preparing a large library may take a while and needs extra disk space. It does not adjust engine sounds, sound effects or game dialogue.
+## 4. Enjoy playback controls
 
-**Now Playing:** A companion window can show the current song while the builder runs. Exclusive-fullscreen games may cover this window.
+**Shuffle:** Optional shuffle can help avoid hearing the same few tracks too soon.
 
-**Backups and restoration:** Game changes can be tracked for later restoration where proper records exist. Always keep your own game backup too.
+**Skip:** Most Wanted uses **T while driving**; Carbon uses optional **F9**.
 
-## Most Wanted: what works and what's next?
+**Now Playing:** A companion window can show song information. Some games in exclusive fullscreen may cover it.
 
-You **can use Most Wanted today** to organize and save a custom soundtrack using **Frontend**, **Free Roam**, **Race** and **Pursuit** categories.
+**EA Trax:** Most Wanted can show song information using game notifications.
 
-What is *not finished yet* is automatic switching between those situations during gameplay. Carbon currently has the fuller set of in-game music features.
+## 5. Make the volume more consistent
 
-We want feedback from Most Wanted players about the existing workflow and what additional playback features would be most useful.
+Optional **audio leveling** produces additional playback copies with a more consistent perceived volume. It doesn't overwrite your original music.
 
-## Important public beta notes
+Large music libraries can take time and extra disk space to prepare the first time. Progress is shown while tracks are processed.
 
-- Carbon **1.2** has been tested in-game on the developer's computer, not across the wider community.
-- Carbon **1.4** support has been checked offline, but hasn't received a live-game test.
-- Your game installation, version and existing mods can affect results.
-- For Carbon game integration, a suitable **ASI loader** is required.
-- The Windows installer is **unsigned**.
-- No game files, commercial songs or third-party music libraries are included.
+In Carbon, an optional feature can lower the music during crew dialogue. **Most Wanted police-radio ducking is not available yet.** Game effects and speech volume can still be adjusted in the game's own sound settings.
 
-[**Questions? Read the help page →**](TROUBLESHOOTING.md)
+## 6. Backup, inspect and restore
+
+The feature installer can make backed-up copies when replacing a previous player setup. Installation checks show whether expected files and playlists are in place.
+
+**Restore backup** returns to a saved setup. **Restore original game** aims to undo the changes recorded since the first tracked installation. Neither can guarantee recovery if the original files or restore records were changed or lost.
+
+[Read the full restore guide](BACKUPS-AND-RESTORE.md).
+
+## What the beta doesn't promise
+
+This isn't an online music subscription, a complete music recognition service, or a replacement for your original game. Not every game executable and mod combination has been verified. Always keep a backup of the game before making changes.
 
 [← Home](../README.md)

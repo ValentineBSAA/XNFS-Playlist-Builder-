@@ -1,39 +1,51 @@
-name: "🐛 Something isn't working"
-description: Report a problem with Carbon, Most Wanted, or the builder
+name: "🐛 Something didn't work"
+description: Help us investigate Carbon or Most Wanted problems
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping test Beta 1.2! Both games work with the builder, but this is a beta and results can vary. Remove any private paths or personal information from screenshots and logs.
+        Thanks for trying XNFS Playlist Builder! Please avoid posting private Windows paths or personal information. Note which beta you're using: 3.0 Beta 1.2 or 3.2 Beta 1.4.
   - type: dropdown
     id: game
     attributes:
-      label: Which game or part of the app?
+      label: Which game?
       options:
-        - Carbon
         - Most Wanted (2005)
-        - The Windows application
+        - Carbon (2006)
+        - The builder app itself
+    validations:
+      required: true
+  - type: dropdown
+    id: beta
+    attributes:
+      label: Which beta?
+      options:
+        - 3.2 Beta 1.4
+        - 3.0 Beta 1.2
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: did
+    attributes:
+      label: What were you trying to do?
+      placeholder: For example, I was trying to save a new pursuit playlist.
     validations:
       required: true
   - type: textarea
     id: happened
     attributes:
-      label: What happened?
-      description: Tell us in your own words. Include what you clicked, if possible.
+      label: What happened instead?
     validations:
       required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: What did you expect instead?
   - type: input
     id: version
     attributes:
-      label: Game version (if known)
-      placeholder: "For example, Carbon 1.2"
+      label: Game version (if you know it)
+      placeholder: For example, Carbon 1.2
   - type: textarea
     id: extra
     attributes:
-      label: Anything else that might help? (optional)
-      description: Screenshots and error text are welcome. Remove private information before posting.
+      label: Anything else that could help?
+      description: Screenshots and logs are welcome. Remove personal paths and information first.

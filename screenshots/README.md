@@ -1,47 +1,36 @@
-# 📷 Take a tour of XNFS Playlist Builder
+# 📸 XNFS Playlist Builder screenshots
 
-Here are **six screenshots from Beta 1.2** on the developer's Windows PC. They show what the application looks like and how the main steps fit together.
+[← Homepage](../README.md) · [Get started](../docs/GETTING-STARTED.md)
 
-[**⬇️ Download the app**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip) · [**🚀 Easy setup guide**](../docs/GETTING-STARTED.md) · [← Home](../README.md)
+## 🔵 Carbon
 
-## 1. Choose your game and organize your songs
+[![Carbon soundtrack library, captured from the earlier 3.0 Beta 1.2](carbon-library.png)](carbon-library.png)
 
-### 🔵 Carbon
+*The earlier beta's Carbon editor: organize Menu, Muscle, Tuner and Exotic songs.*
 
-[![Carbon soundtrack library with Menu, Muscle, Tuner and Exotic playlists](carbon-library.png)](carbon-library.png)
+[![Carbon player feature selections, captured from the earlier 3.0 Beta 1.2](carbon-features.png)](carbon-features.png)
 
-Pick songs for **Menu**, **Muscle**, **Tuner**, and **Exotic**. Carbon also has extra in-game playback options.
+*Choose optional player features.*
 
-### 🟡 Most Wanted (2005)
+<details>
+<summary><b>More Carbon pictures: music processing and saved playlists</b></summary>
 
-[![Most Wanted gold soundtrack editor with Frontend, Free Roam, Race and Pursuit](most-wanted-preview.png)](most-wanted-preview.png)
+[![Music leveling progress](leveling-progress.png)](leveling-progress.png)
 
-**Most Wanted works today** for creating and saving custom playlists. Automatic transitions between game situations are still being developed.
+[![Playlist save summary](save-summary.png)](save-summary.png)
 
-## 2. Choose optional Carbon features
+[![Saved player files](saved-files.png)](saved-files.png)
 
-[![Carbon player features installation dialog](carbon-features.png)](carbon-features.png)
+</details>
 
-Turn optional Carbon options on or off before you install them.
+## 🟡 Most Wanted
 
-## 3. Watch your music being prepared
+[![Most Wanted editor, captured from the earlier 3.0 Beta 1.2](most-wanted-preview.png)](most-wanted-preview.png)
 
-[![Leveling music progress window](leveling-progress.png)](leveling-progress.png)
+*This is the **previous** Most Wanted interface, not the new Beta 1.4 design.*
 
-If you choose audio leveling, the builder shows progress while preparing separate playback copies. Your original songs stay unchanged.
+Beta 1.4 adds a revised Rockport soundtrack interface, state-specific music options, T-drive skipping, installation verification, and expanded restore screens. **Updated screenshots have been prepared for publication separately**, and will appear here when the new image files are transferred into GitHub.
 
-## 4. See the finished result
+**These pictures show real application interfaces, not proof of compatibility with every game installation.**
 
-[![Soundtrack saved summary with track counts](save-summary.png)](save-summary.png)
-
-See how many songs were saved in each playlist.
-
-## 5. Your saved playlists and backups
-
-[![Windows File Explorer showing playlist folder and backups](saved-files.png)](saved-files.png)
-
-The builder writes playlists for the player and keeps compatible backup records.
-
-> These are screenshots from one local PC. They're not a promise that every game version or modded setup has been tested.
-
-[← Home](../README.md)
+[← Homepage](../README.md)

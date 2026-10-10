@@ -1,70 +1,79 @@
-# 🚀 Get started in five steps
+# 🚀 Let's get your music into Need for Speed
 
-**This guide is for anyone using XNFS Playlist Builder for the first time.** You don't need programming skills.
+You don't need to be a computer expert. This guide explains the process from start to finish.
 
-**[⬇️ Download XNFS Playlist Builder Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** · [← Back to the homepage](../README.md)
+[← Home](../README.md) · [Which game is supported?](GAMES-AND-COMPATIBILITY.md) · [I need help](TROUBLESHOOTING.md)
 
-## Before you begin
+> **Which version can I download right now?** Beta 1.4's new Windows installer is prepared but isn't attached to a published GitHub release yet. Until that upload is finished, the public download is **[Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)**. This guide describes the updated Beta 1.4 controls; some labels may differ in the older beta.
 
-You'll need **Windows 10 or 11 (64-bit)**, your own **Need for Speed Carbon (2006)** or **Most Wanted (2005)** installation, and a folder of music you own.
+## Before you start
 
-**Both games work with the builder now.** Carbon has more options. Extra automatic playlist switching features for Most Wanted are still being developed.
+You'll need:
+- A PC with **Windows 10 or Windows 11 (64-bit)**.
+- Your own installation of **Carbon (2006)** or **Most Wanted (2005)**.
+- Some music files stored on your computer.
+- A compatible **ASI loader** in the game folder for custom in-game playback. This is a small component that allows the game to load player modifications.
 
-> **Back up your game folder before installing game features or saving playlists**, especially if your game is already modded. Close the game before making changes.
+**Make a copy of your game folder** before applying game features or saving playlists. This is particularly important if you already have mods installed.
 
-## 1. Download and install
+## Step 1: Download and install
 
-1. Click **[Download Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)**.
-2. Save **XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip**.
-3. Right-click the ZIP in Windows and choose **Extract All**.
-4. Open the extracted folder and run **XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe**.
+When Beta 1.4 is published, download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** (the final release file will be labeled clearly).
 
-**Don't download the GitHub “Source code” ZIP.** That is not the app installer.
+Right-click the downloaded ZIP, choose **Extract All**, and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
 
-The program is currently unsigned, so Windows may warn about an unknown publisher. Check that you downloaded it from this project's official release before deciding whether to continue.
+**Do not download the “Source code” ZIP** generated automatically by GitHub. It isn't a Windows installer.
 
-## 2. Choose your game
+The setup program is unsigned. Windows may ask you to confirm an unknown publisher. Double-check where you got the installer and proceed only if you trust it.
 
-Open **XNFS Playlist Builder** and select **Carbon** or **Most Wanted** at the top.
+## Step 2: Select your game
 
-Choose your **Game Folder** so the app can find the correct installation. You can use **Auto Detect** where it works, or pick the folder yourself.
+Open XNFS Playlist Builder.
 
-**For Carbon:** You need a compatible ASI loader installed in your game already for game integration. The supported Carbon 1.2 setup has only been tested on the developer's PC. Carbon 1.4 requires live-game testing.
+Choose **Carbon** or **Most Wanted** at the top of the application.
 
-## 3. Add your music
+Select **Game Folder** to show where that game is installed. You can try **Auto Detect** if you don't know the location.
 
-Choose **Music Folder**, select the folder where your songs are stored and press **Scan**.
+Select **XNFS Folder** if the app needs help finding the game's music-player folder.
 
-The app shows the songs it finds. You can review their names, artists, lengths and genres when that information is available. Songs with missing genre tags may need your help.
+The app checks whether the selected game version is compatible before installing features. If the check fails, don't force a different version; read the warning and ask for help.
 
-## 4. Make your playlists
+## Step 3: Find your songs
 
-**Carbon** gives you **Menu, Muscle, Tuner, Exotic**. Select **Match music to your car** and **Auto-classify genres** if you want help sorting, or choose the playlists yourself.
+Select **Music Folder** and choose where you store your music, then click **Scan**.
 
-**Most Wanted** gives you **Frontend, Free Roam, Race, Pursuit**. You can create and save your playlists today. Automatic in-game situation switching between these groups is still being developed.
+The app displays titles, artists, track lengths and genre information when available. It remembers your music folder and can scan it again in later sessions.
 
-Click **Review genres**, **Unclassified tracks**, or the assignment controls if something looks wrong.
+Missing genres? Use **Review genres**, **Unclassified tracks**, or **Edit genre** to organize them.
 
-### Optional Carbon playback features
+## Step 4: Choose your playlists
 
-Open **Install Carbon features** to choose optional playback features, including car-class playlists, shuffle and, when enabled, **F9 to skip tracks**. Read each installation prompt before continuing.
+**Most Wanted:** **Safe House** covers both the menus and safe house. **Free Roam**, **Race**, and **Pursuit** each have their own soundtracks. The automatic driving playlists feature selects music for the active situation when enabled.
 
-## 5. Save your soundtrack
+**Carbon:** **Menu**, **Muscle**, **Tuner**, and **Exotic** let you tailor the soundtrack to what you drive.
 
-1. **Close your game.**
-2. Click **Build / Save changes**.
-3. If you chose audio leveling, let it finish preparing separate music copies. This may take some time for large libraries.
-4. Read the summary to see what was saved.
+You can enable **Auto-assign tracks by genre** to get suggestions, or select music yourself. The app may balance track counts across categories, so review its suggestions.
 
-Your original music files are not changed by optional leveling. Game files and playlists **can** be changed by installing game features or saving, which is why the backup matters.
+Open **Install game features** to choose optional playback settings. Read the options before installing them. Most Wanted lets you use **T** to skip while driving; Carbon offers optional **F9** skipping.
 
-## What should I do if something goes wrong?
+## Step 5: Build and save
 
-- [**Frequently asked questions and troubleshooting**](TROUBLESHOOTING.md)
-- [**How backup and restore work**](BACKUPS-AND-RESTORE.md)
-- [**See pictures of each main screen**](../screenshots/README.md)
-- [**Tell us about a problem**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+**Close the game first.**
 
-**Remember:** Both games are usable in Beta 1.2, but this remains a public test. Results may vary between PCs, game versions and other installed mods.
+Click **Build / Save**.
+
+Wait for any optional loudness leveling to finish. Leveling makes separate playback copies; your original music stays unchanged.
+
+Read the save summary, then start your game.
+
+## Need to restore your game?
+
+Choose **Restore original game** to attempt to return tracked files to the state before the first builder installation. Choose **Restore backup** for a saved player/playlist setup, which may still include mods.
+
+These options work only when the required restore records are intact. [Read the restore guide](BACKUPS-AND-RESTORE.md) before proceeding.
+
+## If something doesn't work
+
+Check the selected folders, installed game features, compatible game version and completed Build / Save. The [common questions](TROUBLESHOOTING.md) page has more help.
 
 [← Back to the homepage](../README.md)

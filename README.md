@@ -2,117 +2,114 @@
 
 # 🏁 XNFS Playlist Builder
 
-### Play **your own music** in Need for Speed Carbon and Most Wanted (2005).
+### Your music. Your drive. Your soundtrack.
 
-**Both games work today.** Carbon has more features right now, and more features are planned for Most Wanted.
+**Build your own soundtracks for Need for Speed Carbon and Need for Speed Most Wanted (2005).**
 
-**Windows 10 / 11 (64-bit)** · **Free fan-made utility** · **Version 3.0 Beta 1.2**
+**Both games work.** Carbon has car-class music and crew-dialogue ducking. Most Wanted now has automatic driving playlists, in-game skipping, and a much stronger set of features.
 
-<a href="https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip"><img alt="Download XNFS Playlist Builder 3.0 Beta 1.2 for Windows" src="https://img.shields.io/badge/⬇_DOWNLOAD_FOR_WINDOWS-Beta_1.2-35BCEF?style=for-the-badge&labelColor=092238"></a>
+<img alt="Windows 10 and 11" src="https://img.shields.io/badge/Windows-10%20%2F%2011-249ac5?style=flat-square"> <img alt="Version 3.2 Beta 1.4" src="https://img.shields.io/badge/3.2-Beta%201.4-f0b94c?style=flat-square"> <img alt="Public beta" src="https://img.shields.io/badge/Public-Beta-73bd8d?style=flat-square">
 
-**[How to install](docs/GETTING-STARTED.md)** · **[See the pictures](screenshots/README.md)** · **[Get help](docs/TROUBLESHOOTING.md)**
+**[🚗 What can I do?](docs/FEATURES.md)** · **[🚀 How do I install it?](docs/GETTING-STARTED.md)** · **[💬 I need help](docs/TROUBLESHOOTING.md)**
 
 </div>
 
 ---
 
-## 👋 What is this?
+> [!IMPORTANT]
+> **Release transition:** The **3.2 Beta 1.4** upgrade is being prepared for GitHub publication. The installer currently attached to the public releases is **3.0 Beta 1.2**. Do not mistake the older download for Beta 1.4. This page explains the new Beta 1.4 features; the new installer will appear in Releases after the final upload.
 
-Ever wished you could drive through **Need for Speed** with your own music?
+### 📥 Want to try the publicly available version?
 
-XNFS Playlist Builder helps you choose songs from a folder on your PC, organize them for the game, and save a custom soundtrack. You can let the app suggest playlists or decide where every song goes yourself.
+**[⬇️ Download currently published Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** · **[See the GitHub releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases)**
 
-**You don't need to code, install Python, or make playlists by hand.**
+> The prepared **3.2 Beta 1.4** release will replace this download recommendation once its Windows installer is attached and published. Avoid GitHub's automatically generated “Source code” ZIPs: those are **not** the app.
 
-## ✅ Which games can I use?
+## 🎶 What is it?
 
-| Game | Works today? | What you get |
+Imagine driving through Carbon or Rockport with songs you actually chose.
+
+**XNFS Playlist Builder** finds music in a folder on your PC, helps organize it into game-specific playlists, and prepares it for your game. You can use genre suggestions or put every song exactly where you want it.
+
+You do **not** need to write code, edit configuration files by hand, or subscribe to a music service.
+
+## 🎮 Choose your game
+
+|  | 🔵 Carbon (2006) | 🟡 Most Wanted (2005) |
 | --- | --- | --- |
-| 🔵 **Need for Speed Carbon (2006)** | **Yes** | Custom music, Menu / Muscle / Tuner / Exotic playlists, car-class features, shuffle, audio leveling and more. |
-| 🟡 **Need for Speed Most Wanted (2005)** | **Yes** | Build and save your own soundtrack with Frontend / Free Roam / Race / Pursuit playlist categories. More advanced automatic switching is still being developed. |
+| **Custom playlists** | ✅ Yes | ✅ Yes |
+| **Soundtrack categories** | Menu, Muscle, Tuner, Exotic | Safe House, Free Roam, Race, Pursuit |
+| **Automatic in-game selection** | Follows car class | Follows driving situation |
+| **Skip a song** | Optional **F9** | **T** while driving |
+| **Shuffle / volume leveling** | Available | Available |
+| **Extra option** | Lower music during crew dialogue | EA Trax song notifications |
 
-> **A note about this beta:** Both games are usable, but this is still a testing release. Carbon **1.2** has been tested in-game on the developer's PC. Carbon **1.4** still needs in-game testing. More computers and game setups need testing, especially with existing mods.
+**Good to know:** In Most Wanted, **Safe House** includes both the game menus and the safe house. There is no separate Menu playlist to set up.
 
-## 🚀 Start in five easy steps
+Both games are usable, but installation and gameplay can vary by executable version and existing modifications. Read the [compatibility notes](docs/GAMES-AND-COMPATIBILITY.md) before changing your game.
 
-1. **[Download the Windows installer ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)**. Choose **XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip**, **not** GitHub's automatic “Source code” ZIP.
-2. **Extract the ZIP** and open **XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe**.
-3. **Open XNFS Playlist Builder** and choose **Carbon** or **Most Wanted**.
-4. **Pick your music folder**, select **Scan**, and review or change the song categories.
-5. **Close the game**, then select **Build / Save changes**. For Carbon, you can also choose **Install Carbon features** to set up its optional in-game playback options.
+## 🚀 It's as simple as choosing songs
 
-**Already have mods?** Make a backup of your game first. Carbon integration needs a compatible ASI loader. Simply installing the Windows app does **not** immediately change your game.
+1. **Download and install the Windows builder.**
+2. Choose **Carbon** or **Most Wanted**.
+3. Pick your **game folder** and **music folder**, then scan.
+4. Review your songs and choose the optional game playback features.
+5. With the game closed, select **Build / Save**, then launch your game.
 
-[**📖 See the full beginner's setup guide →**](docs/GETTING-STARTED.md)
+[**📖 First time doing this? Follow the illustrated, beginner-friendly setup guide →**](docs/GETTING-STARTED.md)
 
-## 📷 See what the app looks like
+> If this is your first game mod, the [setup guide](docs/GETTING-STARTED.md) explains what to back up and why an ASI loader is needed.
 
-### 🔵 Carbon: make a soundtrack for your car
+## 📷 See the application
 
-[![Blue Carbon soundtrack editor showing Menu, Muscle, Tuner and Exotic playlists](screenshots/carbon-library.png)](screenshots/carbon-library.png)
+### 🔵 Carbon soundtrack editor
 
-*Scan songs, adjust categories and make playlists for each kind of car.*
+[![Carbon's blue soundtrack builder in the previous public beta](screenshots/carbon-library.png)](screenshots/carbon-library.png)
 
-### 🟡 Most Wanted: make your own soundtrack
+*Create playlists for your Menu and the three car classes.*
 
-[![Gold Most Wanted soundtrack editor showing Frontend, Free Roam, Race and Pursuit](screenshots/most-wanted-preview.png)](screenshots/most-wanted-preview.png)
+### 🟡 Most Wanted soundtrack editor
 
-*Most Wanted already works for making custom playlists. Automatic changes between driving situations are a feature still being improved.*
+[![Gold Most Wanted soundtrack builder from the previous public beta](screenshots/most-wanted-preview.png)](screenshots/most-wanted-preview.png)
 
-<details>
-<summary><b>📸 See more pictures: optional features, audio leveling, saving and backups</b></summary>
+*This image is from the **previous public beta**. Beta 1.4's new Most Wanted screens will be added to the gallery as part of the screenshot update.*
 
-| Carbon playback options | Audio leveling progress |
-| --- | --- |
-| [![Carbon feature selections](screenshots/carbon-features.png)](screenshots/carbon-features.png) | [![Music leveling progress](screenshots/leveling-progress.png)](screenshots/leveling-progress.png) |
-| Your completed soundtrack | Files and saved backups |
-| [![Saved soundtrack categories](screenshots/save-summary.png)](screenshots/save-summary.png) | [![Playlist and backup files](screenshots/saved-files.png)](screenshots/saved-files.png) |
+[**📸 Browse the available application screenshots →**](screenshots/README.md)
 
-</details>
+## ✨ What's new in 3.2 Beta 1.4?
 
-[**View all six full-size screenshots →**](screenshots/README.md)
+Most Wanted received the biggest upgrade:
 
-## 🎶 What can I do with it?
+**Four automatic soundtracks.** Menu and safe-house music share one **Safe House** group; Free Roam, Race and Pursuit have their own groups.
 
-- **Use your own songs.** Choose a folder and scan your music collection.
-- **Let it organize songs.** Get genre-based suggestions, then change any assignment yourself.
-- **Have different playlists.** Carbon includes Menu, Muscle, Tuner and Exotic. Most Wanted includes Frontend, Free Roam, Race and Pursuit.
-- **Keep playback varied.** Carbon has optional shuffle that can avoid recently heard tracks.
-- **Even out song volumes.** Carbon's optional audio leveling makes separate playback copies, keeping your original files unchanged.
-- **See what happened.** Track preparation progress, get a summary when you save, and use the Now Playing companion window.
-- **Protect your setup.** There are backup and restore options for supported changes.
+**Skip without pausing.** Press **T** to move to the next track while driving in Most Wanted. Carbon continues using optional F9 skipping.
 
-[**Explore the features in everyday language →**](docs/FEATURES.md)
+**More equal footing.** Most Wanted now includes automatic driving-state routing, optional repeat-aware shuffle, music-leveling copies and EA Trax notifications.
 
-## ❓ Good to know before you download
+**Safer changes.** Clearer installation status checks, better backup handling, and separate options to restore a saved setup or return to tracked original game files.
 
-**Is Most Wanted supported now?**  
-**Yes.** You can use Most Wanted with the builder today. Carbon has more finished features. Most Wanted's automatic switching between menu, free roam, races and pursuits is still being developed.
+[**🏁 Read the full Beta 1.4 change guide →**](docs/WHATS-NEW-BETA-1.4.md)
 
-**Does it include the game or music?**  
-No. You need your own game installation and songs.
+## 🛡️ Before you modify a game
 
-**Will it change my original music files?**  
-Optional audio leveling prepares separate copies and leaves the originals alone. Saving playlists and installing game features can change files in your game directory, so back that up first.
+- Use **Windows 10 or 11, 64-bit**. Bring your own games and music; they are **not** included.
+- Make a backup of your game, especially if you already use mods or another XNFS music player.
+- For in-game integration you need a **compatible ASI loader** and supported game executable.
+- Installing the Windows builder alone does **not** automatically modify your game. Installing game features or saving playlists can.
+- **Beta software:** Carbon 1.2 has been tested in-game, while Carbon 1.4 still needs wider game testing. Most Wanted's latest merged menu/safe-house behavior still needs a follow-up live test.
+- The installer is **unsigned**, so Windows might display an unknown-publisher warning. Only run software you trust.
 
-**Why might Windows show a warning?**  
-The installer is not digitally signed yet. Only open the file if you trust the download source.
+## ❤️ Questions, bugs, or ideas?
 
-**Can I undo game changes?**  
-The app offers restore options when the necessary backup records exist. [Learn how restoring works](docs/BACKUPS-AND-RESTORE.md).
+[**💬 Common questions**](docs/TROUBLESHOOTING.md) · [**🛡️ Backups and restoring**](docs/BACKUPS-AND-RESTORE.md) · [**🐛 Report a problem**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
 
-**Having trouble?**  
-Read the [common questions](docs/TROUBLESHOOTING.md) or [report a problem](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Tell us which game you're using and what happened.
+When reporting a problem, tell us your game, game version, Windows version, and what happened. Remove personal paths from screenshots or logs.
 
 ---
 
 <div align="center">
 
-### 💙 Thanks for helping test Beta 1.2!
-
-**[⬇️ Download Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** · **[📖 Installation help](docs/GETTING-STARTED.md)** · **[🐛 Report a problem](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)**
-
-Made by **valentine** · Original **XNFSMusicPlayer** by **Lovro Pleše (xan1242)**.
+**Made by valentine** · Original XNFSMusicPlayer by **Lovro Pleše (xan1242)**
 
 <sub>Independent fan-made utility. Not affiliated with or endorsed by Electronic Arts. Need for Speed and related trademarks belong to their respective owners.</sub>
 
