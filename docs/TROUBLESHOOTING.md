@@ -1,47 +1,73 @@
-# 💬 Questions and troubleshooting
+# 💬 Common questions and help
 
-## Carbon isn't playing music
+Here are the answers to the questions people are most likely to have while using **Beta 1.2**.
 
-Check that you have a supported Carbon **1.2 or 1.4** executable, an appropriate existing ASI loader, the right game and XNFSMusicPlayer folders, and that you actually installed the optional Carbon features and saved the playlist. Close the game before changing files.
+[**⬇️ Official download**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip) · [**🚀 Setup steps**](GETTING-STARTED.md) · [← Home](../README.md)
 
-Only **Carbon 1.2** has been confirmed during actual play on the developer's own PC. Carbon 1.4 still needs live testing.
+## Does it work with both games?
 
-## Why doesn't Most Wanted change music when I start a race or pursuit?
+**Yes. Both Carbon and Most Wanted (2005) are usable now.** Carbon currently has more features.
 
-**Most Wanted remains under development.** You can organize and export playlists, but automatic switching among Frontend, Free Roam, Race and Pursuit isn't finished in this beta.
+**Most Wanted's automatic playlist switching** between Frontend, Free Roam, Race and Pursuit is still being developed. That doesn't mean the Most Wanted part of the builder is unavailable.
 
-## Why are songs in unexpected categories?
+## Which download do I choose?
 
-The app offers genre-based suggestions, and balancing can place songs outside their preferred category. Missing or unfamiliar genre tags may require a manual choice. Use **Review genres**, **Unclassified tracks**, **Edit genre**, and assignment controls to tidy up before saving.
+Choose **XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip** from the [official release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.0-beta.1.2). Extract it and run the **Setup.exe** inside.
 
-## Why does volume leveling take a while?
+**Don't choose “Source code (zip)” or “Source code (tar.gz)”.** Those are GitHub's automatic repository archives, not the Windows installer.
 
-It prepares separate playback copies of songs and may need extra time and disk space for the first scan. You can watch song-by-song progress; long tracks may make the progress bar appear to pause. Later passes can reuse verified copies.
+## Carbon isn't playing my music. What should I check?
 
-## Does leveling turn down the engine or character dialogue?
+- Is the game **Carbon 1.2 or 1.4**? Only those inspected versions are intended for this beta.
+- Do you already have a compatible **ASI loader**?
+- Did you choose the correct **Game Folder** and **XNFS Folder**?
+- Did you select **Install Carbon features**, if needed?
+- Did you **Build / Save changes**?
+- Is the game **closed** while you make installation changes?
 
-No. It adjusts the loudness of the music copies, not the engine, effects or in-game dialogue. The separate crew-volume control has not yet been proven effective during live play.
+Carbon 1.2 has only been tested in-game on the developer's own PC. Carbon 1.4 still needs live testing.
 
-## What about my original music?
+## Why doesn't Most Wanted automatically change music during a race or pursuit?
 
-Your own source recordings stay unchanged when optional leveling is used.
+That *specific advanced feature* is still under development. You can already build and save Most Wanted playlists, but fully automatic in-game situation switching isn't finished.
 
-## Where is Now Playing?
+## Why are songs in the wrong playlist?
 
-It's a companion window; keep the builder open to use it. Exclusive-fullscreen games might cover it.
+The automatic genre sorter makes suggestions rather than perfect decisions. Tracks without useful genre tags may require manual attention.
 
-## Can I undo game modifications?
+Use **Review genres**, **Unclassified tracks**, **Edit genre**, and the song-assignment controls.
 
-Use the backup and restore controls when valid backup records are available. See [Backups and restore](BACKUPS-AND-RESTORE.md).
+## Why is audio leveling taking so long?
 
-## Windows warns about an unknown publisher
+When enabled, leveling prepares separate playback copies. First-time preparation of a large library can take time and uses extra disk space. Watch the song counts and progress window.
 
-The beta installer is not digitally signed. Confirm that you downloaded the intended release and review Windows warnings.
+**Your original music recordings remain unchanged.**
 
-## How should I report a bug?
+## Does audio leveling control engines or dialogue?
 
-Open [a GitHub issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Include which game and game version, your Windows version, what you clicked, what you expected and what happened.
+No. It makes the *music tracks* more consistent with one another. It doesn't change engine effects or voices. Crew-voice volume controls have not yet been proven in live play.
 
-If Carbon playback fails, the `XNFSMusicPlayer.log` file in `scripts/XNFSMusicPlayer` may be helpful. **Remove usernames, private paths, IP addresses and personal information** from screenshots and logs before posting them publicly.
+## Can I undo something?
 
-[← Back to the homepage](../README.md)
+There are backup/restore options for supported changes. Restoration depends on backup records being intact. **Back up your original game installation before changing anything.** [Read the restore guide](BACKUPS-AND-RESTORE.md).
+
+## Why does Windows warn me about the installer?
+
+The public beta is not digitally signed. Check that you downloaded it from the official release and make your own decision whether to run it.
+
+## Why can't I see the Now Playing window?
+
+It is a companion window that requires the builder to be running. Some exclusive-fullscreen games may cover it.
+
+## How do I get help or report a bug?
+
+[**Report a problem on GitHub**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Tell us:
+1. Which game you're using, and its version if known.
+2. What you tried.
+3. What happened instead.
+
+You can attach screenshots. For Carbon playback problems, the **XNFSMusicPlayer.log** file inside your game's **scripts/XNFSMusicPlayer** folder may help.
+
+**Before posting logs or screenshots publicly, remove private usernames, full personal paths, addresses and other personal details.**
+
+[← Home](../README.md)

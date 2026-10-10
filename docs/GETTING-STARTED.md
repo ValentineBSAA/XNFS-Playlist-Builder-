@@ -1,46 +1,70 @@
-# 🚀 Getting started with XNFS Playlist Builder
+# 🚀 Get started in five steps
 
-Welcome to the **3.0 Beta 1.2**! No programming knowledge, Python installation or command line needed.
+**This guide is for anyone using XNFS Playlist Builder for the first time.** You don't need programming skills.
 
-> **Before you play:** Carbon 1.2 has been game-tested only on the developer's own computer. Carbon 1.4 has not had a live game test. Most Wanted support is still a work in progress.
+**[⬇️ Download XNFS Playlist Builder Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** · [← Back to the homepage](../README.md)
 
-## What you'll need
+## Before you begin
 
-- **Windows 10 or 11 (64-bit)**
-- A copy of Need for Speed Carbon or Need for Speed Most Wanted (2005)
-- Music files you own
-- For Carbon, a compatible ASI loader already installed and one of the inspected Carbon **1.2/1.4** executables
+You'll need **Windows 10 or 11 (64-bit)**, your own **Need for Speed Carbon (2006)** or **Most Wanted (2005)** installation, and a folder of music you own.
 
-Back up your game first, especially if you already have XNFSMusicPlayer or other mods.
+**Both games work with the builder now.** Carbon has more options. Extra automatic playlist switching features for Most Wanted are still being developed.
 
-## Step 1: Install the builder
+> **Back up your game folder before installing game features or saving playlists**, especially if your game is already modded. Close the game before making changes.
 
-[Download the official beta ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip), extract it and run `XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe`. The app is unsigned, so Windows may show an unknown-publisher warning. Only run files from a source you trust.
+## 1. Download and install
 
-**Installing the app alone won't change either game.**
+1. Click **[Download Beta 1.2](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)**.
+2. Save **XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip**.
+3. Right-click the ZIP in Windows and choose **Extract All**.
+4. Open the extracted folder and run **XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe**.
 
-## Step 2: Find your music
+**Don't download the GitHub “Source code” ZIP.** That is not the app installer.
 
-Open the builder, choose **Carbon** or **Most Wanted**, select your music folder and press **Scan**. You'll see track titles, artists, lengths and genres where available. The builder remembers your music folder and can rescan it on subsequent launches if it's still connected.
+The program is currently unsigned, so Windows may warn about an unknown publisher. Check that you downloaded it from this project's official release before deciding whether to continue.
 
-## Step 3: Organize your soundtrack
+## 2. Choose your game
 
-**Carbon:** Organize music into **Menu, Muscle, Tuner and Exotic** playlists. Use **Match music to your car** and **Auto-classify genres** for automated suggestions, or assign tracks yourself. Review unclassified music and adjust the order before saving.
+Open **XNFS Playlist Builder** and select **Carbon** or **Most Wanted** at the top.
 
-**Most Wanted:** Prepare categories for **Frontend, Free Roam, Race and Pursuit**. Playlist export is available, but automatic in-game switching between those categories is **not yet complete**.
+Choose your **Game Folder** so the app can find the correct installation. You can use **Auto Detect** where it works, or pick the folder yourself.
 
-## Step 4: Optional Carbon features
+**For Carbon:** You need a compatible ASI loader installed in your game already for game integration. The supported Carbon 1.2 setup has only been tested on the developer's PC. Carbon 1.4 requires live-game testing.
 
-Choose **Install Carbon features** to review car-class playback, shuffle and supported skip controls. **F9** can skip a song when the feature is enabled. The Carbon player may replace an existing XNFSMusicPlayer component; keep the backup and read the app's prompts. Existing loaders and BASS libraries are intended to stay in place.
+## 3. Add your music
 
-## Step 5: Save
+Choose **Music Folder**, select the folder where your songs are stored and press **Scan**.
 
-**Close your game** first. Then press **Build / Save changes**. If you selected audio leveling, let the builder prepare playback copies. Original recordings remain untouched, but the copies use extra storage. The completion window shows where the playlists were written and how many tracks were assigned.
+The app shows the songs it finds. You can review their names, artists, lengths and genres when that information is available. Songs with missing genre tags may need your help.
 
-## Want to undo a change?
+## 4. Make your playlists
 
-Use **Restore backup** or **Restore original game**, depending on what's available for your installation. Exact restoration is only possible when the required records and backups exist. Uninstalling the builder alone doesn't automatically undo game modifications. Read [Backups and restore](BACKUPS-AND-RESTORE.md).
+**Carbon** gives you **Menu, Muscle, Tuner, Exotic**. Select **Match music to your car** and **Auto-classify genres** if you want help sorting, or choose the playlists yourself.
 
-Need help? See [Troubleshooting](TROUBLESHOOTING.md), or [report a problem](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose).
+**Most Wanted** gives you **Frontend, Free Roam, Race, Pursuit**. You can create and save your playlists today. Automatic in-game situation switching between these groups is still being developed.
+
+Click **Review genres**, **Unclassified tracks**, or the assignment controls if something looks wrong.
+
+### Optional Carbon playback features
+
+Open **Install Carbon features** to choose optional playback features, including car-class playlists, shuffle and, when enabled, **F9 to skip tracks**. Read each installation prompt before continuing.
+
+## 5. Save your soundtrack
+
+1. **Close your game.**
+2. Click **Build / Save changes**.
+3. If you chose audio leveling, let it finish preparing separate music copies. This may take some time for large libraries.
+4. Read the summary to see what was saved.
+
+Your original music files are not changed by optional leveling. Game files and playlists **can** be changed by installing game features or saving, which is why the backup matters.
+
+## What should I do if something goes wrong?
+
+- [**Frequently asked questions and troubleshooting**](TROUBLESHOOTING.md)
+- [**How backup and restore work**](BACKUPS-AND-RESTORE.md)
+- [**See pictures of each main screen**](../screenshots/README.md)
+- [**Tell us about a problem**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+
+**Remember:** Both games are usable in Beta 1.2, but this remains a public test. Results may vary between PCs, game versions and other installed mods.
 
 [← Back to the homepage](../README.md)

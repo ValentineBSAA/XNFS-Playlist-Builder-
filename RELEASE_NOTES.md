@@ -1,43 +1,54 @@
-# 🏁 XNFS Playlist Builder 3.0 | Beta 1.2
+# 🏁 XNFS Playlist Builder 3.0 | Public Beta 1.2
 
-**The first public testing release of XNFS Playlist Builder by valentine.**
+### Your music. Your drive. Your soundtrack.
 
-Create your own soundtrack for **Need for Speed Carbon** and prepare playlists for **Need for Speed Most Wanted (2005)**.
+**Both Need for Speed Carbon (2006) and Need for Speed Most Wanted (2005) work with the builder today.** Carbon currently has more playback features.
 
-## What's inside
+This beta is a friendly Windows application for bringing your own music into Need for Speed. Choose a music folder, scan your songs, decide which playlist each track should be in, and save your soundtrack.
 
-- Four Carbon collections: **Menu, Muscle, Tuner and Exotic**, with automated genre suggestions, manual editing and ordering.
-- Car-class-aware playback, optional shuffle with recent-repeat avoidance and optional F9 song skipping.
-- Library scanning with track details, unclassified-song review, duplicates reporting and remembered music folders.
-- Optional audio leveling that prepares separate playback copies. Your originals are left untouched.
-- Progress while songs are prepared and a save summary showing playlist totals.
-- Backup and restore controls to help undo tracked game changes.
-- A Now Playing companion window.
-- Early Most Wanted playlist preparation/export with **Frontend, Free Roam, Race and Pursuit** categories.
+## ⬇️ How to install
 
-## Important testing status
+1. Download **XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip** from the assets below. **Do not choose GitHub's “Source code” ZIP.**
+2. Extract it, then run **XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe**.
+3. Open the builder, choose **Carbon** or **Most Wanted**, and scan your music folder.
+4. Review your playlists. Close the game before saving. For Carbon, you can also install its optional player features.
 
-| Game | Testing status |
-| --- | --- |
-| **Carbon 1.2** | Game-tested on the developer's own PC only. Custom music, class routing, skipping and leveled copies tested. |
-| **Carbon 1.4** | Prepared and checked offline, not verified in live gameplay. |
-| **Most Wanted (2005)** | Still under development. Playlist output exists; automatic switching among game states isn't finished. |
+You need **Windows 10 or 11 (64-bit)**, your own game installation, and your own music. Carbon integration also needs a compatible ASI loader. Back up your game before changing its files.
 
-This is **public beta software**. Other PCs, game builds and combinations of mods haven't yet been broadly tested.
+## 🔵 Carbon: more features today
 
-## Install
+- Custom music in **Menu, Muscle, Tuner, Exotic** playlists
+- Genre suggestions and manual song assignments
+- Optional music matched to your car class
+- Optional shuffle with repeat avoidance
+- Optional **F9** song skipping
+- Optional audio leveling using separate playback copies
+- Progress tracking, playlist summaries and **Now Playing**
+- Backup/restore controls for supported changes
 
-1. **[Download the official Beta 1.2 ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-3.0-Beta-1.2-Public.zip)** from the published GitHub release.
-2. Extract it and run `XNFS-Playlist-Builder-3.0-Beta-1.2-Setup.exe`.
-3. Use Windows 10 or 11, 64-bit. The installer is unsigned; review any Windows warning.
-4. For Carbon, have a compatible ASI loader in place and back up your game installation before applying features.
+**Testing:** Carbon **1.2** has been game-tested on the developer's PC. Carbon **1.4** has been checked offline but still needs a live game test. Other PCs and mod combinations are not yet broadly verified.
 
-The original game and commercial music are not included. Installing the Windows program by itself does not automatically alter your game. Installing features or saving playlists can change files in your chosen game folder.
+## 🟡 Most Wanted: works now, more features coming
 
-For full steps see [Getting started](docs/GETTING-STARTED.md). For backup details see [Backups and restoring](docs/BACKUPS-AND-RESTORE.md). For help see [Troubleshooting](docs/TROUBLESHOOTING.md).
+You can use the Most Wanted section **today** to prepare and save your own music playlists for **Frontend, Free Roam, Race and Pursuit**.
 
-**[Explore the six screenshots](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)** (ZIP download).
+Carbon has more finished playback controls. **Fully automatic switching between Most Wanted's driving situations is still being developed**, so don't expect that extra feature to be complete in Beta 1.2.
 
-**File verification:** [SHA-256 of original beta ZIP](docs/SHA256-OF-PUBLIC-BETA.txt).
+## 📷 See the app
 
-This is a fan-made project by valentine. Original XNFSMusicPlayer by Lovro Pleše (xan1242). Not affiliated with Electronic Arts.
+[**Browse all six real application screenshots**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/tree/main/screenshots) directly on GitHub.
+
+## 💬 Help us improve it
+
+This is a **public beta**, not a finished, universally tested release. If something works differently on your computer, [**report it here**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Carbon and Most Wanted feedback are both welcome.
+
+Full documentation:
+- [Easy installation instructions](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md)
+- [Features explained](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/FEATURES.md)
+- [Common questions and help](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/TROUBLESHOOTING.md)
+- [Backing up and restoring](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/BACKUPS-AND-RESTORE.md)
+- [Original ZIP SHA-256 checksum](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/SHA256-OF-PUBLIC-BETA.txt)
+
+Made by **valentine**. Original **XNFSMusicPlayer** by **Lovro Pleše (xan1242)**.
+
+Independent fan-made project. Not affiliated with or endorsed by Electronic Arts. Need for Speed and related trademarks belong to their respective owners.
