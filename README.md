@@ -34,23 +34,42 @@ XNFS Playlist Builder finds the songs you already own, organizes them for your g
 
 ## 📸 Take a look inside the app
 
-The beta includes **six real application screenshots**, showing the Carbon and Most Wanted designs, the Carbon feature selector, music leveling, the finished soundtrack and the saved files.
+Real screenshots from **3.0 Beta 1.2**, with a blue-themed Carbon workspace and a gold-themed Most Wanted preview.
+
+### 🔵 Carbon soundtrack builder
 
 <p align="center">
-  <a href="https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip">
-    <img alt="Download all six application screenshots" src="https://img.shields.io/badge/%F0%9F%93%B8_View_6_Real_Screenshots-Download_Gallery-33BDEA?style=for-the-badge&labelColor=101820">
+  <a href="screenshots/carbon-library.png">
+    <img src="screenshots/carbon-library.png" alt="Carbon screenshot: music library with Menu, Muscle, Tuner, and Exotic playlists" width="1000">
   </a>
 </p>
 
-| <span style="color:#33BDEA">🔵 Carbon soundtrack</span> | <span style="color:#F2A826">🟡 Most Wanted preview</span> |
-| --- | --- |
-| Menu, Muscle, Tuner and Exotic playlists | Frontend, Free Roam, Race and Pursuit categories |
-| Car-class playlist options and shuffle | Dedicated gold-themed editing interface |
-| Audio leveling, progress and save confirmation | Playlist export while in-game switching is still in development |
+*Bring in your music, find missing genres, and organize Menu, Muscle, Tuner and Exotic playlists.*
 
-**[📥 Download the six application screenshots](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)** as a ZIP to view them at full resolution.
+### 🟡 Most Wanted development preview
 
-> The screenshots are available in the official release archive. They are **not yet embedded individually in this README**, because their image files have not been added to the repository. See the [screenshot folder](screenshots/README.md) for details.
+<p align="center">
+  <a href="screenshots/most-wanted-preview.png">
+    <img src="screenshots/most-wanted-preview.png" alt="Most Wanted screenshot: gold-themed soundtrack builder with Frontend, Free Roam, Race, and Pursuit playlists" width="1000">
+  </a>
+</p>
+
+*Most Wanted playlists can be prepared and exported. **Automatic in-game situation switching is still under development.***
+
+<details>
+<summary><strong>📷 View four more screenshots: features, leveling, saving and backups</strong></summary>
+
+<br>
+
+| **Choose Carbon features** | **Watch audio leveling progress** |
+| :---: | :---: |
+| [![Carbon feature installer and playback options](screenshots/carbon-features.png)](screenshots/carbon-features.png) | [![Song leveling progress with song counts](screenshots/leveling-progress.png)](screenshots/leveling-progress.png) |
+| **Confirm your saved soundtrack** | **Find your playlists and backups** |
+| [![Completed soundtrack showing category totals](screenshots/save-summary.png)](screenshots/save-summary.png) | [![Saved XNFS music player playlist, normalized audio and backup files](screenshots/saved-files.png)](screenshots/saved-files.png) |
+
+</details>
+
+**[📂 Browse all six full-size screenshots](screenshots/README.md)** · **[📥 Download the screenshot ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.0-beta.1.2/XNFS-Playlist-Builder-Beta-1.2-Screenshots.zip)**
 
 ## 🚦 What works today?
 
