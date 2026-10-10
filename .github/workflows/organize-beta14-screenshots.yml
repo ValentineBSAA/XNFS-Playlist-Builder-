@@ -1,0 +1,81 @@
+name: Import and organize Beta 1.4 screenshots
+
+on:
+  push:
+    paths:
+      - ".github/workflows/organize-beta14-screenshots.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-gallery:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Download and verify four Beta 1.4 images
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/xnfs-beta14-images
+          gh release download v3.1-beta-1.4 \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern 'XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' \
+            --dir /tmp/xnfs-beta14-images
+          echo '325e327706f8fac51f254d476de9c5080e1c947bf65a38238b384f18fc674014  /tmp/xnfs-beta14-images/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip' | sha256sum --check
+          python3 - <<'PY'
+          from pathlib import Path
+          from zipfile import ZipFile
+          from shutil import copy2
+
+          archive=Path('/tmp/xnfs-beta14-images/XNFS-Playlist-Builder-3.2-Beta-1.4-GitHub-Screenshots.zip')
+          images={
+            'most-wanted-library.png':'screenshots/most-wanted/library.png',
+            'most-wanted-features.png':'screenshots/most-wanted/features.png',
+            'most-wanted-installation-status.png':'screenshots/most-wanted/installation-status.png',
+            'most-wanted-original-restore.png':'screenshots/most-wanted/restore-original.png'
+          }
+          with ZipFile(archive) as z:
+            assert z.testzip() is None,'ZIP failed integrity test'
+            assert set(z.namelist())==set(images),'Expected exactly four Most Wanted screenshots'
+            for source,target in images.items():
+              data=z.read(source)
+              assert data[:8]==b'\x89PNG\r\n\x1a\n' and len(data)>1000,'Invalid image'
+              out=Path(target)
+              out.parent.mkdir(parents=True,exist_ok=True)
+              out.write_bytes(data)
+              print(target,len(data))
+
+          old={
+            'screenshots/carbon-library.png':'screenshots/carbon/library.png',
+            'screenshots/carbon-features.png':'screenshots/carbon/features.png',
+            'screenshots/leveling-progress.png':'screenshots/shared/leveling-progress.png',
+            'screenshots/save-summary.png':'screenshots/shared/save-summary.png',
+            'screenshots/saved-files.png':'screenshots/shared/saved-files.png',
+            'screenshots/most-wanted-preview.png':'screenshots/most-wanted/previous-beta-preview.png'
+          }
+          for source,target in old.items():
+            source=Path(source)
+            assert source.is_file(),'Missing existing screenshot: '+str(source)
+            target=Path(target)
+            target.parent.mkdir(parents=True,exist_ok=True)
+            copy2(source,target)
+            print(target,target.stat().st_size)
+          PY
+      - name: Commit clean image folders
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add screenshots/carbon screenshots/most-wanted screenshots/shared
+          if git diff --cached --quiet; then
+            echo "Images already imported"
+          else
+            git commit -m "Organize Carbon, Most Wanted Beta 1.4, and shared screenshot galleries"
+            git push origin main
+          fi
