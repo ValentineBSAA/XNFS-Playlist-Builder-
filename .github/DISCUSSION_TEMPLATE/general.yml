@@ -1,0 +1,18 @@
+title: ""
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for visiting XNFS Playlist Builder! This is a relaxed place to ask questions, share successful installs, report testing results, or suggest ideas for Need for Speed Carbon (2006) and Most Wanted (2005).
+
+        A one-line update is welcome. You do not need a technical report. For detailed bugs, the Issues tab has a separate bug-report form.
+
+        Please remove personal information from any screenshots or logs.
+  - type: textarea
+    id: message
+    attributes:
+      label: What would you like to share?
+      description: If relevant, tell us which game and which version of XNFS Playlist Builder you tried.
+      placeholder: "I tried Beta 1.4 with Most Wanted on Windows 11, and T to skip tracks worked!"
+    validations:
+      required: true
