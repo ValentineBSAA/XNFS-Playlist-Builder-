@@ -15,15 +15,15 @@
 | **Safe House** | Main menus **and** safe house |
 | **Free Roam** | Exploring Rockport |
 | **Race** | Racing |
-| **Pursuit** | Police chases; **interactive pursuit music is not working in Beta 1.4** |
+| **Pursuit** | Police chases; **full interactive pursuit music was not implemented in Beta 1.4** |
 
 **There is no separate Menu playlist.** Safe House includes menu music, so you only need one playlist for both.
 
-> **Important Beta 1.4 limitation:** The Pursuit playlist can be edited in the builder, but **interactive in-game pursuit music is not functioning as intended**. A revised implementation is being developed for **Beta 1.5**, which is **not ready for release**. The presence of a Pursuit category in the interface does not mean the feature has been verified as working.
+> **Important Beta 1.4 limitation:** The Pursuit playlist can be edited in the builder, and some supporting playback work exists, but **a complete, working interactive pursuit-music system was never implemented in Beta 1.4**. It is an **unfinished feature**, not a completed feature that later stopped working. Completion is being addressed for **Beta 1.5**, which is **not ready for release**. A visible Pursuit category does not mean interactive pursuit music is available.
 
 ## Music features
 
-- **Situation-based playlists:** organize music for Safe House, Free Roam, Race, and Pursuit. Some prior state-based playback was tested, but **interactive pursuit behavior is not working in this beta**.
+- **Situation-based playlists:** organize music for Safe House, Free Roam, Race, and Pursuit. Some prior state-based playback was tested, but **the full interactive pursuit-music system was not implemented in this beta**.
 - **T to skip:** press **T while driving** to move to the next song without pausing, when installed.
 - **EA Trax notifications:** display supported song information using game notifications.
 - **Shuffle with repeat avoidance:** keep songs from repeating too frequently.
@@ -53,9 +53,9 @@
 
 You'll need your own game and music files, **Windows 10 or 11 (64-bit)**, a supported game executable, and a compatible **ASI loader** for in-game playback.
 
-**Testing status:** Earlier Most Wanted playback behavior, **T-key skipping**, and restoration were tested by the developer. **Interactive pursuit music is a known nonworking feature in public Beta 1.4.** The latest update combining main-menu and Safe House behavior still needs an in-game recheck. Compatibility can differ on other PCs and modded games.
+**Testing status:** Earlier Most Wanted playback behavior, **T-key skipping**, and restoration were tested by the developer. **Interactive pursuit music was never fully implemented in public Beta 1.4.** The latest update combining main-menu and Safe House behavior still needs an in-game recheck. Compatibility can differ on other PCs and modded games.
 
-**Developer clarification:** I'm sorry if this documentation previously suggested Beta 1.4 had been fully tested. I'm developing this project on my own and cannot test every gameplay scenario or system configuration. I should have described the known limitations more clearly.
+**Developer clarification:** I'm sorry I previously presented the Pursuit feature as if its complete interactive behavior was implemented and tested. It wasn't. I'm developing the project on my own and cannot test every gameplay scenario or system configuration, but I should have identified this as **unfinished implementation**, not just incomplete testing.
 
 Make a backup of your game before installing features.
 
