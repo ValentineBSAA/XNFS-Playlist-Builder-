@@ -17,6 +17,8 @@
 
 ## Step 1: Download the real installer
 
+> **Important before downloading:** Most Wanted's full **interactive pursuit-music system was never fully implemented in Beta 1.4**. You can organize a Pursuit playlist, but the dynamic system is unfinished. **The existing installer is unchanged**; no setting or reinstall enables that missing feature. [Read the public clarification](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2). **Beta 1.5 is still in development, not released.**
+
 **[⬇️ Download XNFS Playlist Builder 3.2 Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**
 
 The file you want is **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip**.
