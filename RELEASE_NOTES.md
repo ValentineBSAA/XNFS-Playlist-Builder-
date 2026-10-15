@@ -2,7 +2,21 @@
 
 **Your music. Your drive. Your soundtrack.**
 
-Play your own music in **Need for Speed Carbon (2006)** and **Need for Speed Most Wanted (2005)**. Both games work with the builder. **Most Wanted received major upgrades in this release**, bringing its music controls much closer to Carbon's.
+Play your own music in **Need for Speed Carbon (2006)** and **Need for Speed Most Wanted (2005)**. Both games are supported by the builder, but **not all in-game features are fully implemented or tested in Beta 1.4**.
+
+## ⚠️ Important correction for Beta 1.4: interactive pursuit music
+
+**The complete interactive pursuit-music system for Most Wanted (2005) was never fully implemented in public Beta 1.4.** The **Pursuit** playlist appears in the builder and can be edited, but it is **not a completed, working interactive pursuit system**. Please do not install this beta expecting dynamic interactive pursuit music. This is **unfinished functionality**, not a feature that was completed and later stopped working.
+
+**If you already installed Beta 1.4:** There is no missed setup step that would enable the missing complete interactive system. This notice corrects the documentation; **the existing Beta 1.4 installer has not been fixed or replaced**.
+
+Work to complete the implementation is underway for **Beta 1.5**, but **Beta 1.5 is not ready for release** and has no promised release date. Other supported and tested features should not be assumed broken because of this limitation.
+
+**Developer apology:** I'm sorry for previously presenting interactive pursuit music as if it was implemented and tested. I'm the sole developer and cannot test every feature, game state, or mod combination, but I should have been clearer about what was complete versus unfinished. Thank you to Kronos and everyone providing honest feedback.
+
+[**Read the known-issue notice / discussion**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2) · [**Beta 1.4 testing status**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.4.md)
+
+---
 
 ### 📥 Get started
 
@@ -40,11 +54,11 @@ Play your own music in **Need for Speed Carbon (2006)** and **Need for Speed Mos
 | **Safe House** | Both the menus and safe house |
 | **Free Roam** | Exploring Rockport |
 | **Race** | Racing |
-| **Pursuit** | Police chases |
+| **Pursuit** | Playlist category for police chases; **full interactive system not included in Beta 1.4** |
 
-**Most Wanted extras:** automatic driving-situation music, **T** to skip while driving, EA Trax song notifications, smart shuffle and volume leveling.
+**Most Wanted extras:** driving-situation playlist tools, **T** to skip while driving, EA Trax song notifications, smart shuffle and volume leveling. **The full interactive pursuit-music feature was not implemented in this beta.**
 
-**This is the big Beta 1.4 upgrade:** Most Wanted now has much more complete in-game music controls and new installation/restore screens. Police-radio ducking is **not** included.
+**This is the big Beta 1.4 upgrade:** Most Wanted has more music-management controls and new installation/restore screens. **Interactive pursuit music was not completed; police-radio ducking is also not included.** Those are separate features.
 
 [**See four new Most Wanted screenshots and details**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/MOST-WANTED.md)
 
@@ -62,7 +76,7 @@ Play your own music in **Need for Speed Carbon (2006)** and **Need for Speed Mos
 
 **Carbon 1.2** has been tested in-game on the developer's computer. **Carbon 1.4** has been checked offline and needs live-game testing.
 
-Earlier **Most Wanted** driving-state playback, T skipping and restoration were tested. The **latest combined menu/Safe House change** still needs a follow-up live-game test. Different game installations and mod combinations may behave differently.
+Earlier **Most Wanted** playback behavior, **T skipping** and restoration were tested, but **full interactive pursuit music was never implemented in Beta 1.4**. The **latest combined menu/Safe House change** still needs a follow-up live-game test. Different game installations and mod combinations may behave differently.
 
 If something isn't working, please [**report an issue**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Mention which game and game version you're using and what happened. Remove private information from screenshots or logs.
 
