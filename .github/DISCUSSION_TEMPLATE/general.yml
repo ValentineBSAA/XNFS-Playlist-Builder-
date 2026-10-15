@@ -5,6 +5,8 @@ body:
       value: |
         Thanks for visiting XNFS Playlist Builder! This is a relaxed place to ask questions, share successful installs, report testing results, or suggest ideas for Need for Speed Carbon (2006) and Most Wanted (2005).
 
+        **Known Beta 1.4 limitation:** The complete Most Wanted interactive pursuit-music system was never fully implemented in this release. The visible Pursuit playlist does not mean the interactive feature works. The Beta 1.4 installer is unchanged; Beta 1.5 is in development, not ready for release. See https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2.
+
         A one-line update is welcome. You do not need a technical report. For detailed bugs, the Issues tab has a separate bug-report form.
 
         Please remove personal information from any screenshots or logs.
