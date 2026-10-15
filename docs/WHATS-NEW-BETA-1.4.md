@@ -6,15 +6,15 @@
 
 ## Known issue: interactive pursuit music
 
-**Status of the public 3.2 Beta 1.4 release (October 14, 2026):** Interactive pursuit music for **Need for Speed Most Wanted (2005) is not currently working as intended**. The builder displays a Pursuit playlist, but its interactive in-game pursuit behavior is **not a tested, working feature**. Please do not download Beta 1.4 expecting fully functional interactive pursuit music.
+**Clarification for public 3.2 Beta 1.4 (October 14, 2026):** The **complete interactive pursuit-music system was never fully implemented in Beta 1.4** for Need for Speed Most Wanted (2005). The builder lets you create and edit a **Pursuit** playlist, and some supporting playback groundwork exists, but the full interactive behavior was not completed or integrated as a working feature. **This is unfinished functionality, not a previously working feature that broke.** Please do not download Beta 1.4 expecting fully functional interactive pursuit music.
 
-The implementation is being addressed as part of **Beta 1.5 development**. **Beta 1.5 is not ready for release**, and no release date is being promised here. This does not mean that the entire builder or every other music feature is broken.
+Completing the missing interactive implementation is being addressed as part of **Beta 1.5 development**. **Beta 1.5 is not ready for release**, and no release date is being promised here. This does not mean that the entire builder or every other music feature is broken.
 
-**A message from the sole developer:** I'm sorry if earlier descriptions of Beta 1.4 led anyone to believe every aspect of the application had been completely tested. I test the features and game setups available to me, but as one developer I can't cover every feature, gameplay condition, computer, or mod combination. I should have been more precise about what was confirmed, what was still being tested, and what was not working. Thank you for your patience and for sharing test reports.
+**A message from the sole developer:** I apologize for describing interactive pursuit music as if it was already working in Beta 1.4 when its full implementation was not actually included. As the sole developer, I test the features and setups available to me, but I cannot cover every gameplay condition, computer, or mod combination. That is a limitation, not an excuse for inaccurate release documentation. I should have clearly separated **implemented and tested**, **partially implemented**, and **planned** features. Thank you to Kronos and everyone reporting issues and helping me improve the project.
 
 ## 🟡 Most Wanted: a major upgrade
 
-**Four playlist categories.** Safe House (including menus), Free Roam, Race and Pursuit. **The interactive Pursuit implementation is not working in Beta 1.4**, despite the category appearing in the editor.
+**Four playlist categories.** Safe House (including menus), Free Roam, Race and Pursuit. **The full interactive Pursuit system was never implemented in Beta 1.4**, despite the category appearing in the editor.
 
 **T to skip songs.** Move to the next song while driving, without opening the pause menu.
 
@@ -26,7 +26,7 @@ The implementation is being addressed as part of **Beta 1.5 development**. **Bet
 
 [![New Most Wanted 3.2 Beta 1.4 game features](../screenshots/most-wanted/features.png)](../screenshots/most-wanted/features.png)
 
-**Testing note:** Earlier Most Wanted playback routing, T skipping and restoration were tested by the developer. This is limited testing; it does **not** establish that interactive pursuit music works. The latest change merging menus into Safe House still needs a new live-game test.
+**Testing note:** Earlier Most Wanted playback routing, T skipping and restoration were tested by the developer. This is limited testing; **interactive pursuit music was not fully implemented in this release**. The latest change merging menus into Safe House still needs a new live-game test.
 
 ## 🔵 Carbon: the car-class specialist
 
@@ -46,10 +46,10 @@ The implementation is being addressed as part of **Beta 1.5 development**. **Bet
 - Optional music leveling that preserves original recordings.
 - Better setup checks, status information, and restoring tracked changes.
 
-## Still being tested
+## Incomplete features and ongoing testing
 
-- The newest Most Wanted menu/Safe House behavior.
-- **Known not working:** Most Wanted interactive pursuit music; a revised implementation is being developed for unreleased Beta 1.5.
+- The newest Most Wanted menu/Safe House behavior still needs further testing.
+- **Not fully implemented in Beta 1.4:** Most Wanted interactive pursuit music. Completing it is part of unreleased Beta 1.5 development.
 - Carbon 1.4 live gameplay.
 - Compatibility with additional PCs and mod configurations.
 
