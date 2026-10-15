@@ -6,7 +6,7 @@
 
 ## Known issue: interactive pursuit music
 
-**Clarification for public 3.2 Beta 1.4 (October 14, 2026):** The **complete interactive pursuit-music system was never fully implemented in Beta 1.4** for Need for Speed Most Wanted (2005). The builder lets you create and edit a **Pursuit** playlist, and some supporting playback groundwork exists, but the full interactive behavior was not completed or integrated as a working feature. **This is unfinished functionality, not a previously working feature that broke.** Please do not download Beta 1.4 expecting fully functional interactive pursuit music.
+**Clarification for public 3.2 Beta 1.4 (October 14, 2026):** The **complete interactive pursuit-music system was never fully implemented in Beta 1.4** for Need for Speed Most Wanted (2005). The builder lets you create and edit a **Pursuit** playlist, and some supporting playback groundwork exists, but the full interactive behavior was not completed or integrated as a working feature. **This is unfinished functionality, not a previously working feature that broke.** Please do not download Beta 1.4 expecting fully functional interactive pursuit music. **If you have already installed Beta 1.4, there is no hidden setup switch that adds the unfinished complete system. This clarification does not change or replace the downloaded Beta 1.4 installer.**
 
 Completing the missing interactive implementation is being addressed as part of **Beta 1.5 development**. **Beta 1.5 is not ready for release**, and no release date is being promised here. This does not mean that the entire builder or every other music feature is broken.
 
@@ -54,5 +54,7 @@ Completing the missing interactive implementation is being addressed as part of 
 - Compatibility with additional PCs and mod configurations.
 
 **Most Wanted police-radio music ducking is not included in Beta 1.4.** This is a separate feature from interactive pursuit music.
+
+[**Public known-issue notice and discussion**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2)
 
 [**Need help?**](TROUBLESHOOTING.md) · [**Report a test result**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
