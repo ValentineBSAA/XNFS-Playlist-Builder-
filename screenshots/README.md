@@ -10,7 +10,7 @@ Screens are organized by game, with shared features shown separately. Click any 
 
 [![Most Wanted Beta 1.4 soundtrack library showing Safe House, Free Roam, Race and Pursuit](most-wanted/library.png)](most-wanted/library.png)
 
-Safe House includes menus; Free Roam, Race and Pursuit have their own playlist categories. **Important:** The Pursuit category is shown in this screenshot, but **the full interactive pursuit-music system was never implemented in public Beta 1.4**. The updated implementation is still in development for **Beta 1.5**, which is not ready for release.
+Safe House includes menus; Free Roam, Race and Pursuit have their own playlist categories. **Important:** The Pursuit category is shown in this screenshot, but **the full interactive pursuit-music system was never implemented in public Beta 1.4**. The updated implementation is still in development for **Beta 1.5**, which is not ready for release. **The Beta 1.4 download is unchanged.** [Read the public known-issue notice](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2).
 
 ### 2. Choose your playback options
 
