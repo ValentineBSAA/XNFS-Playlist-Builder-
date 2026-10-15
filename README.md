@@ -6,7 +6,7 @@
 
 Make your own soundtracks for **Need for Speed Carbon (2006)** and **Need for Speed Most Wanted (2005)**.
 
-**Both games are supported by the builder**, but some in-game features are still incomplete or require more testing. In particular, interactive pursuit music in Most Wanted is not working in Beta 1.4 (details below).
+**Both games are supported by the builder**, but some in-game features are still incomplete or require more testing. In particular, the full interactive pursuit-music system for Most Wanted was **not fully implemented in Beta 1.4** (details below).
 
 **Windows 10 / 11 · 64-bit · Public Beta 3.2 / 1.4**
 
@@ -20,11 +20,11 @@ Make your own soundtracks for **Need for Speed Carbon (2006)** and **Need for Sp
 
 ## ⚠️ Beta 1.4 known issue: Most Wanted interactive pursuit music
 
-**Interactive pursuit music is not currently working in the public 3.2 Beta 1.4 release.** The **Pursuit** playlist is visible in the builder, but its interactive in-game behavior is **not functioning as intended**. Please do not treat it as a tested, working feature.
+**The complete interactive pursuit-music system was never fully implemented in public 3.2 Beta 1.4.** The builder includes a **Pursuit** playlist for organizing tracks and some underlying playback groundwork, but that is **not the same as a complete, functioning interactive pursuit-music system**. This was an **incomplete feature**, not a finished feature that later broke. Please do not install Beta 1.4 expecting fully functional interactive pursuit music.
 
-A revised implementation is being worked on for **Beta 1.5**. **Beta 1.5 is still in development and is not ready for release.** See the [Beta 1.4 status and testing notes](docs/WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
+Completing the interactive pursuit-music implementation is being addressed for **Beta 1.5**. **Beta 1.5 is still in development and is not ready for release.** See the [Beta 1.4 status and testing notes](docs/WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
-**A note from the developer:** I'm sorry if the earlier Beta 1.4 documentation gave anyone the impression that every feature was fully tested and working. I'm the sole developer of XNFS Playlist Builder. I test as much as I can, but I cannot personally verify every game state, feature, PC configuration, or mod combination. I should have communicated those testing limits more clearly. Thank you to everyone trying the beta and reporting issues.
+**A note from the developer:** I'm sorry I described interactive pursuit music in a way that suggested it was already implemented and working in Beta 1.4. That was inaccurate. I'm the sole developer of XNFS Playlist Builder, and while I test as much as I can, I cannot personally verify every game state, feature, PC configuration, or mod combination. That limitation doesn't excuse presenting an incomplete feature as finished. I should have made the distinction clear before release. Thank you to Kronos and everyone helping identify and report problems.
 
 ---
 
@@ -60,9 +60,9 @@ Most Wanted has four soundtrack groups:
 
 | Safe House | Free Roam | Race | Pursuit |
 | --- | --- | --- | --- |
-| Menus and safe house | Driving around Rockport | Racing | Playlist for police chases; interactive pursuit music is **not working in Beta 1.4** |
+| Menus and safe house | Driving around Rockport | Racing | Playlist for police chases; **full interactive system not implemented in Beta 1.4** |
 
-**What makes Most Wanted different?** It offers playlists for different driving situations, **T** can skip songs while driving, and **EA Trax notifications** can display song information. **Interactive Pursuit playback is currently not working** in Beta 1.4.
+**What makes Most Wanted different?** It offers playlists for different driving situations, **T** can skip songs while driving, and **EA Trax notifications** can display song information. **Full interactive Pursuit playback was not implemented** in Beta 1.4.
 
 [**Explore Most Wanted's features and four new screenshots →**](docs/MOST-WANTED.md)
 
@@ -92,7 +92,7 @@ Want the detailed comparison? [**Carbon vs. Most Wanted feature table →**](doc
 
 ## 🆕 What's different in Beta 1.4?
 
-**Most Wanted has had the biggest upgrade.** Its Safe House, Free Roam, Race, and Pursuit playlist categories, T-key skipping, shuffle, leveling, EA Trax notifications, and install/restore controls bring it much closer to Carbon's overall experience. **However, interactive pursuit music does not currently work in Beta 1.4** and is being addressed in the unreleased Beta 1.5.
+**Most Wanted has had the biggest upgrade.** Its Safe House, Free Roam, Race, and Pursuit playlist categories, T-key skipping, shuffle, leveling, EA Trax notifications, and install/restore controls bring it much closer to Carbon's overall experience. **However, the full interactive pursuit-music system was not completed or released in Beta 1.4** and is being addressed in the unreleased Beta 1.5.
 
 Carbon retains its car-class soundtrack system and optional crew-dialogue ducking.
 
@@ -102,7 +102,7 @@ Carbon retains its car-class soundtrack system and optional crew-dialogue duckin
 
 > **This is a public beta.** Keep a backup of your game folder, especially if you have other mods. A compatible ASI loader and supported game executable are needed for in-game music features. The installer is unsigned, so Windows may display an unknown-publisher warning.
 >
-> Carbon 1.2 has been tested in-game on the developer's PC; Carbon 1.4 still needs live-game testing. Earlier Most Wanted playback behavior and T-key skipping were tested, but **interactive pursuit music is not working in Beta 1.4**; the newest combined menu/Safe House adjustment also needs another live test. Other PCs and mod combinations need community testing.
+> Carbon 1.2 has been tested in-game on the developer's PC; Carbon 1.4 still needs live-game testing. Earlier Most Wanted playback behavior and T-key skipping were tested, but **full interactive pursuit music was never fully implemented in Beta 1.4**; the newest combined menu/Safe House adjustment also needs another live test. Other PCs and mod combinations need community testing.
 
 Installing the Windows builder alone doesn't automatically alter your game. Installing game features or saving playlists **can** change game files.
 
