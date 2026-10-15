@@ -19,7 +19,7 @@
 
 **There is no separate Menu playlist.** Safe House includes menu music, so you only need one playlist for both.
 
-> **Important Beta 1.4 limitation:** The Pursuit playlist can be edited in the builder, and some supporting playback work exists, but **a complete, working interactive pursuit-music system was never implemented in Beta 1.4**. It is an **unfinished feature**, not a completed feature that later stopped working. Completion is being addressed for **Beta 1.5**, which is **not ready for release**. A visible Pursuit category does not mean interactive pursuit music is available.
+> **Important Beta 1.4 limitation:** The Pursuit playlist can be edited in the builder, and some supporting playback work exists, but **a complete, working interactive pursuit-music system was never implemented in Beta 1.4**. It is an **unfinished feature**, not a completed feature that later stopped working. Completion is being addressed for **Beta 1.5**, which is **not ready for release**. A visible Pursuit category does not mean interactive pursuit music is available. **The downloadable Beta 1.4 installer has not been patched, so existing users are not missing a configuration option that enables the full system.** [Read the public clarification](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2).
 
 ## Music features
 
