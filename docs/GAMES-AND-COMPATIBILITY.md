@@ -22,7 +22,7 @@
 
 **Safe House in Most Wanted also includes main-menu music.** There isn't a separate menu playlist to configure.
 
-**The Pursuit playlist is available to edit, but the full interactive pursuit-music system was never implemented in Beta 1.4.** It is an incomplete feature, not a regression from previously working functionality. Completing the implementation is being addressed for **Beta 1.5**, which is **not ready for release**.
+**The Pursuit playlist is available to edit, but the full interactive pursuit-music system was never implemented in Beta 1.4.** It is an incomplete feature, not a regression from previously working functionality. Completing the implementation is being addressed for **Beta 1.5**, which is **not ready for release**. **The Beta 1.4 installer has not been updated to add this feature.** [Read the public known-issue notice](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2).
 
 **Police-radio ducking for Most Wanted isn't included** in this release.
 
