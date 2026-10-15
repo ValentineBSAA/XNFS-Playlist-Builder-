@@ -1,6 +1,6 @@
 # 🟡 Need for Speed Most Wanted (2005)
 
-### A soundtrack for every part of Rockport.
+### Build your own soundtrack for Rockport.
 
 [← Home](../README.md) · [Carbon guide](CARBON.md) · [⬇️ Download](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)
 
@@ -10,18 +10,20 @@
 
 ## The four Most Wanted soundtracks
 
-| Playlist | When it's used |
+| Playlist | Intended use / current status |
 | --- | --- |
 | **Safe House** | Main menus **and** safe house |
 | **Free Roam** | Exploring Rockport |
 | **Race** | Racing |
-| **Pursuit** | Police chases |
+| **Pursuit** | Police chases; **interactive pursuit music is not working in Beta 1.4** |
 
 **There is no separate Menu playlist.** Safe House includes menu music, so you only need one playlist for both.
 
+> **Important Beta 1.4 limitation:** The Pursuit playlist can be edited in the builder, but **interactive in-game pursuit music is not functioning as intended**. A revised implementation is being developed for **Beta 1.5**, which is **not ready for release**. The presence of a Pursuit category in the interface does not mean the feature has been verified as working.
+
 ## Music features
 
-- **Automatic situation-based playlists:** the player selects a soundtrack for the current driving state.
+- **Situation-based playlists:** organize music for Safe House, Free Roam, Race, and Pursuit. Some prior state-based playback was tested, but **interactive pursuit behavior is not working in this beta**.
 - **T to skip:** press **T while driving** to move to the next song without pausing, when installed.
 - **EA Trax notifications:** display supported song information using game notifications.
 - **Shuffle with repeat avoidance:** keep songs from repeating too frequently.
@@ -51,7 +53,9 @@
 
 You'll need your own game and music files, **Windows 10 or 11 (64-bit)**, a supported game executable, and a compatible **ASI loader** for in-game playback.
 
-**Testing status:** Earlier Most Wanted driving-state playback, T skipping, and restoration were tested by the developer. **The latest update combining main-menu and Safe House behavior still needs an in-game recheck.** Compatibility can differ on other PCs and modded games.
+**Testing status:** Earlier Most Wanted playback behavior, **T-key skipping**, and restoration were tested by the developer. **Interactive pursuit music is a known nonworking feature in public Beta 1.4.** The latest update combining main-menu and Safe House behavior still needs an in-game recheck. Compatibility can differ on other PCs and modded games.
+
+**Developer clarification:** I'm sorry if this documentation previously suggested Beta 1.4 had been fully tested. I'm developing this project on my own and cannot test every gameplay scenario or system configuration. I should have described the known limitations more clearly.
 
 Make a backup of your game before installing features.
 
