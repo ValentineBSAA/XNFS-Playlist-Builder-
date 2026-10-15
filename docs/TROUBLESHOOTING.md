@@ -36,7 +36,9 @@ Most Wanted now uses **Safe House** for both menus and the safe house. This is i
 
 ## Does Most Wanted change music for pursuits?
 
-Automatic Safe House, Free Roam, Race and Pursuit routing is part of Beta 1.4. Prior game-state testing was successful, but the newest combined Safe House/menu routing still needs final live testing.
+**Not as intended in public Beta 1.4.** The builder includes a **Pursuit** playlist, but the **interactive in-game pursuit-music implementation is not currently working**. Earlier tests of other playback behavior do not mean this pursuit feature works. The implementation is being addressed in **Beta 1.5**, which is **not ready for release**. Please don't install Beta 1.4 expecting fully working interactive pursuit music.
+
+I'm sorry if the earlier feature description made the beta seem more thoroughly tested than it was. This is a one-developer project, and I cannot test every feature and game setup myself.
 
 ## Why is audio leveling slow?
 
@@ -55,6 +57,10 @@ No. **Restore backup** returns to a saved player/playlist setup. **Restore origi
 ## Why does Windows warn about an unknown publisher?
 
 The installer is currently unsigned. Make sure it came from the official project's GitHub release and only run it if you trust the source.
+
+## Is Beta 1.4 fully tested?
+
+**No.** Some functions, including Most Wanted T-key skipping, have been tested by the developer; other features and system combinations have limited coverage. **Interactive pursuit music is a known nonworking feature**, rather than merely an untested one. Please read the [full testing status](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
 ## How do I report a problem?
 
