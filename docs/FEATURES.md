@@ -16,7 +16,7 @@ Choose your own music, let the builder help organize it, then prepare playlists 
 
 ## While driving
 
-**Automatic music:** Carbon can follow Muscle, Tuner and Exotic cars. Most Wanted can follow Safe House, Free Roam, Race and Pursuit.
+**Automatic music:** Carbon can follow Muscle, Tuner and Exotic cars. Most Wanted includes Safe House, Free Roam, Race, and Pursuit playlist categories, but **the complete interactive pursuit-music behavior was never fully implemented in Beta 1.4**. A visible Pursuit playlist is **not** proof that dynamic pursuit music is ready. Work on the missing implementation is ongoing for **Beta 1.5 (not release-ready)**.
 
 **Skip a track:** Carbon offers optional F9. Most Wanted uses T while driving after installing the feature.
 
@@ -42,6 +42,8 @@ Processing a large collection may take extra time and disk space; the builder sh
 
 ## A reminder about the beta
 
-Both games are usable, but some combinations of game executables, mods, and computers have not been broadly tested. The latest Most Wanted combined menu/Safe House adjustment needs its final in-game recheck.
+Both games are supported by the builder, but some features and combinations of game executables, mods, and computers have not been broadly tested. **Most Wanted interactive pursuit music was not completed in Beta 1.4**, and the latest combined menu/Safe House adjustment needs an in-game recheck. **The Beta 1.4 installer remains unchanged; the documentation update does not fix the missing feature.**
+
+[**Read the Beta 1.4 known-issue notice**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2)
 
 [**Get started**](GETTING-STARTED.md) · [← Home](../README.md)
