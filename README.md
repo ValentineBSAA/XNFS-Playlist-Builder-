@@ -12,6 +12,8 @@ Make your own soundtracks for **Need for Speed Carbon (2006)** and **Need for Sp
 
 ### [⬇️ Download XNFS Playlist Builder for Windows](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)
 
+**Before downloading Beta 1.4: the full Most Wanted interactive pursuit-music feature was NOT included. The download has NOT been patched.**
+
 [**First-time setup guide**](docs/GETTING-STARTED.md) · [**Browse screenshots**](screenshots/README.md) · [**Help & questions**](docs/TROUBLESHOOTING.md)
 
 </div>
@@ -22,7 +24,7 @@ Make your own soundtracks for **Need for Speed Carbon (2006)** and **Need for Sp
 
 **The complete interactive pursuit-music system was never fully implemented in public 3.2 Beta 1.4.** The builder includes a **Pursuit** playlist for organizing tracks and some underlying playback groundwork, but that is **not the same as a complete, functioning interactive pursuit-music system**. This was an **incomplete feature**, not a finished feature that later broke. Please do not install Beta 1.4 expecting fully functional interactive pursuit music.
 
-Completing the interactive pursuit-music implementation is being addressed for **Beta 1.5**. **Beta 1.5 is still in development and is not ready for release.** See the [Beta 1.4 status and testing notes](docs/WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
+Completing the interactive pursuit-music implementation is being addressed for **Beta 1.5**. **Beta 1.5 is still in development and is not ready for release.** If you already installed Beta 1.4, **you have not missed a setting that unlocks the complete feature; this is a documentation correction, not an updated installer.** See the [public known-issue notice](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2) and [Beta 1.4 status and testing notes](docs/WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
 **A note from the developer:** I'm sorry I described interactive pursuit music in a way that suggested it was already implemented and working in Beta 1.4. That was inaccurate. I'm the sole developer of XNFS Playlist Builder, and while I test as much as I can, I cannot personally verify every game state, feature, PC configuration, or mod combination. That limitation doesn't excuse presenting an incomplete feature as finished. I should have made the distinction clear before release. Thank you to Kronos and everyone helping identify and report problems.
 
@@ -119,7 +121,7 @@ Installing the Windows builder alone doesn't automatically alter your game. Inst
 | Undo changes | [Backups and restoration](docs/BACKUPS-AND-RESTORE.md) |
 | Check game compatibility and files | [Technical notes](docs/TECHNICAL-NOTES.md) |
 
-**[Download Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)** · **[Report a problem or idea](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)**
+**[Download Beta 1.4 (known limitations apply)](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)** · **[Known-issue notice](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2)** · **[Report a problem or idea](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)**
 
 ---
 
