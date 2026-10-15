@@ -10,7 +10,9 @@ The main pages are written for beginners. This page collects the setup facts tha
 
 For in-game music playback you need a **supported executable** and a **compatible ASI loader**. Game versions and installed mods may affect behavior. The builder's compatibility checks should be respected, not bypassed.
 
-Carbon **1.2** has received developer live-game testing. Carbon **1.4** has been checked offline and still needs live testing. Most Wanted's earlier Beta 1.4 state routing, T skipping and restoration were tested; the newest merged menu/Safe House routing requires a new acceptance test.
+Carbon **1.2** has received developer live-game testing. Carbon **1.4** has been checked offline and still needs live testing. Some earlier Most Wanted Beta 1.4 playback behavior, **T skipping**, and restoration were tested; the newest merged menu/Safe House routing requires a new acceptance test.
+
+**Known nonworking feature in public Beta 1.4:** Most Wanted **interactive pursuit music** does not currently function as intended. The Pursuit category in the builder does not prove the runtime feature works. The revised implementation is being addressed for **Beta 1.5**, which is **not release-ready**. The sole developer cannot test every game state or mod setup; see the [public status clarification](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
 ## What gets changed?
 
