@@ -6,6 +6,8 @@ body:
     attributes:
       value: |
         Thanks for trying XNFS Playlist Builder! Please avoid posting private Windows paths or personal information. Note which beta you're using: 3.0 Beta 1.2 or 3.2 Beta 1.4.
+
+        **Before reporting Most Wanted pursuit-music issues:** The complete interactive pursuit-music system was never fully implemented in Beta 1.4. This is already acknowledged at https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2. It is being addressed for Beta 1.5, which is not yet release-ready. Report other problems normally.
   - type: dropdown
     id: game
     attributes:
