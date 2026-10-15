@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
+  - name: "⚠️ Beta 1.4 incomplete pursuit music"
+    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2
+    about: Clarification about the missing full interactive Pursuit system and Beta 1.5 status
   - name: "📖 Getting started"
     url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md
     about: Installing the builder and creating playlists
