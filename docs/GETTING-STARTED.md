@@ -46,10 +46,12 @@ The app reads available song information, including names, artists, genres, and 
 | In Carbon | In Most Wanted |
 | --- | --- |
 | **Menu**, **Muscle**, **Tuner**, **Exotic** | **Safe House**, **Free Roam**, **Race**, **Pursuit** |
-| Car-class music | Situation-based music |
+| Car-class music | Situation-based playlists; **interactive Pursuit music is not working in Beta 1.4** |
 | Optional F9 skipping | T to skip while driving |
 
 For Most Wanted, **Safe House includes the menus**, too.
+
+> **Beta 1.4 known issue:** Although Most Wanted lets you organize a **Pursuit** playlist, **interactive pursuit music is not working as intended** in this release. The implementation is being addressed for **Beta 1.5**, which is **not ready for release**. See the [current status note](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
 You can try **Auto-assign tracks by genre**, review unclassified music, change individual assignments, and choose playlist order. Genre suggestions aren't always perfect.
 
@@ -68,6 +70,6 @@ Choose **Install game features** if you want optional in-game playback controls.
 
 [**Troubleshooting and frequently asked questions**](TROUBLESHOOTING.md) · [**Backups and restoration**](BACKUPS-AND-RESTORE.md) · [**All screenshots**](../screenshots/README.md)
 
-**Beta testing reminder:** Not all game versions or mod combinations have been verified. The latest Most Wanted menu/Safe House change still needs a new live-game test.
+**Beta testing reminder:** Not all features, game versions, or mod combinations have been verified. **Most Wanted interactive pursuit music is known not to work in Beta 1.4**, and the latest menu/Safe House change still needs a new live-game test.
 
 [← Home](../README.md)
