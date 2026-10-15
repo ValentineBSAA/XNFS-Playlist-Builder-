@@ -10,13 +10,13 @@ Screens are organized by game, with shared features shown separately. Click any 
 
 [![Most Wanted Beta 1.4 soundtrack library showing Safe House, Free Roam, Race and Pursuit](most-wanted/library.png)](most-wanted/library.png)
 
-Safe House includes menus; Free Roam, Race and Pursuit have their own playlists.
+Safe House includes menus; Free Roam, Race and Pursuit have their own playlist categories. **Important:** The Pursuit category is shown in this screenshot, but **interactive pursuit music is not working in public Beta 1.4**. The updated implementation is still in development for **Beta 1.5**, which is not ready for release.
 
 ### 2. Choose your playback options
 
 [![Most Wanted Beta 1.4 music feature installer](most-wanted/features.png)](most-wanted/features.png)
 
-Configure automatic driving music, skipping, shuffle and other supported features.
+Configure available driving-music options, skipping, shuffle and other supported features. **A visible option is not proof that its runtime behavior has been fully tested**; see the [Beta 1.4 known issue](../docs/WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
 ### 3. Check installation status
 
@@ -78,6 +78,6 @@ These shared screenshots were captured with the earlier Beta 1.2 interface.
 
 </details>
 
-*Screenshots show the developer's Windows application, not proof that every supported setup has been tested. The newest Most Wanted combined menu/Safe House behavior still needs another in-game acceptance test.*
+*Screenshots show the developer's Windows application, not proof that every supported setup has been tested. Interactive pursuit music is known not to work in Beta 1.4. The newest Most Wanted combined menu/Safe House behavior still needs another in-game acceptance test.*
 
 [← Home](../README.md)
