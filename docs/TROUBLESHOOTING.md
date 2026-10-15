@@ -36,9 +36,9 @@ Most Wanted now uses **Safe House** for both menus and the safe house. This is i
 
 ## Does Most Wanted change music for pursuits?
 
-**Not as intended in public Beta 1.4.** The builder includes a **Pursuit** playlist, but the **interactive in-game pursuit-music implementation is not currently working**. Earlier tests of other playback behavior do not mean this pursuit feature works. The implementation is being addressed in **Beta 1.5**, which is **not ready for release**. Please don't install Beta 1.4 expecting fully working interactive pursuit music.
+**No. Not fully in public Beta 1.4.** The builder includes a **Pursuit** playlist and some underlying playback groundwork, but **the full interactive pursuit-music system was never completely implemented in this beta**. It is unfinished functionality, **not a completed feature that broke**. Earlier tests of other playback behavior do not establish that interactive pursuit music was ever finished. Completing the feature is being addressed for **Beta 1.5**, which is **not ready for release**. Please don't install Beta 1.4 expecting fully functional interactive pursuit music.
 
-I'm sorry if the earlier feature description made the beta seem more thoroughly tested than it was. This is a one-developer project, and I cannot test every feature and game setup myself.
+I'm sorry the earlier feature description incorrectly suggested interactive pursuit music had been implemented and tested. This is a one-developer project, and I cannot test every feature and game setup myself, but the incomplete implementation should have been clearly disclosed.
 
 ## Why is audio leveling slow?
 
@@ -60,7 +60,7 @@ The installer is currently unsigned. Make sure it came from the official project
 
 ## Is Beta 1.4 fully tested?
 
-**No.** Some functions, including Most Wanted T-key skipping, have been tested by the developer; other features and system combinations have limited coverage. **Interactive pursuit music is a known nonworking feature**, rather than merely an untested one. Please read the [full testing status](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
+**No.** Some functions, including Most Wanted T-key skipping, have been tested by the developer; other features and system combinations have limited coverage. **Interactive pursuit music was never fully implemented in Beta 1.4**, rather than simply being an implemented feature that hasn't been tested. Please read the [full testing status](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
 
 ## How do I report a problem?
 
