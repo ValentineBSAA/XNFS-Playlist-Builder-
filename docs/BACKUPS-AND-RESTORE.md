@@ -1,36 +1,39 @@
-# 🛡️ Backups and restoring your game
+# 🛡️ Backups and restoring a game in Beta 1.5
 
-**Save a copy of your game folder before installing player features or changing playlists.** The builder has safety features, but personal backups are important.
+[← Home](../README.md) · [Install guide](GETTING-STARTED.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
-[← Home](../README.md) · [How to install](GETTING-STARTED.md)
+**Before you install any in-game features, copy your entire game folder somewhere safe.** Include any existing mods and your XNFSMusicPlayer files. The builder has tracked backup and rollback tools, but they are not a substitute for an independent backup.
 
-## What changes your game?
+## What changes the game?
 
-Installing the Windows builder **alone** doesn't immediately change game files.
+**Installing the Windows builder by itself** does **not** automatically modify a game. However, **Install selected features** may replace game player/configuration components, and **Build / Save** writes playlist data (and may prepare separate leveled audio copies).
 
-Choosing to install game playback features **can** replace an existing player. The program gives a replacement notice and keeps tracked backups.
+**Never delete original backup files or replacement records** merely because the builder says the player is installed.
 
-Using **Build / Save** writes playlists and may create separate music playback copies. Your original song recordings are not overwritten by optional leveling.
+## Backup vs original: two different destinations
 
-## Two different restore choices
+| Button | What it attempts | Limit |
+| --- | --- | --- |
+| **Restore backup** | Return to a **saved prior player/playlist setup** | That save may already contain other mods or earlier customizations |
+| **Restore original game** | Preview changes and return to the **first recorded original baseline** | Depends on the integrity of the tracked original files and correctly recorded additions |
 
-**Restore backup:** Returns to a previously saved player/playlist setup. That saved setup may already include mods or earlier changes.
+A restore may refuse to proceed if an original file was edited outside the builder or a backup record is missing. **Do not force-delete game files to bypass that protection.**
 
-**Restore original game:** Attempts to return all tracked files to the setup recorded before the first tracked installation, and remove files added by the builder.
+## Safer recovery steps
 
-The latest Most Wanted testing reported a successful restore and reinstall using an independently checked original-game baseline. But this doesn't mean every installation can be restored perfectly.
+1. Close the game.
+2. Open the builder and select the **correct game/profile/folder**.
+3. Visit **Game configuration → Installation** and choose **Check setup**. Read the displayed status.
+4. Choose **Restore backup** or **Restore original game**, review the full preview and confirm only if correct.
+5. Check that the game launches and the expected files/music are back.
+6. Keep your backups until you're satisfied with the result.
 
-Restoration can stop when original files were edited, backup records are missing or corrupted, or the installation comes from an older untracked version.
+**Native original interactive soundtrack caveat (Most Wanted):** the builder deploys a native in-game installer that may generate music files *after* the Windows installer has committed. Complete restoration of every one of those generated files remains an **end-to-end test outstanding in Beta 1.5**. Do not claim one-click original restoration is perfect.
 
-## How to restore
+## What if installation closed unexpectedly?
 
-1. **Close the game.**
-2. Open the builder's **Library / game** area and find the restore controls.
-3. Choose the appropriate restore option.
-4. Read which original files will be restored and which builder-added files will be removed.
-5. Confirm the operation only when you're comfortable with the summary.
-6. Check the game before discarding old backups.
+It may have already committed files before the UI closed. **Reopen → Game configuration → Installation → Check setup first**, rather than repeatedly installing. Then use **Open troubleshooting logs** for more information. **Builder installer UI crash hardening was tested in fixtures, not proven to eliminate all crashes.**
 
-**Keep the builder's Windows application data** if you may need its restore points. Uninstalling the builder does not automatically undo changes made to the game.
+Uninstalling the Windows builder does not automatically reverse game changes. Retain app data and tracked restore records until restoration is complete.
 
-[Questions?](TROUBLESHOOTING.md) · [← Home](../README.md)
+[Report a problem](../.github/ISSUE_TEMPLATE/bug_report.yml) · [See tested and untested behavior](WHATS-NEW-BETA-1.5.md)
