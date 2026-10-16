@@ -1,0 +1,37 @@
+name: Publish Beta 1.5 release notes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "RELEASE_NOTES.md"
+      - ".github/workflows/sync-beta-1.5-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare release-page links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          notes=Path('RELEASE_NOTES.md').read_text(encoding='utf-8')
+          base='https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/'
+          for prefix in ('docs/', 'screenshots/'):
+              notes=notes.replace(']('+prefix, ']('+base+prefix)
+          Path('release-notes-for-github.md').write_text(notes,encoding='utf-8')
+          PY
+      - name: Update existing Beta 1.5 release without changing assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release edit Beta-1.5 \
+            --repo ValentineBSAA/XNFS-Playlist-Builder- \
+            --title "XNFS Playlist Builder 3.2 Beta 1.5 | Hybrid Performance Studio" \
+            --notes-file release-notes-for-github.md \
+            --prerelease
