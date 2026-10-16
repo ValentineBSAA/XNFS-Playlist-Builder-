@@ -1,28 +1,17 @@
-# 🏁 XNFS Playlist Builder 3.2 Beta 1.4 | Testing & Feedback
+# 🏁 XNFS Playlist Builder 3.2 Beta 1.5 | Testing and feedback
 
-Welcome! If you've downloaded XNFS Playlist Builder, this is the place to chat about it.
+Welcome! **Beta 1.5 Hybrid Performance Studio** is now public as an **experimental prerelease**. It lets you organize your own music for **Most Wanted (2005)** and **Carbon (2006)** with an updated Windows studio.
 
-The builder helps you bring your own music into **Need for Speed Carbon (2006)** and **Most Wanted (2005)**. Carbon uses Menu, Muscle, Tuner and Exotic playlists; Most Wanted uses Safe House, Free Roam, Race and Pursuit playlists.
+**Download the Windows app:** https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/Beta-1.5
 
-**I'd love to know how Beta 1.4 works for you.** You don't need a long review or technical report. Even “Most Wanted works on my Windows 11 PC” is useful feedback.
+I'd love to hear even a small report: **game version, what you tried, what worked, what didn't**. You don't have to know anything about modding to help.
 
-A few ideas if you want to share:
+**What to try:** scan and organize your music, preview songs, save manual categories, choose/install player features, use Most Wanted T-skipping or Carbon F9, test a short and long pursuit, check music ducking, and confirm that settings survive reopening.
 
-- **Your setup:** Carbon or Most Wanted? PC or handheld PC (such as ROG Ally)?
-- **What worked:** Installing, scanning your music, building playlists, in-game playback, or restoring a backup?
-- **What did you try:** Carbon's car-class music, or Most Wanted's driving-state playlists and **T** to skip songs?
-- **What needs work:** Confusing setup steps, compatibility problems, unexpected behavior, or an idea you'd like to see implemented?
+**Current limits:** complete fresh Beta 1.5 in-game regressions are still pending. Most Wanted original and custom pursuit paths have earlier user-gameplay confirmation but need overlap/transition testing. Carbon 1.4 and new Canyon/Pursuit/Drift modes require in-game verification; separate custom Canyon/Pursuit playlists are **not implemented**. An intermittent Carbon Load Complete crash is still unresolved. The UI installer was hardened against an observed native animation crash, but not proven crash-free.
 
-You can also post playlist ideas, screenshots, or just say hello. Friendly questions are welcome.
+Full status: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md
 
-### Current beta-testing notes
+For a reproducible problem, use [the bug form](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Remove Windows usernames, local paths, song metadata and other private details from screenshots or logs before posting.
 
-- **Carbon 1.2** has had developer in-game testing; **Carbon 1.4** still needs live-game testing.
-- Earlier **Most Wanted** state switching, T skipping, and restoration have been tested; the newest combined Menu/Safe House behavior needs a final live recheck.
-- Different game versions, ASI loaders, and other mods may behave differently.
-
-For a reproducible problem, you can also [open a bug report](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Please remove personal file paths or other private information from screenshots and logs.
-
-**Download Beta 1.4:** https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/v3.2-beta.1.4
-
-Thanks for giving this project a try. Your feedback helps make both games' custom-music experience better. 🎵
+Thank you for testing and helping this one-developer project get better! 🎵
