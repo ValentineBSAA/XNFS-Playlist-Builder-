@@ -1,69 +1,64 @@
-# 💬 Questions and help
+# 🛟 Troubleshooting XNFS Playlist Builder 3.2 Beta 1.5
 
-This guide is for **3.2 Beta 1.4**. If you're using the older **3.0 Beta 1.2**, some game options and key bindings are different.
+[← Home](../README.md) · [Start guide](GETTING-STARTED.md) · [Current test results](WHATS-NEW-BETA-1.5.md)
 
-[← Home](../README.md) · [Installation guide](GETTING-STARTED.md)
+**Beta 1.5 is public but experimental.** A feature appearing in a menu or passing an isolated file check does **not** mean that gameplay has been verified.
 
-## Which game works?
+## Where is the installer?
 
-**Both Carbon and Most Wanted (2005).** They have different playlist names and in-game options, but both can work with the builder.
+Download [**XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip). Extract it with Windows **Extract All**. Run **`XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe`**. The screenshots ZIP and automatic GitHub "Source code" ZIP are **not installers**.
 
-## Where do I download Beta 1.4?
+## Windows says the publisher is unknown
 
-**[Download the official Beta 1.4 Windows ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**. Extract the Clean-Public ZIP and open Setup.exe inside. Do **not** choose GitHub's “Source code” archives.
+The app is unsigned. Check that the installer was downloaded from **this project's official release**, compare [SHA-256](SHA256-OF-BETA-1.5.txt) if desired, and only run software you trust.
 
-## What is an ASI loader?
+## I had “No module named 'uuid'” in Beta 1.4
 
-An ASI loader is a small part of a modded game setup that allows supported game additions to load. This project requires a compatible one for game integration. If you aren't sure whether your game has one, check your game's existing mod installation instructions before proceeding.
+The final Beta 1.5 compiled package **includes** the `uuid` Python standard-library module and related runtime components. Its inclusion passed build/fixture inspection. It does not guarantee that every unrelated installation issue is gone. Download the new Beta 1.5 package, not the old Beta 1.4 ZIP.
 
-## Why does the installer say my game isn't compatible?
+## My music doesn't play in game
 
-The game executable must match a supported version. Check that you selected the correct game folder. Do not try to force an unsupported executable.
+1. Confirm the **correct game folder and executable version**.
+2. Confirm your selected music library and scan results.
+3. Review **Game configuration → Manual assignments**, then **Save assignments** if edited.
+4. With the game closed, verify required player features are installed and use **Build / Save**.
+5. Check that your **compatible ASI loader** works. The builder doesn't silently install or replace unknown loader DLLs.
+6. Try a simple category first. If file status passes but game playback doesn't, **report it as unverified gameplay**, not automatically as a broken music file.
 
-## Why isn't my music playing?
+## Which Most Wanted pursuit mode should I use?
 
-Check that you picked the correct **Music Folder**, scanned your songs, reviewed category assignments and completed **Build / Save**. Make sure any required player features were installed, the game was closed during changes, and your ASI loader is working.
+**Original/default:** uses your own original game soundtrack and the **native in-game XNFS installation/extraction**. **Custom interactive:** songs from your scanned library, with experimental advanced mapping options. **Pursuit playlist:** ordinary track pool. Choose only one pursuit mode at a time. The native original soundtrack **cannot be skipped with T**; T supports ordinary/custom continuous tracks.
 
-## Why don't I see a separate Menu category in Most Wanted?
+**Do original and custom pursuit play on top of each other?** They **should not**, but the latest full-game regression for overlap, transitions, exit and mode-save persistence has **not** been completed. Please report audible overlap with game and mode details.
 
-Most Wanted now uses **Safe House** for both menus and the safe house. This is intentional.
+**Most Wanted police-radio ducking?** Not included.
 
-## How do I skip tracks?
+## Why can't I see Carbon-specific Canyon or Pursuit custom song buckets?
 
-**Most Wanted:** Press **T** while driving after installing the T-skip feature. It doesn't use F9.
+They are **not implemented**. The current custom modes use the existing Muscle/Tuner/Exotic/Menu routing. Original Canyon/Pursuit and Drift configuration controls exist, but need actual events tested. Carbon original music extraction is experimental.
 
-**Carbon:** F9 works if its optional skip feature is installed and enabled.
+## Carbon freezes or crashes around Load Complete
 
-## Does Most Wanted change music for pursuits?
+That intermittent issue is **unresolved** and **not established as a player/plugin bug**. Report your exact Carbon executable version (1.2 or 1.4), other mods, where the game stops, whether it happens without the new components, and any Windows crash details. Preserve your backup.
 
-**No. Not fully in public Beta 1.4.** The builder includes a **Pursuit** playlist and some underlying playback groundwork, but **the full interactive pursuit-music system was never completely implemented in this beta**. It is unfinished functionality, **not a completed feature that broke**. Earlier tests of other playback behavior do not establish that interactive pursuit music was ever finished. Completing the feature is being addressed for **Beta 1.5**, which is **not ready for release**. Please don't install Beta 1.4 expecting fully functional interactive pursuit music. **If you already installed it, reinstalling or changing options cannot add the unfinished complete system. The current Beta 1.4 installer has not been replaced.** See the [public known-issue notice](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2).
+## The Windows builder closed just after player installation
 
-I'm sorry the earlier feature description incorrectly suggested interactive pursuit music had been implemented and tested. This is a one-developer project, and I cannot test every feature and game setup myself, but the incomplete implementation should have been clearly disclosed.
+Some Windows failure evidence implicated Qt animation/lifetime handling **after file changes had already committed**. Beta 1.5 hardens timers, queued UI callbacks and dialog/worker disposal. Fixture tests passed, but the original intermittent crash was not reliably reproduced, so **no universal fix is claimed**.
 
-## Why is audio leveling slow?
+**Reopen → Game configuration → Installation → Check setup**. If the component is already installed, don't blindly overwrite it. **Open troubleshooting logs** and review the operation summary and any Windows Error Reporting information.
 
-The program creates separate copies for more consistent music loudness. Larger libraries need processing time and extra disk space. Your original songs are left unchanged.
+## Why are genres odd or songs in multiple categories?
 
-## Does it change voices or police-radio volume?
+Automatic suggestions rely on **metadata and balancing**, not listening to the audio. Missing/inaccurate tags need review. Driving pools can overlap, and repeated songs may appear in different contexts. Use **Manual assignments** to refine them, **Save assignments**, then **Build / Save** for the game.
 
-Audio leveling affects music copies, not engine sounds or dialogue. Carbon offers optional music ducking during crew speech. **Most Wanted police-radio ducking is not included.**
+## Can I restore everything perfectly?
 
-## Is Restore backup the same as Restore original game?
+**Not guaranteed.** Restore backup/original requires intact tracking and files. In particular, the complete rollback of **media generated later by Most Wanted's native in-game original-score extractor** still needs end-to-end acceptance. Keep your own full game backup. [See restoration guide](BACKUPS-AND-RESTORE.md).
 
-No. **Restore backup** returns to a saved player/playlist setup. **Restore original game** aims to undo tracked changes and return the game to its recorded original state. Both depend on good restore data.
+## What should I send with a bug report?
 
-[Read the full backup guide](BACKUPS-AND-RESTORE.md).
+Use [GitHub's bug form](../.github/ISSUE_TEMPLATE/bug_report.yml). Include **application Beta 1.5**, Most Wanted/Carbon and executable version, Windows version and screen scaling, selected pursuit/event options, steps, expected vs actual behavior, screenshot, operations/Qt/Windows error logs if available, and whether restarting changes it.
 
-## Why does Windows warn about an unknown publisher?
+**Please redact Windows usernames, local paths, music metadata and IP addresses before posting.** A little reproduction detail is much more useful than posting an entire unreviewed log.
 
-The installer is currently unsigned. Make sure it came from the official project's GitHub release and only run it if you trust the source.
-
-## Is Beta 1.4 fully tested?
-
-**No.** Some functions, including Most Wanted T-key skipping, have been tested by the developer; other features and system combinations have limited coverage. **Interactive pursuit music was never fully implemented in Beta 1.4**, rather than simply being an implemented feature that hasn't been tested. Please read the [full testing status](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
-
-## How do I report a problem?
-
-[**Report it on GitHub**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Include which game and version you're using, your Windows version, what you clicked, and what happened. Remove usernames, personal paths and any other private information from logs and screenshots.
-
-[← Home](../README.md)
+[Open a GitHub issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose) · [Discuss testing](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions)
