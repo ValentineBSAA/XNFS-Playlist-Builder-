@@ -1,53 +1,81 @@
-name: "🐛 Something didn't work"
-description: Help us investigate Carbon or Most Wanted problems
+name: "🐛 Report a Beta 1.5 bug"
+description: "Help investigate crashes, installation problems or music playback"
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for trying XNFS Playlist Builder! Please avoid posting private Windows paths or personal information. Note which beta you're using: 3.0 Beta 1.2 or 3.2 Beta 1.4.
-
-        **Before reporting Most Wanted pursuit-music issues:** The complete interactive pursuit-music system was never fully implemented in Beta 1.4. This is already acknowledged at https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2. It is being addressed for Beta 1.5, which is not yet release-ready. Report other problems normally.
+        Thanks for testing XNFS Playlist Builder. **Beta 1.5 is an experimental prerelease.**
+        A successful configuration or file check is not the same as confirmed gameplay.
+        Before posting logs or screenshots, remove Windows user names, local paths, IPs, and private song metadata.
+        See [current limitations](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md).
+  - type: dropdown
+    id: application-version
+    attributes:
+      label: Application version
+      options:
+        - 3.2 Beta 1.5
+        - 3.2 Beta 1.4
+        - 3.0 Beta 1.2
+        - Other / unknown
+    validations:
+      required: true
   - type: dropdown
     id: game
     attributes:
-      label: Which game?
+      label: Which game or part of the app?
       options:
         - Most Wanted (2005)
         - Carbon (2006)
-        - The builder app itself
-    validations:
-      required: true
-  - type: dropdown
-    id: beta
-    attributes:
-      label: Which beta?
-      options:
-        - 3.2 Beta 1.4
-        - 3.0 Beta 1.2
-        - Not sure
-    validations:
-      required: true
-  - type: textarea
-    id: did
-    attributes:
-      label: What were you trying to do?
-      placeholder: For example, I was trying to save a new pursuit playlist.
-    validations:
-      required: true
-  - type: textarea
-    id: happened
-    attributes:
-      label: What happened instead?
+        - Windows builder itself / installer
     validations:
       required: true
   - type: input
-    id: version
+    id: game-version
     attributes:
-      label: Game version (if you know it)
-      placeholder: For example, Carbon 1.2
+      label: Exact game executable / version (if known)
+      placeholder: "For example: Carbon 1.2 or Carbon 1.4"
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version and display scale
+      placeholder: "Windows 11, 125% scaling"
   - type: textarea
-    id: extra
+    id: options
     attributes:
-      label: Anything else that could help?
-      description: Screenshots and logs are welcome. Remove personal paths and information first.
+      label: What options were selected?
+      description: "Include game profile, pursuit mode, event settings, skip key or other relevant options."
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: "Numbered steps make the issue much easier to test."
+      placeholder: "1. Open Game configuration…"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What actually happened?
+      description: "Include the exact error or crash point."
+    validations:
+      required: true
+  - type: dropdown
+    id: retry
+    attributes:
+      label: Does it still happen after restarting the builder/game?
+      options:
+        - Yes
+        - No
+        - Haven't tried / can't safely retest
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Redacted screenshots, logs or Windows crash details
+      description: "From Game configuration > Installation > Open troubleshooting logs, if available. Review every attachment for private data before sharing."
