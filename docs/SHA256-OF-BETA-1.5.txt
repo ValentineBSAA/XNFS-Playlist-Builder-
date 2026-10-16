@@ -1,0 +1,15 @@
+XNFS Playlist Builder 3.2 Beta 1.5 — public release verification
+Official release: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/Beta-1.5
+Public ZIP: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip
+
+SHA-256 (entire public Windows ZIP)
+9b08539dd10e65e2f7f57d3ce4d1b7650cb92977a0a63a9cc860f05a93072607  XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip
+
+SHA-256 (Setup.exe after extracting the public ZIP)
+89bcef9bfbe94d1e0ec28f4d85f83e3faab14513c32513a43bf37a8fe50082a6  XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe
+
+Windows PowerShell:
+Get-FileHash -Algorithm SHA256 "XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip"
+
+The source-code archive links automatically provided by GitHub are NOT the Windows installer and do NOT contain the editable application project.
+Checksums detect altered or corrupted files; they do not prove an unsigned application is safe.
