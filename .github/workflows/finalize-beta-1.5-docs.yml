@@ -1,0 +1,61 @@
+name: Finalize Beta 1.5 documentation snapshot
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/finalize-beta-1.5-docs.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-retag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Validate gallery and local documentation links
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          images = list(Path('screenshots/beta-1.5').rglob('*.png'))
+          mw = [x for x in images if x.parent.name == 'most-wanted']
+          carbon = [x for x in images if x.parent.name == 'carbon']
+          if len(images) != 45 or len(mw) != 24 or len(carbon) != 21:
+              raise SystemExit(f'Expected 45 images (MW 24, Carbon 21), got {len(images)}, {len(mw)}, {len(carbon)}')
+          errors = []
+          files = [Path('README.md'),Path('RELEASE_NOTES.md')]
+          files += [x for x in Path('docs').glob('*.md') if not x.name.endswith('BETA-1.4.md')]
+          files += [Path('screenshots/README.md')]
+          for doc in files:
+              body = doc.read_text(encoding='utf8')
+              for url in re.findall(r'\]\(([^)]+)\)',body):
+                  path = url.split('#',1)[0].split('?',1)[0].strip()
+                  if not path or '://' in path or path.startswith(('mailto:', '#')):
+                      continue
+                  destination = doc.parent / path
+                  if not destination.exists():
+                      errors.append(f'{doc}: missing {path}')
+          if errors:
+              raise SystemExit('\n'.join(errors))
+          print(f'Checked {len(files)} Markdown files and all {len(images)} PNGs.')
+          PY
+      - name: Verify published Windows package is still attached
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view Beta-1.5 \
+            --repo ValentineBSAA/XNFS-Playlist-Builder- \
+            --json assets \
+            --jq '.assets[].name' | grep -Fx "XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip"
+      - name: Align the Beta 1.5 source snapshot with the updated docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git tag -f Beta-1.5 origin/main
+          git push --force origin refs/tags/Beta-1.5
