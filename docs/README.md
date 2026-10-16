@@ -1,37 +1,27 @@
-# 📚 XNFS Playlist Builder help center
+# 📚 XNFS Playlist Builder: Beta 1.5 help center
 
-**New to custom game soundtracks? You're in the right place.**
+[← Home](../README.md) · [Download Windows Beta 1.5](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip) · [Screenshot gallery](../screenshots/README.md)
 
-> **Read before downloading Beta 1.4:** Need for Speed Most Wanted's **complete interactive pursuit-music system was never fully implemented in this release**. The Pursuit playlist is present, but the full dynamic system is unfinished. The downloadable installer has **not** been patched. Work continues toward **Beta 1.5**, which is **not release-ready**. [Read the developer's public clarification](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2).
+**Welcome to the Hybrid Performance Studio.** Beta 1.5 is a public **experimental prerelease**. The new compiled build passed automated and isolated UI tests, but a complete fresh in-game regression is still outstanding.
 
-[← Back to the homepage](../README.md) · [⬇️ Download Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)
+## 🚀 Get playing
 
-## Start here
-
-**[🚀 Install XNFS Playlist Builder](GETTING-STARTED.md)**
-
-A simple, start-to-finish guide: download the correct ZIP, choose your game and music folders, scan songs, and save.
-
-## Learn about your game
-
-| Carbon | Most Wanted |
+| What you want | Read this |
 | --- | --- |
-| [**🔵 Carbon guide**](CARBON.md) | [**🟡 Most Wanted guide**](MOST-WANTED.md) |
-| Menu, Muscle, Tuner and Exotic soundtracks | Safe House, Free Roam, Race and Pursuit soundtracks |
-| Music follows car class | Driving-situation playlists; interactive Pursuit behavior **unfinished in Beta 1.4** |
-| Optional F9 skipping and crew ducking | T-key skipping and EA Trax notifications |
+| Install for the first time | [Step-by-step setup](GETTING-STARTED.md) |
+| Make your Most Wanted soundtrack | [Most Wanted: Rockport Gold](MOST-WANTED.md) |
+| Make your Carbon soundtrack | [Carbon: Midnight Cyan](CARBON.md) |
+| Understand every feature and test limit | [Features explained](FEATURES.md) |
+| Compare game versions | [Compatibility matrix](GAMES-AND-COMPATIBILITY.md) |
+| Find out what changed in 1.5 | [What's new + what isn't finished](WHATS-NEW-BETA-1.5.md) |
+| View the new screens | [All 45 screenshots](../screenshots/README.md) |
+| Fix a problem | [Troubleshooting](TROUBLESHOOTING.md) |
+| Undo installed changes | [Backups and restore](BACKUPS-AND-RESTORE.md) |
+| Review technical setup | [Technical notes](TECHNICAL-NOTES.md) |
+| Check the downloaded ZIP | [Beta 1.5 SHA-256](SHA256-OF-BETA-1.5.txt) |
 
-[**Compare the games in one table →**](GAMES-AND-COMPATIBILITY.md)
+**Most Wanted:** native original pursuit soundtrack and custom music have earlier gameplay confirmation; newly redesigned mode transitions and overlap still need testing. **Carbon:** class music, F9 and crew ducking have earlier gameplay confirmation, primarily 1.2; separate custom event buckets aren't implemented.
 
-## Explore more
+**Older documentation** about Beta 1.4 remains in [the historical Beta 1.4 notes](WHATS-NEW-BETA-1.4.md). It does not describe the new Beta 1.5 installer.
 
-- [**Features explained**](FEATURES.md): music sorting, shuffling, leveling and restoring, in plain English.
-- [**What's new in Beta 1.4**](WHATS-NEW-BETA-1.4.md): improvements, incomplete pursuit-music implementation, and testing limits.
-- [**Beta 1.4 public known-issue notice**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2): exact status of interactive pursuit music and what existing installers can expect.
-- [**See the screenshots**](../screenshots/README.md): real Carbon and Most Wanted screens.
-- [**Common questions**](TROUBLESHOOTING.md): fixes and explanations.
-- [**Backups and restoring**](BACKUPS-AND-RESTORE.md): how to protect your files.
-- [**Technical notes**](TECHNICAL-NOTES.md): game compatibility, player installation and file checks.
-- [**Beta 1.4 ZIP verification**](SHA256-OF-BETA-1.4.txt): checksum for experienced users.
-
-[← Home](../README.md)
+[Ask a question](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions) · [Report a bug](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
