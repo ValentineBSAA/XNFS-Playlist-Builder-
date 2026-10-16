@@ -3,18 +3,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for visiting XNFS Playlist Builder! This is a relaxed place to ask questions, share successful installs, report testing results, or suggest ideas for Need for Speed Carbon (2006) and Most Wanted (2005).
+        Welcome to XNFS Playlist Builder. We're now testing **3.2 Beta 1.5**, the Hybrid Performance Studio for Most Wanted (2005) and Carbon (2006).
 
-        **Known Beta 1.4 limitation:** The complete Most Wanted interactive pursuit-music system was never fully implemented in this release. The visible Pursuit playlist does not mean the interactive feature works. The Beta 1.4 installer is unchanged; Beta 1.5 is in development, not ready for release. See https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2.
+        Share your setup, ask a question, suggest a feature, or tell us what worked! Even a one-sentence test result is helpful.
 
-        A one-line update is welcome. You do not need a technical report. For detailed bugs, the Issues tab has a separate bug-report form.
+        **Important:** Real-gameplay verification is still incomplete for the new Beta 1.5 release. Most Wanted original and custom pursuit were heard in earlier testing, but transition/overlap regression is still needed. Carbon's separate custom Canyon/Pursuit buckets are not implemented and event modes need game tests. The Carbon Load Complete crash remains unresolved.
 
-        Please remove personal information from any screenshots or logs.
+        See: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md
+
+        Use the Issues tab for a reproducible technical bug. Remove personal paths and song metadata from screenshots/logs.
   - type: textarea
     id: message
     attributes:
       label: What would you like to share?
-      description: If relevant, tell us which game and which version of XNFS Playlist Builder you tried.
-      placeholder: "I tried Beta 1.4 with Most Wanted on Windows 11, and T to skip tracks worked!"
+      placeholder: "I tried Beta 1.5 with Carbon 1.2. F9 skipping worked, but I noticed…"
     validations:
       required: true
