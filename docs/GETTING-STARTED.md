@@ -1,77 +1,67 @@
-# 🚀 Let's get your music into Need for Speed
+# 🚀 First-time setup: your own soundtrack in five steps
 
-**Never used a game mod before? No problem.** These steps are written for first-time users.
+[← Home](../README.md) · [Download Beta 1.5](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip) · [Pictures](../screenshots/README.md)
 
-[← Home](../README.md) · [Carbon guide](CARBON.md) · [Most Wanted guide](MOST-WANTED.md)
+**XNFS Playlist Builder 3.2 Beta 1.5** creates custom playlists for **Most Wanted (2005)** and **Carbon (2006)**. You don't need to know programming.
 
-## What you need
+> [!WARNING]
+> **Beta 1.5 is an experimental prerelease.** Back up your game folder before making changes. Do not assume every in-game feature has been freshly tested. [Current known limits](WHATS-NEW-BETA-1.5.md).
 
-- A computer with **Windows 10 or Windows 11 (64-bit)**.
-- Your own **Carbon (2006)** or **Most Wanted (2005)** installation.
-- Music files stored on your computer.
-- A supported game executable and compatible **ASI loader** for in-game playback.
+## Before you begin
 
-**What's an ASI loader?** It's a small part of a modded game setup that lets the game load compatible add-ons. If the game has never been modified, you may need to set one up separately. Don't overwrite an existing loader without checking compatibility.
+You need **Windows 10 or 11 (64-bit)**, your own copy of one of the supported games, local music files, and a **compatible ASI loader** for game integration. An ASI loader is a component that allows compatible mods to load in a game. The builder helps check your setup but does **not** automatically replace an unknown third-party loader. **Close the game** before player installation or playlist writes.
 
-**Before installing game features:** close your game and **make a copy of the game folder** somewhere safe, especially if you already use mods.
+## 1. Download the correct ZIP
 
-## Step 1: Download the real installer
+[**⬇️ XNFS Playlist Builder 3.2 Beta 1.5 (Windows public package)**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip)
 
-> **Important before downloading:** Most Wanted's full **interactive pursuit-music system was never fully implemented in Beta 1.4**. You can organize a Pursuit playlist, but the dynamic system is unfinished. **The existing installer is unchanged**; no setting or reinstall enables that missing feature. [Read the public clarification](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2). **Beta 1.5 is still in development, not released.**
+The file name is `XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip`. Use Windows **Extract All** and run **`XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe`** from inside the extracted folder.
 
-**[⬇️ Download XNFS Playlist Builder 3.2 Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**
+- The setup is currently **unsigned**, so Windows may ask you to verify the publisher. Use only the release linked above if you trust it.
+- The other ZIP named **GitHub.Screenshots.zip** is a temporary gallery handoff, **not the installer**.
+- GitHub's automatically generated **Source code (zip/tar.gz)** downloads are repository snapshots of docs/screenshots, **not the application or editable source project**.
+- The application does **not** require Python.
 
-The file you want is **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip**.
+## 2. Choose your game and folders
 
-In Windows, right-click the downloaded ZIP and choose **Extract All**. Open the extracted folder and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
+Choose **Most Wanted** (gold) or **Carbon** (cyan). Use the Library/game setup section to select your **Game**, **Music library**, and any required XNFS/player folder. Auto Detect is available where supported, but **check the result** before trusting it.
 
-**Avoid the “Source code” ZIPs** generated automatically by GitHub. Those are not the Windows installer.
+![Most Wanted Beta 1.5 game/music folder setup](../screenshots/beta-1.5/most-wanted/02-library-setup.png)
 
-The Windows installer is unsigned, so Windows may warn about an unknown publisher. Check where you downloaded it and only proceed if you trust it.
+## 3. Scan songs and review your categories
 
-## Step 2: Choose your game
+Click **Scan**. Track titles and genres come from available metadata; the app does **not** listen to waveforms to identify music genres.
 
-Open XNFS Playlist Builder and select **Carbon** or **Most Wanted**.
-
-Use **Game Folder** to select the folder containing your installed game. Try **Auto Detect** if you're unsure where it's installed.
-
-The **XNFS Folder** control can help locate the music-player folder if necessary. Read any compatibility warning instead of forcing an unsupported game executable.
-
-## Step 3: Scan your music
-
-Choose **Music Folder**, select your songs, and press **Scan**.
-
-The app reads available song information, including names, artists, genres, and lengths. It can remember your folder for later.
-
-## Step 4: Make your soundtrack
-
-| In Carbon | In Most Wanted |
+| Most Wanted | Carbon |
 | --- | --- |
-| **Menu**, **Muscle**, **Tuner**, **Exotic** | **Safe House**, **Free Roam**, **Race**, **Pursuit** |
-| Car-class music | Situation-based playlists; **full interactive Pursuit music was not implemented in Beta 1.4** |
-| Optional F9 skipping | T to skip while driving |
+| **Safe House** (also game menus) | **Menu** |
+| **Free Roam** | **Muscle** |
+| **Race** | **Tuner** |
+| **Pursuit** | **Exotic** |
+| **Shared** fallback | **Shared** fallback |
 
-For Most Wanted, **Safe House includes the menus**, too.
+Automatic assignments balance tracks, including unknown genres. Review suggested placements; use **Game configuration → Manual assignments** to switch categories per song, then **Save assignments**. When manual edits are saved, automatic assignment turns OFF to protect your choices. Choose **Build / Save** later to write the game playlists.
 
-> **Beta 1.4 known limitation:** Although Most Wanted lets you organize a **Pursuit** playlist, **the full interactive pursuit-music feature was never fully implemented in this release**. The visible playlist is not evidence of a complete interactive system. Completing it is being addressed for **Beta 1.5**, which is **not ready for release**. See the [current status note](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music).
+## 4. Review optional game-player features
 
-You can try **Auto-assign tracks by genre**, review unclassified music, change individual assignments, and choose playlist order. Genre suggestions aren't always perfect.
+Open **Game configuration → Installation**, use **Check setup**, then choose **Install / repair player** or **Install selected features** as appropriate. Review all options and the replacement warning before committing any game-file changes. A compatible ASI loader remains your responsibility; do not overwrite existing proxy DLLs without checking them.
 
-Choose **Install game features** if you want optional in-game playback controls. Read the prompts and check that your setup is compatible.
+![Beta 1.5 install selection review](../screenshots/beta-1.5/most-wanted/14-install-selection-review.png)
 
-## Step 5: Save and play
+**Most Wanted original pursuit soundtrack:** choose **Install original interactive music** and install the selected feature. Then launch Most Wanted. The **native in-game installer** extracts your own soundtrack, showing progress and estimated time by stage. It may close the game after completion, so start it again. **Do not expect the Windows builder itself to extract the original score.**
 
-1. **Close your game.**
-2. Click **Build / Save**.
-3. Let optional music-volume leveling finish if you enabled it. This creates separate copies and can take time.
-4. Read the save summary and launch the game.
+**Most Wanted custom pursuit:** choose a custom mode and songs from your scanned library. Original/native and custom mode should not be played together. The **T** key skips ordinary/custom continuous songs but **not** the original adaptive score.
 
-**Installing the builder alone doesn't immediately modify the game.** Installing game features or saving playlists can change game files. Keep that backup.
+**Carbon:** car-class music, optional **F9** skip and optional crew music ducking can be configured. Original Canyon/Pursuit and Drift modes are experimental; custom Canyon/Pursuit-specific track buckets aren't implemented. Carbon 1.4 needs full gameplay verification.
 
-## If you need help
+## 5. Save and check in your game
 
-[**Troubleshooting and frequently asked questions**](TROUBLESHOOTING.md) · [**Backups and restoration**](BACKUPS-AND-RESTORE.md) · [**All screenshots**](../screenshots/README.md)
+With the game closed, click **Build / Save** in the main window. Read the save receipt. If optional loudness leveling is enabled, it prepares **separate playback copies**, not destructive changes to your original music. Launch the game and test each relevant state.
 
-**Beta testing reminder:** Not all features, game versions, or mod combinations have been verified. **Most Wanted interactive pursuit music was never fully implemented in Beta 1.4**, and the latest menu/Safe House change still needs a new live-game test.
+**If the builder closes unexpectedly:** open it again, go to **Game configuration → Installation → Check setup**, and check **Open troubleshooting logs**. Do not immediately reinstall over a possibly successful previous file commit.
 
-[← Home](../README.md)
+## Backups matter
+
+**Restore backup** returns to a prior tracked setup. **Restore original game** previews a return to the recorded original. Both rely on intact records and neither is guaranteed when other modifications have changed files. Complete restore coverage for files created by the native in-game original-audio extractor still needs an end-to-end test.
+
+[Restoration details](BACKUPS-AND-RESTORE.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Full status](WHATS-NEW-BETA-1.5.md)
