@@ -1,47 +1,51 @@
-# 🔵 Need for Speed Carbon (2006)
+# 🔵 Carbon (2006): Midnight Cyan
 
-### Your music changes with the car you drive.
+**Music for each car class, built from your own songs.** XNFS Playlist Builder 3.2 Beta 1.5.
 
-[← Home](../README.md) · [Most Wanted guide](MOST-WANTED.md) · [⬇️ Download](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)
+[← Home](../README.md) · [Install](GETTING-STARTED.md) · [All photos](../screenshots/README.md)
 
-[![Carbon soundtrack library with four categories](../screenshots/carbon/library.png)](../screenshots/carbon/library.png)
+[![Carbon Beta 1.5 music library](../screenshots/beta-1.5/carbon/01-library.png)](../screenshots/beta-1.5/carbon/01-library.png)
 
-<sub>Image captured from the earlier Beta 1.2 Carbon interface.</sub>
+## The Carbon playlists
 
-## The four Carbon soundtracks
+| Category | Where it plays | Genre *suggestions* |
+| --- | --- | --- |
+| **Menu** | Game menus | Any |
+| **Muscle** | Muscle cars | Rock / Alternative |
+| **Tuner** | Tuner cars | Pop / Electronic |
+| **Exotic** | Exotic cars | Hip-hop / Rap / Grime |
+| **Shared** | Fallback | Any |
 
-| Playlist | When it's used |
-| --- | --- |
-| **Menu** | While using game menus |
-| **Muscle** | Driving a Muscle-class car |
-| **Tuner** | Driving a Tuner-class car |
-| **Exotic** | Driving an Exotic-class car |
+The builder looks at metadata and balances tracks. This is **not waveform genre recognition**, and songs with missing/odd tags may go into unexpected categories. Use **Manual assignments** to choose exactly what you want. There is no artificial track-count cap.
 
-The builder suggests songs based on genres. These are **suggestions**, not strict rules: put any song in any playlist you want.
+## Playback extras
 
-## Music features
+**Previously confirmed in Carbon 1.2 gameplay:**
+- Music can follow the current car class.
+- **F9**, when enabled/configured, skips tracks.
+- Music can automatically duck while crew members speak and return afterward.
 
-- **Car-class-aware music:** the player can select the soundtrack for the type of car you're driving.
-- **Skip songs:** turn on the optional **F9** feature to move to the next track.
-- **Shuffle with repeat avoidance:** hear a broader mix from your own music.
-- **Optional volume leveling:** prepare playback copies at more consistent music loudness. Your original audio isn't overwritten.
-- **Crew-dialogue ducking:** optionally lower the music when crew characters speak.
-- **Playlist editing and backups:** review assignments, save music, and restore supported changes.
+Ducking is **optional** and preserves your existing OFF setting. **Crew/speech balance is experimental**; the developer has still reported loud crew or car sounds. Music loudness leveling affects **playback copies**, not engine or voice effects.
 
-## Take a look
+## Canyon, pursuits and Drift: experimental
 
-| Optional Carbon features | Playlist save summary |
-| --- | --- |
-| [![Carbon player feature selections](../screenshots/carbon/features.png)](../screenshots/carbon/features.png) | [![Soundtrack build summary](../screenshots/shared/save-summary.png)](../screenshots/shared/save-summary.png) |
+![Carbon Beta 1.5 event configuration](../screenshots/beta-1.5/carbon/18-event-music.png)
 
-[**See the full screenshot gallery →**](../screenshots/README.md)
+The new **Event music** page can configure original **Canyon** and **Pursuit** scoring separately; Drift can use car-class playlists, original ambience or silence. Configuration/installer combinations passed isolated tests, **not real Canyon/Pursuit/Drift gameplay**.
 
-## Before you install
+**Separate custom Canyon/Pursuit event song buckets have not been implemented.** When selecting custom event modes, the current runtime still uses the car-class music pools. Do not expect independent per-event custom playlists. Original scores depend on your own game audio banks; Carbon extraction remains experimental and separate from Most Wanted's in-game original soundtrack installer.
 
-You'll need your own Carbon installation, music files, **Windows 10 or 11 (64-bit)**, a supported executable, and a compatible **ASI loader** for game integration.
+## Game version and crash notes
 
-**Testing status:** Carbon **1.2** was tested in-game on the developer's PC, including class-based music, skipping, and leveled playback. Carbon **1.4** was prepared and checked offline but still needs live-play testing. Other PCs and mod combinations may behave differently.
+The installer carries matched **Carbon 1.2 and Carbon 1.4** payloads. Both passed isolated setup checks, but developer gameplay primarily used **1.2**. **Carbon 1.4 is not yet fully verified in-game**.
 
-Make a backup of the game before installing optional features.
+An **intermittent crash around “Load Complete”** remains **unresolved**. It has **not** been proven to originate in the playlist plugin. The separate Windows builder **installer-dialog animation crash** was hardened, not conclusively eliminated.
 
-[**Easy setup guide**](GETTING-STARTED.md) · [**Problems and questions**](TROUBLESHOOTING.md) · [**Compare both games**](GAMES-AND-COMPATIBILITY.md)
+## Beta 1.5 screenshots
+
+| Choose features | Assign songs manually |
+| :---: | :---: |
+| [![Carbon feature setup](../screenshots/beta-1.5/carbon/04-features.png)](../screenshots/beta-1.5/carbon/04-features.png) | [![Carbon manual assignments](../screenshots/beta-1.5/carbon/17-manual-assignments.png)](../screenshots/beta-1.5/carbon/17-manual-assignments.png) |
+| [Audio / crew](../screenshots/beta-1.5/carbon/05-audio.png) | [Install / repair player](../screenshots/beta-1.5/carbon/05-installation.png) |
+
+[Testing and limits](WHATS-NEW-BETA-1.5.md) · [Compatibility](GAMES-AND-COMPATIBILITY.md) · [Troubleshooting](TROUBLESHOOTING.md)
