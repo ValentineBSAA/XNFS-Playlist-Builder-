@@ -1,51 +1,47 @@
-# 🔧 Technical notes for experienced players
+# 🔧 Technical notes | Beta 1.5
 
-The main pages are written for beginners. This page collects the setup facts that matter if you already use mods, ASI loaders or custom music players.
-
-[← Home](../README.md) · [Feature comparison](GAMES-AND-COMPATIBILITY.md) · [Download Beta 1.4](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)
+[← Home](../README.md) · [Beginner guide](GETTING-STARTED.md) · [Current evidence](WHATS-NEW-BETA-1.5.md)
 
 ## Supported environment
 
-**Windows 10 / 11 (64-bit)**. Bring your own game and locally stored music.
+- **Windows 10/11 x64** compiled application; no user-side Python required.
+- Original locally installed **Most Wanted (2005)** or **Carbon (2006)** with an executable accepted by the game's setup manager.
+- Compatible **ASI loader** for in-game integration; the manager **does not silently replace an existing third-party loader/proxy**.
+- Music library files provided by user; no commercial music or game audio distributed.
+- Version-matched **Carbon 1.2 / 1.4** installer payloads passed isolated checks. 1.4 gameplay remains unverified.
 
-For in-game music playback you need a **supported executable** and a **compatible ASI loader**. Game versions and installed mods may affect behavior. The builder's compatibility checks should be respected, not bypassed.
+## Packaging and install differences
 
-Carbon **1.2** has received developer live-game testing. Carbon **1.4** has been checked offline and still needs live testing. Some earlier Most Wanted Beta 1.4 playback behavior, **T skipping**, and restoration were tested; the newest merged menu/Safe House routing requires a new acceptance test.
+The Beta 1.5 **public Windows ZIP** contains the Setup EXE, first-run help in TXT/HTML, CHANGELOG.md, VERIFICATION.md, and real before/after screenshots. Its ZIP SHA-256 is published in [SHA256-OF-BETA-1.5.txt](SHA256-OF-BETA-1.5.txt).
 
-**Known incomplete implementation in public Beta 1.4:** The complete Most Wanted **interactive pursuit-music system was not implemented or integrated as a functioning feature**. The Pursuit category in the builder and earlier playback groundwork should not be mistaken for a finished interactive music system. **This is not a regression from a completed feature.** Completing the implementation is being addressed for **Beta 1.5**, which is **not release-ready**. The sole developer cannot test every game state or mod setup, but this implementation gap should have been disclosed clearly; see the [public status clarification](WHATS-NEW-BETA-1.4.md#known-issue-interactive-pursuit-music) and [known-issue tracker](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2). **No version of the existing Beta 1.4 download gains the complete missing system through reconfiguration or reinstalling.**
+**Beta 1.4's `No module named 'uuid'` error:** the final Beta 1.5 PyInstaller payload packages the module and `_uuid.pyd`; the last compiled test executable and ten install fixtures passed. Other failures may still exist.
 
-## What gets changed?
+**Public repository:** user-facing docs and screenshots only. GitHub's automatically offered **Source code** zip/tar.gz files contain only the repository snapshot. **The user's editable application source is not included in this public distribution.**
 
-**Installing the Windows application** does not itself immediately modify a game.
+## Most Wanted original soundtrack
 
-**Installing player features** may update or replace supported player components and their configuration. **Build / Save** writes playlists and can generate separate leveled playback copies if selected.
+Installing **Original interactive music** in the builder deploys/arms the **native XNFS ASI** and supporting files. **Extraction occurs within the game process**, using the original user's audio banks and mappings; a standalone Windows-builder extractor/verification pass must not be substituted. The in-game installer reports progress and approximate per-stage ETA. Game exits/relaunch may be required after native extraction.
 
-Keep a backup of the original game folder and any pre-existing **XNFSMusicPlayer** installation. Review installation prompts before replacing components.
+The original adaptive score is **not T-skippable**. Custom-library interactive songs and advanced mapped segments are separate modes; mixing original and custom output is not intended. Playback correctness for all recent transitions, sustained pursuit and mode switches still needs a full gameplay regression.
 
-## Restore paths
+## Carbon event modes
 
-**Restore backup** and **Restore original game** mean different things. The first returns to a saved setup, which may already contain mods. The second attempts to reverse tracked changes back to the recorded original state. Restoration cannot be guaranteed when records are incomplete, original files were changed elsewhere, or backups have been removed.
+Current Carbon player masks/pools remain **Menu/Muscle/Tuner/Exotic**. Beta 1.5 has tested configuration for original Canyon/Pursuit plus Drift playlist/ambience/silence, and isolated installers for versions 1.2 and 1.4. **Separate custom Canyon/Pursuit runtime context selection is not implemented**. No standalone custom event buckets should be documented as functioning.
 
-See [Backups and restoring](BACKUPS-AND-RESTORE.md).
+Carbon original-score extraction is **experimental** and **must not be equated with Most Wanted's previously accepted native install**.
 
-## Verifying the release
+## What the automated tests demonstrate
 
-The intended Windows download is **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** attached to the official **v3.2-beta.1.4** release. It contains only:
+Final build: five 178-track full scans/profile switches; ten compiled installer UI/worker cycles against disposable folders; thirty normalization cancel/close cycles; 150 animated review cycles. Tests cover UI operations, playlist output, native mode configuration and rollback fixture behavior. **They are not a fresh full-game compatibility or game-soundtrack acceptance run.**
 
-- `XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe`
-- `READ-ME-FIRST.txt`
-- `READ-ME-FIRST.html`
+## Crash diagnostics and rollback
 
-See the [published ZIP and installer SHA-256 checksums](SHA256-OF-BETA-1.4.txt). Checksums verify file consistency; they are not a substitute for deciding whether you trust unsigned software.
+Beta 1.5 replaces transient Qt animation objects with longer-lived timers, queues background installer progress through GUI receivers, disposes completed dialogs/workers and exposes persistent operation, Python and Qt logs. Windows native process faults are still diagnosed using Windows Error Reporting; **Python exception logs cannot capture every native crash**. The intermittent Qt installer failure was hardened but not conclusively reproduced/fixed. Carbon's game-side **Load Complete** failure is a separate unresolved problem.
 
-The repository hosts user-facing documentation and screenshots, not the full Windows application source code. The source-code archives GitHub automatically generates from this repository **are not installers**.
+Installation can complete before a GUI fault, so **reopen → Check setup before reinstallation**. Original restoration depends on tracked baselines; native-extractor-generated audio requires fuller end-to-end restoration tests.
 
-## Useful support information
+## Disclosures and bug reports
 
-When reporting a problem, share the game, game executable version if known, Windows version, other installed mods, and what you tried.
+For reproducibility, report Beta 1.5, game executable version, Windows build/scaling, installed loader/other mods, selected options, clear steps, and redacted logs/screenshots. Do not publicly share full personal paths, library metadata or private network details.
 
-For Carbon playback problems, **XNFSMusicPlayer.log** inside the game's `scripts/XNFSMusicPlayer` folder can be useful when present.
-
-**Remove private user names, full local paths, IP addresses and other sensitive information from screenshots or logs before posting publicly.**
-
-[Report a bug](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose) · [Common questions](TROUBLESHOOTING.md)
+[Download checksum](SHA256-OF-BETA-1.5.txt) · [Backups guide](BACKUPS-AND-RESTORE.md) · [File a report](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
