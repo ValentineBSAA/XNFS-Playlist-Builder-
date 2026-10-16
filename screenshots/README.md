@@ -61,7 +61,7 @@
 | [![Menu](beta-1.5/carbon/03-menu.png)](beta-1.5/carbon/03-menu.png) | [![Muscle](beta-1.5/carbon/03-muscle.png)](beta-1.5/carbon/03-muscle.png) | [![Tuner](beta-1.5/carbon/03-tuner.png)](beta-1.5/carbon/03-tuner.png) | [![Exotic](beta-1.5/carbon/03-exotic.png)](beta-1.5/carbon/03-exotic.png) |
 
 <details>
-<summary><strong>See 11 more Carbon screens: installation, crew audio, categories and restoration</strong></summary>
+<summary><strong>See 13 more Carbon screens: installation, crew audio, categories and restoration</strong></summary>
 
 | Screenshot | What you are looking at |
 | --- | --- |
