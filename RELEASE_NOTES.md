@@ -1,87 +1,84 @@
-# 🏁 XNFS Playlist Builder 3.2 | Public Beta 1.4
+# 🏁 XNFS Playlist Builder 3.2 | Beta 1.5 (experimental prerelease)
 
 **Your music. Your drive. Your soundtrack.**
 
-Play your own music in **Need for Speed Carbon (2006)** and **Need for Speed Most Wanted (2005)**. Both games are supported by the builder, but **not all in-game features are fully implemented or tested in Beta 1.4**.
+A significantly redesigned Windows music-playlist studio for **Need for Speed Most Wanted (2005)** and **Need for Speed Carbon (2006)**.
 
-## ⚠️ Important correction for Beta 1.4: interactive pursuit music
+> **This is a public experimental beta, not a stable or completely gameplay-regression-tested release.** Please read the confirmed/experimental distinctions below before downloading.
 
-**The complete interactive pursuit-music system for Most Wanted (2005) was never fully implemented in public Beta 1.4.** The **Pursuit** playlist appears in the builder and can be edited, but it is **not a completed, working interactive pursuit system**. Please do not install this beta expecting dynamic interactive pursuit music. This is **unfinished functionality**, not a feature that was completed and later stopped working.
+## ⬇️ Download and install
 
-**If you already installed Beta 1.4:** There is no missed setup step that would enable the missing complete interactive system. This notice corrects the documentation; **the existing Beta 1.4 installer has not been fixed or replaced**.
+**[Get XNFS Playlist Builder 3.2 Beta 1.5 for Windows](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip)**
 
-Work to complete the implementation is underway for **Beta 1.5**, but **Beta 1.5 is not ready for release** and has no promised release date. Other supported and tested features should not be assumed broken because of this limitation.
+**Download:** `XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip` (about 100 MB). Extract it and run **`XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe`**.
 
-**Developer apology:** I'm sorry for previously presenting interactive pursuit music as if it was implemented and tested. I'm the sole developer and cannot test every feature, game state, or mod combination, but I should have been clearer about what was complete versus unfinished. Thank you to Kronos and everyone providing honest feedback.
+Requires **Windows 10/11 x64**, your own music, your own compatible copy of the game and a suitable **ASI loader** for game integration. Python is not needed. This unsigned installer may show a Windows unknown-publisher warning. **Back up your game folder and close the game before installing features.**
 
-[**Read the known-issue notice / discussion**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2) · [**Beta 1.4 testing status**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.4.md)
+The public ZIP contains the installer, README, changelog, verification notes, and before/after application screenshots. GitHub's automatic **Source code** archives are documentation snapshots, **not** the Windows app or editable application code.
 
----
+## ✨ What's new in Beta 1.5
 
-### 📥 Get started
+- **Hybrid Performance Studio:** redesigned frameless dark interface, **Rockport Gold** Most Wanted theme, **Midnight Cyan** Carbon theme, more readable configuration and installation screens.
+- **Full music library workflow:** scan remembered folders; preview/pause/seek; search, category filters and ordering; genre review and duplicate checking.
+- **Manual assignments inside Game configuration:** per-song category switches, bulk tools and explicit **Save assignments**. **Build / Save** remains the separate action that writes game playlists.
+- **Improved setup manager:** pre-install component/settings review, guided repair/status checks, backup warnings, errors with next steps and expandable diagnostics.
+- **Optional playback-copy loudness leveling:** source music remains unchanged. Hardened cancellation/close handling.
+- **Most Wanted pursuit settings:** separate original/default, custom interactive and continuous pursuit-playlist choices; experimental node mapping/segment editing and packs.
+- **Carbon event configuration:** original Canyon/Pursuit mode choices and Drift playlist/original ambience/silent options. The underlying event behavior still needs in-game verification.
+- **Packaging fix for Beta 1.4's missing `uuid` runtime:** dependency verified in the final compiled build and fixture installer.
+- **Installation crash hardening:** persistent Qt timer ownership, queued GUI updates and safer cleanup. **Not a confirmed complete fix for every intermittent crash.**
+- **Updated real-application screenshots**, new help pages and clearer user-facing status labels.
 
-**[⬇️ Download the Windows installer ZIP](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/v3.2-beta.1.4/XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip)**
+## 🟡 Most Wanted: what currently works, and the limits
 
-1. Download **XNFS-Playlist-Builder-3.2-Beta-1.4-Clean-Public.zip** from the release assets. Don't use GitHub's automatic **Source code** archives.
-2. Extract the ZIP and run **XNFS-Playlist-Builder-3.2-Beta-1.4-Setup.exe**.
-3. Choose **Carbon** or **Most Wanted**, then select your game and music folders.
-4. Scan your songs, organize the playlists and choose any optional playback features.
-5. **Close the game**, then select **Build / Save**.
+**Soundtrack pools:** **Safe House** (includes menus), **Free Roam**, **Race**, **Pursuit**, plus **Shared** fallback.
 
-**Requires:** Windows 10 or 11 (64-bit), your own game and music, a supported game executable, and a compatible ASI loader for in-game music integration. **Back up your game before changing it.** The installer is unsigned.
+**Earlier developer gameplay confirmed** state-based music, **T** skipping for ordinary/custom continuous tracks, EA Trax notifications, the original native interactive pursuit score and custom-library pursuit playback.
 
-[**Easy setup guide**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md) · [**Frequently asked questions**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/TROUBLESHOOTING.md)
+**Original interactive soundtrack setup:** select **Game configuration → Installation → Install original interactive music → Install selected features**, then launch the game and use the **native in-game XNFS installation/extraction flow**. The game extracts from your own game audio banks and shows percent/progress and stage ETA. **The builder does not independently extract the original score.** A valid game-audio and node baseline is required.
 
----
+**Choose one original/default or custom pursuit mode at a time.** The **T** key does **not** skip the original native adaptive score or advanced mapped segments. Saved custom-song selections should survive mode changes.
 
-## 🔵 Carbon: music that follows your car
+**Still needs focused gameplay tests:** extended pursuits, custom authored transitions, start/exit events, playlist save/reopen, and overlap between original and custom audio. **Police-radio ducking is not implemented.** Do not treat short playback confirmation as proof of a complete new regression.
 
-| Playlist | When it's used |
-| --- | --- |
-| **Menu** | Game menus |
-| **Muscle** | Driving a Muscle car |
-| **Tuner** | Driving a Tuner car |
-| **Exotic** | Driving an Exotic car |
+## 🔵 Carbon: what currently works, and the limits
 
-**Carbon extras:** automatic car-class music, optional **F9** to skip tracks, smart shuffle, volume leveling, and optional music ducking while crew members speak.
+**Soundtrack pools:** **Menu, Muscle, Tuner, Exotic**, plus **Shared**. The builder uses metadata/genre preferences, not waveform classification; automatic balancing can place a song outside its preferred genre.
 
-[**See Carbon screenshots and details**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/CARBON.md)
+**Earlier gameplay confirmed** car-class routing on Carbon 1.2, optional/configurable **F9** skipping and music lowering during crew dialogue. Do not silently re-enable ducking when a user's saved setting is OFF.
 
-## 🟡 Most Wanted: music that follows the action
+**Carbon 1.2 and 1.4 installation payloads** passed isolated checks. **Carbon 1.4 has not received a complete live-game verification.** Crew/speech balance remains experimental.
 
-| Playlist | When it's used |
-| --- | --- |
-| **Safe House** | Both the menus and safe house |
-| **Free Roam** | Exploring Rockport |
-| **Race** | Racing |
-| **Pursuit** | Playlist category for police chases; **full interactive system not included in Beta 1.4** |
+**Experimental event controls:** original Canyon and Pursuit scores; Drift playlist, original ambience or silence. Actual event transitions need gameplay tests. **There are no independent custom Canyon/Pursuit track buckets yet**: existing custom modes use car-class pools.
 
-**Most Wanted extras:** driving-situation playlist tools, **T** to skip while driving, EA Trax song notifications, smart shuffle and volume leveling. **The full interactive pursuit-music feature was not implemented in this beta.**
+**Known issue:** an intermittent crash near **Load Complete** remains unresolved. Its root cause is not proven to be the playlist plugin.
 
-**This is the big Beta 1.4 upgrade:** Most Wanted has more music-management controls and new installation/restore screens. **Interactive pursuit music was not completed; police-radio ducking is also not included.** Those are separate features.
+## 🧪 What was actually tested?
 
-[**See four new Most Wanted screenshots and details**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/MOST-WANTED.md)
+**Automated / isolated checks, not gameplay:**
+- Final compiled executable: five 178-track library scans/profile switches.
+- Ten installer/UI fixture cycles across Most Wanted and Carbon; backups, dialogs and installer worker paths exercised against disposable folders.
+- Configuration, playlist output, manual assignment, save/reload, mode combinations and restore/rollback fixtures.
+- 30 rapid normalization cancel/close cycles with no remaining workers; 150 animated review cycles.
+- UI checks across 1280×720 to 2560×1440 and 100–200% scaling.
+- Compiled packaging inspection confirms the missing `uuid` module is included.
 
-## 🎵 Both games include
+**Not completed:** comprehensive new in-game regressions for either game; fresh extraction/reinstall/original restoration that includes all native-generated media; Carbon Load Complete crash reproduction and root-cause fix; full custom pursuit overlap/transition listening; live Carbon 1.4 and event-mode verification.
 
-- Scan your own songs and automatically suggest categories based on genre.
-- Edit assignments manually, organize playlist order and review music without genre tags.
-- Optional shuffle that can avoid recently played tracks.
-- Optional consistent-volume music copies without overwriting your original recordings.
-- Better installation-status checks, backup handling and restoration controls.
+## 🛡️ Install and restoration safety
 
-[**Compare both games**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GAMES-AND-COMPATIBILITY.md) · [**Browse all application screenshots**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/tree/main/screenshots)
+Installing the Windows app **does not itself modify game files**. **Install selected features** and **Build / Save** can. Read replacement prompts and preserve original game files and tracked backups.
 
-## 🧪 Public beta: what has been tested?
+**Restore backup** recovers a compatible saved player setup; **Restore original game** aims to undo tracked changes. Neither is guaranteed when the baseline is missing or files were edited externally. Original soundtrack files generated later by the native in-game installer require additional end-to-end restore testing.
 
-**Carbon 1.2** has been tested in-game on the developer's computer. **Carbon 1.4** has been checked offline and needs live-game testing.
+If the application closes while installing, **reopen → Game configuration → Installation → Check setup** before reinstalling. **Open troubleshooting logs** and include a *redacted* log in a bug report when possible.
 
-Earlier **Most Wanted** playback behavior, **T skipping** and restoration were tested, but **full interactive pursuit music was never implemented in Beta 1.4**. The **latest combined menu/Safe House change** still needs a follow-up live-game test. Different game installations and mod combinations may behave differently.
+## 🔗 Guide and help
 
-If something isn't working, please [**report an issue**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Mention which game and game version you're using and what happened. Remove private information from screenshots or logs.
+[First-time installation](docs/GETTING-STARTED.md) · [Most Wanted](docs/MOST-WANTED.md) · [Carbon](docs/CARBON.md) · [Beta 1.5 full status](docs/WHATS-NEW-BETA-1.5.md) · [Screenshots](screenshots/README.md) · [Known issues](docs/TROUBLESHOOTING.md) · [Report a bug](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
 
-**[Check the download SHA-256](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/SHA256-OF-BETA-1.4.txt)** · **[Backing up and restoring](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/BACKUPS-AND-RESTORE.md)**
+**The historical Beta 1.4 notice remains true for Beta 1.4:** its advertised complete interactive pursuit feature was not actually implemented. **Beta 1.5 is a different experimental build** with new implementation and additional outstanding verification. We will not retroactively label Beta 1.4 as working.
 
 ---
 
-Made by **valentine**. Original **XNFSMusicPlayer** by **Lovro Pleše (xan1242)**. Independent fan-made utility, not affiliated with or endorsed by Electronic Arts. Games and commercial music are not included.
+Created by **valentine**. Original XNFSMusicPlayer and native in-game soundtrack installer work by **Lovro Pleše (xan1242)**. Independent fan tool, not affiliated with Electronic Arts. Commercial game/audio assets are not included.
