@@ -1,11 +1,11 @@
 blank_issues_enabled: true
 contact_links:
-  - name: "⚠️ Beta 1.4 incomplete pursuit music"
-    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/2
-    about: Clarification about the missing full interactive Pursuit system and Beta 1.5 status
-  - name: "📖 Getting started"
+  - name: "📖 Beta 1.5 setup instructions"
     url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md
-    about: Installing the builder and creating playlists
-  - name: "🛟 Common questions"
-    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/TROUBLESHOOTING.md
-    about: Help with beta questions
+    about: Start with the Windows installer, game folder, music library, and setup checks
+  - name: "🧪 Known limitations and testing"
+    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md
+    about: Most Wanted pursuit modes, Carbon event modes, and unresolved crashes
+  - name: "💬 Ask the community"
+    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions
+    about: General questions, testing impressions and suggestions
