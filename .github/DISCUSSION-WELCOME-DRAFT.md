@@ -1,17 +1,17 @@
-# 🏁 XNFS Playlist Builder 3.2 Beta 1.5 | Testing and feedback
+# 🏁 XNFS Playlist Builder 3.2 Beta 1.6 | Gameplay feedback
 
-Welcome! **Beta 1.5 Hybrid Performance Studio** is now public as an **experimental prerelease**. It lets you organize your own music for **Most Wanted (2005)** and **Carbon (2006)** with an updated Windows studio.
+Welcome to the experimental **3.2 Beta 1.6** release for *Most Wanted (2005)* and *Carbon (2006)*.
 
-**Download the Windows app:** https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/Beta-1.5
+**Windows download (after publication):** https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases
 
-I'd love to hear even a small report: **game version, what you tried, what worked, what didn't**. You don't have to know anything about modding to help.
+This update is much better tested in **Most Wanted** than Beta 1.5: Safe House fades, prologue audio, Free Roam, ordinary pursuits, custom interactive songs, T skips, EA Trax titles, the 65% music mix and original adaptive score exit fade have specific hardware-test confirmations. The latter works but can feel slow.
 
-**What to try:** scan and organize your music, preview songs, save manual categories, choose/install player features, use Most Wanted T-skipping or Carbon F9, test a short and long pursuit, check music ducking, and confirm that settings survive reopening.
+**Where feedback is especially valuable:** Most Wanted's first song after switching saves and revised **custom** pursuit exit fade; Carbon 1.4 gameplay; Canyon/Pursuit/Drift event modes; and any reproducible Carbon Load Complete crashes. Separate custom Carbon Canyon/Pursuit buckets are not yet built.
 
-**Current limits:** complete fresh Beta 1.5 in-game regressions are still pending. Most Wanted original and custom pursuit paths have earlier user-gameplay confirmation but need overlap/transition testing. Carbon 1.4 and new Canyon/Pursuit/Drift modes require in-game verification; separate custom Canyon/Pursuit playlists are **not implemented**. An intermittent Carbon Load Complete crash is still unresolved. The UI installer was hardened against an observed native animation crash, but not proven crash-free.
+Just tell us **which game/version you played, what you tried and what happened**. You do not need to be a programmer. Even one sentence helps.
 
-Full status: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md
+For a bug, use https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose. The new in-app **Support** button lets you preview and save a ZIP containing Plain English and JSON diagnostics. It does not upload it for you, and you should still review any extra attachments for private details.
 
-For a reproducible problem, use [the bug form](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose). Remove Windows usernames, local paths, song metadata and other private details from screenshots or logs before posting.
+**Testing matrix:** https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.6.md
 
-Thank you for testing and helping this one-developer project get better! 🎵
+Thank you for giving the music some road time. 🎵

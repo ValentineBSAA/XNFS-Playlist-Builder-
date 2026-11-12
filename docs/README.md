@@ -1,27 +1,27 @@
-# 📚 XNFS Playlist Builder: Beta 1.5 help center
+# 📚 XNFS Playlist Builder 3.2 Beta 1.6 help center
 
-[← Home](../README.md) · [Download Windows Beta 1.5](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip) · [Screenshot gallery](../screenshots/README.md)
+[← Home](../README.md) · [Windows releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Existing screenshot gallery](../screenshots/README.md)
 
-**Welcome to the Hybrid Performance Studio.** Beta 1.5 is a public **experimental prerelease**. The new compiled build passed automated and isolated UI tests, but a complete fresh in-game regression is still outstanding.
+**Beta 1.6 is an experimental prerelease with fresh Most Wanted gameplay confirmations.** Carbon experimental event modes and 1.4 gameplay still require testing. The screenshots are intentionally retained from Beta 1.5.
 
-## 🚀 Get playing
-
-| What you want | Read this |
+| What would you like to do? | Read this |
 | --- | --- |
-| Install for the first time | [Step-by-step setup](GETTING-STARTED.md) |
-| Make your Most Wanted soundtrack | [Most Wanted: Rockport Gold](MOST-WANTED.md) |
-| Make your Carbon soundtrack | [Carbon: Midnight Cyan](CARBON.md) |
-| Understand every feature and test limit | [Features explained](FEATURES.md) |
-| Compare game versions | [Compatibility matrix](GAMES-AND-COMPATIBILITY.md) |
-| Find out what changed in 1.5 | [What's new + what isn't finished](WHATS-NEW-BETA-1.5.md) |
-| View the new screens | [All 45 screenshots](../screenshots/README.md) |
-| Fix a problem | [Troubleshooting](TROUBLESHOOTING.md) |
-| Undo installed changes | [Backups and restore](BACKUPS-AND-RESTORE.md) |
-| Review technical setup | [Technical notes](TECHNICAL-NOTES.md) |
-| Check the downloaded ZIP | [Beta 1.5 SHA-256](SHA256-OF-BETA-1.5.txt) |
+| Install and make your first soundtrack | [Get started](GETTING-STARTED.md) |
+| Learn Most Wanted routing and pursuit modes | [Most Wanted](MOST-WANTED.md) |
+| Configure Carbon car-class music | [Carbon](CARBON.md) |
+| Understand ordinary and advanced features | [Features](FEATURES.md) |
+| Compare games and executable compatibility | [Compatibility](GAMES-AND-COMPATIBILITY.md) |
+| Read exactly what was heard in gameplay | [Beta 1.6 testing matrix](WHATS-NEW-BETA-1.6.md) |
+| Find the release notes | [Release notes](../RELEASE_NOTES.md) |
+| Fix missing music or a crash | [Troubleshooting](TROUBLESHOOTING.md) |
+| Recover previous settings and game files | [Backups and restore](BACKUPS-AND-RESTORE.md) |
+| See detailed installation and runtime notes | [Technical notes](TECHNICAL-NOTES.md) |
+| Verify a download | [Beta 1.6 SHA-256](SHA256-OF-BETA-1.6.txt) |
+| Understand third-party licenses and credit | [Licensing and credits](LICENSING-AND-CREDITS.md) |
+| View the unchanged Beta 1.5 UI gallery | [Screenshots](../screenshots/README.md) |
 
-**Most Wanted:** native original pursuit soundtrack and custom music have earlier gameplay confirmation; newly redesigned mode transitions and overlap still need testing. **Carbon:** class music, F9 and crew ducking have earlier gameplay confirmation, primarily 1.2; separate custom event buckets aren't implemented.
+**Most Wanted:** Safe House, prologue, ordinary/free-roam pursuit switching, custom interactive songs, EA Trax notifications, T skip, 65% mixing and original pursuit-exit fade have session-based gameplay acceptance. Custom exit fade and save switching still need targeted tests.
 
-**Older documentation** about Beta 1.4 remains in [the historical Beta 1.4 notes](WHATS-NEW-BETA-1.4.md). It does not describe the new Beta 1.5 installer.
+**Carbon:** earlier real Carbon 1.2 class/F9/ducking tests succeeded, but 1.4 gameplay, original event modes and the reported intermittent Load Complete crash are not resolved.
 
-[Ask a question](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions) · [Report a bug](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+[Historical Beta 1.5 record](WHATS-NEW-BETA-1.5.md) · [Historical Beta 1.4 disclosure](WHATS-NEW-BETA-1.4.md) · [Open an issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose) · [Discussions](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions)

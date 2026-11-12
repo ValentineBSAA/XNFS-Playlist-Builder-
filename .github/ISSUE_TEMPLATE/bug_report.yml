@@ -1,19 +1,20 @@
-name: "🐛 Report a Beta 1.5 bug"
-description: "Help investigate crashes, installation problems or music playback"
+name: "🐛 Report an XNFS bug"
+description: "Help investigate installation, music playback or crashes"
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for testing XNFS Playlist Builder. **Beta 1.5 is an experimental prerelease.**
-        A successful configuration or file check is not the same as confirmed gameplay.
-        Before posting logs or screenshots, remove Windows user names, local paths, IPs, and private song metadata.
-        See [current limitations](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md).
+        Thanks for testing XNFS Playlist Builder. **3.2 Beta 1.6 is an experimental prerelease.**
+        For a support attachment, open **Support → preview Plain English or JSON → Save ZIP** in the app. It contains diagnostics.txt and diagnostics.json and is **not uploaded automatically**.
+        The in-app report excludes raw logs, personal paths and song titles. Review any *other* attachments, screenshots and manually gathered logs for personal data before posting.
+        See the [exact tested / untested matrix](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.6.md).
   - type: dropdown
     id: application-version
     attributes:
       label: Application version
       options:
+        - 3.2 Beta 1.6
         - 3.2 Beta 1.5
         - 3.2 Beta 1.4
         - 3.0 Beta 1.2
@@ -23,59 +24,57 @@ body:
   - type: dropdown
     id: game
     attributes:
-      label: Which game or part of the app?
+      label: Which game or app component?
       options:
         - Most Wanted (2005)
         - Carbon (2006)
-        - Windows builder itself / installer
+        - Windows builder / installer
     validations:
       required: true
   - type: input
     id: game-version
     attributes:
-      label: Exact game executable / version (if known)
-      placeholder: "For example: Carbon 1.2 or Carbon 1.4"
+      label: Exact game executable and version
+      placeholder: "Carbon 1.2 / 1.4, Most Wanted 2005, modified EXE details"
   - type: input
     id: windows
     attributes:
-      label: Windows version and display scale
+      label: Windows version and display scaling
       placeholder: "Windows 11, 125% scaling"
   - type: textarea
     id: options
     attributes:
-      label: What options were selected?
-      description: "Include game profile, pursuit mode, event settings, skip key or other relevant options."
+      label: Relevant options and other mods
+      description: "Pursuit mode, fades, level settings, game loader, executable mods or Carbon event mode"
   - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      description: "Numbered steps make the issue much easier to test."
-      placeholder: "1. Open Game configuration…"
+      placeholder: "1. Open the builder ...\n2. Select ...\n3. Launch the game ..."
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: What did you expect to happen?
+      label: Expected result
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: What actually happened?
-      description: "Include the exact error or crash point."
+      label: Actual result / error / crash stage
     validations:
       required: true
   - type: dropdown
-    id: retry
+    id: reproducible
     attributes:
-      label: Does it still happen after restarting the builder/game?
+      label: Does the issue reproduce after restarting?
       options:
         - Yes
         - No
-        - Haven't tried / can't safely retest
+        - Not tested / cannot retest safely
   - type: textarea
     id: diagnostics
     attributes:
-      label: Redacted screenshots, logs or Windows crash details
-      description: "From Game configuration > Installation > Open troubleshooting logs, if available. Review every attachment for private data before sharing."
+      label: Support ZIP or redacted evidence
+      description: "Attach your saved diagnostics ZIP via GitHub. Never post unreviewed raw logs, usernames, local paths or private song metadata."

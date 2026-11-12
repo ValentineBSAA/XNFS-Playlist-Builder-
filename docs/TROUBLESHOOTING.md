@@ -1,64 +1,60 @@
-# 🛟 Troubleshooting XNFS Playlist Builder 3.2 Beta 1.5
+# 🛟 Troubleshooting Beta 1.6
 
-[← Home](../README.md) · [Start guide](GETTING-STARTED.md) · [Current test results](WHATS-NEW-BETA-1.5.md)
+[← Home](../README.md) · [Getting started](GETTING-STARTED.md) · [Known test status](WHATS-NEW-BETA-1.6.md)
 
-**Beta 1.5 is public but experimental.** A feature appearing in a menu or passing an isolated file check does **not** mean that gameplay has been verified.
+## I can't find the Windows installer
 
-## Where is the installer?
+Visit [Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases). Once published, download **`XNFS-Playlist-Builder-3.2-Beta-1.6-Public.zip`**, extract it, and run **`XNFS-Playlist-Builder-3.2-Beta-1.6-Setup.exe`**. GitHub's automatically created Source code ZIP is **not** the installer. The public package does not ship new screenshots.
 
-Download [**XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip). Extract it with Windows **Extract All**. Run **`XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe`**. The screenshots ZIP and automatic GitHub "Source code" ZIP are **not installers**.
+## Unknown publisher / security prompt
 
-## Windows says the publisher is unknown
+The Setup EXE is **unsigned**. Confirm the file came from this repository and compare the [SHA-256 checksum](SHA256-OF-BETA-1.6.txt). A matching checksum detects alteration but does not certify the program's security.
 
-The app is unsigned. Check that the installer was downloaded from **this project's official release**, compare [SHA-256](SHA256-OF-BETA-1.5.txt) if desired, and only run software you trust.
+## No music in game
 
-## I had “No module named 'uuid'” in Beta 1.4
+1. Confirm your game and selected executable, correct game/music folders, and that library Scan found songs.
+2. Review **Game configuration → Manual assignments** and save changes if needed.
+3. Close the game. Use **Game configuration → Installation → Check setup** to confirm required player components.
+4. Make sure a compatible **ASI loader** is already installed and working. Do not casually overwrite other proxy loaders.
+5. Use **Build / Save**, then test a simple music state in game. File checks alone do not prove in-game audio.
+6. Use **Support** to generate a ZIP for a bug report if the issue persists.
 
-The final Beta 1.5 compiled package **includes** the `uuid` Python standard-library module and related runtime components. Its inclusion passed build/fixture inspection. It does not guarantee that every unrelated installation issue is gone. Download the new Beta 1.5 package, not the old Beta 1.4 ZIP.
+## Which Most Wanted pursuit option should I choose?
 
-## My music doesn't play in game
+- **Ordinary Pursuit playlist:** complete songs from the Pursuit pool, with configurable fades/finish-current-song behavior.
+- **Original interactive:** your game's native adaptive score, extracted **inside the game** after the original installer feature is enabled. **T cannot skip native score nodes**.
+- **Custom interactive:** your own library songs; **T skip and EA Trax titles** were confirmed in Beta 1.6 gameplay. Advanced authored mapping stays experimental.
 
-1. Confirm the **correct game folder and executable version**.
-2. Confirm your selected music library and scan results.
-3. Review **Game configuration → Manual assignments**, then **Save assignments** if edited.
-4. With the game closed, verify required player features are installed and use **Build / Save**.
-5. Check that your **compatible ASI loader** works. The builder doesn't silently install or replace unknown loader DLLs.
-6. Try a simple category first. If file status passes but game playback doesn't, **report it as unverified gameplay**, not automatically as a broken music file.
+Do not select original and custom output together. Beta 1.6 confirms the **original-mode** pursuit-to-Free-Roam fade but its timing can feel slow. **Custom-mode exit fade after the latest revision is not separately confirmed**.
 
-## Which Most Wanted pursuit mode should I use?
+## A first track or fade behaves strangely
 
-**Original/default:** uses your own original game soundtrack and the **native in-game XNFS installation/extraction**. **Custom interactive:** songs from your scanned library, with experimental advanced mapping options. **Pursuit playlist:** ordinary track pool. Choose only one pursuit mode at a time. The native original soundtrack **cannot be skipped with T**; T supports ordinary/custom continuous tracks.
+The first selected pool after switching saves still needs a full gameplay retest. Likewise, the incoming fade at **every** natural custom-interactive song boundary is not yet confirmed. Capture game mode, settings and expected versus actual behavior. Do not report these as universally fixed.
 
-**Do original and custom pursuit play on top of each other?** They **should not**, but the latest full-game regression for overlap, transitions, exit and mode-save persistence has **not** been completed. Please report audible overlap with game and mode details.
+## Carbon Canyon/Pursuit playlists are missing
 
-**Most Wanted police-radio ducking?** Not included.
+That is expected: independent **custom** Canyon/Pursuit song buckets are **not implemented**. Existing custom event paths still reuse car-class pools. Original Canyon/Pursuit and Drift audio configuration has not passed real event-mode acceptance. Carbon **1.4 gameplay is unverified** even though version-matched binaries were packaged.
 
-## Why can't I see Carbon-specific Canyon or Pursuit custom song buckets?
+## Carbon freezes around Load Complete
 
-They are **not implemented**. The current custom modes use the existing Muscle/Tuner/Exotic/Menu routing. Original Canyon/Pursuit and Drift configuration controls exist, but need actual events tested. Carbon original music extraction is experimental.
+The intermittent **Load Complete** crash remains open. There is no verified root cause or complete fix. Report the Carbon executable (1.2/1.4), other mods/loader, stage of failure and whether it also occurs without the new player components. Do not delete backups.
 
-## Carbon freezes or crashes around Load Complete
+## The Windows builder closed during or just after installation
 
-That intermittent issue is **unresolved** and **not established as a player/plugin bug**. Report your exact Carbon executable version (1.2 or 1.4), other mods, where the game stops, whether it happens without the new components, and any Windows crash details. Preserve your backup.
+The operation may have already completed. Reopen it and use **Game configuration → Installation → Check setup** before retrying. Inspect any local troubleshooting logs privately. Beta 1.6's clean Setup and disposable installation verification does not guarantee all intermittent UI/runtime faults are resolved.
 
-## The Windows builder closed just after player installation
+## Most Wanted car rendering is broken
 
-Some Windows failure evidence implicated Qt animation/lifetime handling **after file changes had already committed**. Beta 1.5 hardens timers, queued UI callbacks and dialog/worker disposal. Fixture tests passed, but the original intermittent crash was not reliably reproduced, so **no universal fix is claimed**.
+One heavily modded installation showed a disappearing or incorrectly rendered body. A limited read-only check did **not** establish the cause. It is **not proven** to be related to the music player. This release did not change graphics or LAA flags to address it.
 
-**Reopen → Game configuration → Installation → Check setup**. If the component is already installed, don't blindly overwrite it. **Open troubleshooting logs** and review the operation summary and any Windows Error Reporting information.
+## How do I share useful diagnostics?
 
-## Why are genres odd or songs in multiple categories?
+Open **Support**, preview **Plain English** or **JSON**, and choose **Save ZIP**. It creates a local archive with **`diagnostics.txt`** and **`diagnostics.json`**; attach it yourself to an issue. The reports exclude raw logs, personal paths, track names, audio files and saves. Scrub **any additional** screenshots/logs you choose to post for private information.
 
-Automatic suggestions rely on **metadata and balancing**, not listening to the audio. Missing/inaccurate tags need review. Driving pools can overlap, and repeated songs may appear in different contexts. Use **Manual assignments** to refine them, **Save assignments**, then **Build / Save** for the game.
+For accurate reproduction, include Beta 1.6, the exact game executable, Windows version, your selected music mode, other mods, steps and expected/actual results.
 
-## Can I restore everything perfectly?
+## Restoration safety
 
-**Not guaranteed.** Restore backup/original requires intact tracking and files. In particular, the complete rollback of **media generated later by Most Wanted's native in-game original-score extractor** still needs end-to-end acceptance. Keep your own full game backup. [See restoration guide](BACKUPS-AND-RESTORE.md).
+A full native-generated audio rollback is not completely accepted, and pre-existing external mods can complicate restoration. Keep a known-good copy of your complete game folder. Uninstalling the Windows builder does not restore game files.
 
-## What should I send with a bug report?
-
-Use [GitHub's bug form](../.github/ISSUE_TEMPLATE/bug_report.yml). Include **application Beta 1.5**, Most Wanted/Carbon and executable version, Windows version and screen scaling, selected pursuit/event options, steps, expected vs actual behavior, screenshot, operations/Qt/Windows error logs if available, and whether restarting changes it.
-
-**Please redact Windows usernames, local paths, music metadata and IP addresses before posting.** A little reproduction detail is much more useful than posting an entire unreviewed log.
-
-[Open a GitHub issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose) · [Discuss testing](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions)
+[Backup guide](BACKUPS-AND-RESTORE.md) · [Create an issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose) · [Discussion](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions)

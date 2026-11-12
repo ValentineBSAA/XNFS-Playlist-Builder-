@@ -1,50 +1,47 @@
 # 🟡 Most Wanted (2005): Rockport Gold
 
-**Build your own Rockport soundtrack with XNFS Playlist Builder 3.2 Beta 1.5.**
+[← Home](../README.md) · [Get started](GETTING-STARTED.md) · [Beta 1.6 test record](WHATS-NEW-BETA-1.6.md)
 
-[← Home](../README.md) · [Install](GETTING-STARTED.md) · [All photos](../screenshots/README.md)
+![Most Wanted library, retained Beta 1.5 screenshot](../screenshots/beta-1.5/most-wanted/01-library.png)
 
-[![Most Wanted Beta 1.5 music library](../screenshots/beta-1.5/most-wanted/01-library.png)](../screenshots/beta-1.5/most-wanted/01-library.png)
+## Music pools
 
-## Where the songs play
-
-| Pool | Use |
+| Pool | When |
 | --- | --- |
-| **Safe House** | Frontend menus **and** the safe house; there's no second Menu bucket |
+| **Safe House** | Safe House **and** frontend menus |
 | **Free Roam** | Driving around Rockport |
-| **Race** | Races |
-| **Pursuit** | Police chases, according to the selected music mode |
-| **Shared** | Fallback |
+| **Race** | Racing |
+| **Pursuit** | Police pursuits when ordinary playlist mode is active |
+| **Shared** | Fallback music |
 
-You can assign songs manually to multiple driving categories, or use metadata-based automatic placement. **Shared** is fallback, not a fifth driving state.
+Songs may belong to multiple pools. Auto assignment uses metadata, not acoustic analysis. Inspect Manual assignments for precise control.
 
-## Original score, custom score and normal playlists
+## Three distinct pursuit modes
 
-The **Game configuration → Pursuit music** page separates original/default interactive audio, custom interactive music from your library, and the ordinary pursuit playlist. Choose **one mode at a time**.
+**Game configuration → Pursuit music** lets you choose *one* of the ordinary Pursuit playlist, original native adaptive score or custom interactive library playback.
 
-![Most Wanted Beta 1.5 pursuit configuration](../screenshots/beta-1.5/most-wanted/11-custom-pursuit.png)
+- **Ordinary Pursuit playlist:** normal full songs assigned to the Pursuit pool. Beta 1.6 supports finishing the current song before switching pools and configurable fades. A real session confirmed Free Roam to ordinary Pursuit after the prior song ended.
+- **Original interactive score:** enable its native installer in **Game configuration → Installation**. The game, **not** the builder, extracts original score audio from your own assets during its native first-run setup. This adaptive score has original timing and cannot be skipped by **T**.
+- **Custom interactive music:** choose your own songs from the library. Developer gameplay heard three selected songs and confirmed **T** skipping and corrected **EA Trax** titles. Advanced node maps, segment editing and authored packs remain experimental.
 
-**Original game score:** in **Game configuration → Installation**, choose **Install original interactive music** and **Install selected features**. The builder installs/arms the native ASI. **The game itself** extracts/decodes/encodes your own original soundtrack banks on first run, displaying percent and stage ETA. After its completion and game exit, launch it again. You need valid original game audio and node files. The builder must not run a separate copy of this extraction process.
+![Pursuit configuration screenshot retained from Beta 1.5](../screenshots/beta-1.5/most-wanted/11-custom-pursuit.png)
 
-**Custom interactive pursuit:** select songs from your scanned library. Advanced mapped segments and pack import/export are optional experimental tools. Song playlists and mode settings are retained across mode changes, but extended transitions and overlap still need real listening tests.
+## New fade and balance behavior
 
-**T-key skipping:** confirmed previously for installed ordinary/custom continuous playback while driving; it does **not** skip the native original adaptive score or mapped original nodes. **No F9 requirement for Most Wanted.**
+The independent music mix defaults to **65%**, accepted during a session where music, engine and police radio were all audible. Adjust to preference; loudness leveling can prepare normalized copies without changing originals.
 
-**EA Trax notifications:** previously confirmed; occasional late notifications were observed historically and are not claimed fully fixed.
+Beta 1.6 listening confirmed the **first three Safe House fades**, audible prologue soundtrack, ordinary Free Roam/Pursuit selection, custom interactive playback, and revised **original-score pursuit → Free Roam fade-out/fade-in**. The exit timing may still feel slow.
 
-## What is actually confirmed?
+## Tests that are still open
 
-Earlier developer game sessions confirmed situation-based music, original interactive pursuit playback, in-game original soundtrack installer completion, custom pursuit music and custom track skipping. **Those are not a new complete Beta 1.5 regression of Safe House/Free Roam/Race/Pursuit and all transitions.**
+- The **latest custom-interactive** exit-fade change has not had a separate in-game retest.
+- Fade-in at **every natural custom-song boundary** remains unconfirmed, even though isolated BASS fade checks passed.
+- The **first selected track after switching saved games** still needs a complete gameplay check.
+- Long pursuits, different game/mod configurations and complete native-generated soundtrack restoration need more coverage.
+- The installer now accepts modified `speed.exe` when **61 music-hook signatures** match; **actual PLAK gameplay remains unverified**.
+- A disappearing/misrendered car body was observed on one heavily modified Most Wanted setup. Its cause was **not established** and no graphics files or flags were modified.
+- **Police-radio ducking is not implemented**.
 
-**Still to test:** sustained police pursuits; authored segment transitions; original-vs-custom overlap; exit to ordinary music and menus; save/reopen persistence; clean native extraction and restore. **Most Wanted police-radio ducking is not implemented.**
+Beta 1.4's historical complete-interactive claim was inaccurate; see the [archived disclosure](WHATS-NEW-BETA-1.4.md). Beta 1.6's specific gameplay acceptance does not rewrite earlier versions' histories.
 
-## More Beta 1.5 screens
-
-| Player features | Experimental score mapping |
-| :---: | :---: |
-| [![Features](../screenshots/beta-1.5/most-wanted/04-features.png)](../screenshots/beta-1.5/most-wanted/04-features.png) | [![Advanced mapped score editor](../screenshots/beta-1.5/most-wanted/16-mapped-score-editor.png)](../screenshots/beta-1.5/most-wanted/16-mapped-score-editor.png) |
-| [Manual assignments](../screenshots/beta-1.5/most-wanted/17-manual-assignments.png) | [Installation details](../screenshots/beta-1.5/most-wanted/12-installation-details.png) |
-
-> **Historical Beta 1.4 clarification:** the earlier public Beta 1.4 download did **not** include a completed full interactive pursuit system. Beta 1.5 is a new experimental implementation; earlier in-game acceptance now exists for its original and custom paths, but final regression remains pending. [Read historical Beta 1.4 disclosure](WHATS-NEW-BETA-1.4.md).
-
-[Game comparison](GAMES-AND-COMPATIBILITY.md) · [Current tests and known issues](WHATS-NEW-BETA-1.5.md) · [Help](TROUBLESHOOTING.md)
+[Compatibility](GAMES-AND-COMPATIBILITY.md) · [Technical notes](TECHNICAL-NOTES.md) · [Troubleshooting](TROUBLESHOOTING.md)

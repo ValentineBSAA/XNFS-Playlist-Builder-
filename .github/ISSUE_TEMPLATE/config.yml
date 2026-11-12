@@ -1,11 +1,11 @@
 blank_issues_enabled: true
 contact_links:
-  - name: "📖 Beta 1.5 setup instructions"
+  - name: "📖 Beta 1.6 setup instructions"
     url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/GETTING-STARTED.md
-    about: Start with the Windows installer, game folder, music library, and setup checks
-  - name: "🧪 Known limitations and testing"
-    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.5.md
-    about: Most Wanted pursuit modes, Carbon event modes, and unresolved crashes
+    about: Download the correct ZIP, install, check game folders and playlists
+  - name: "🧪 Beta 1.6 verified and unverified features"
+    url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.6.md
+    about: Most Wanted gameplay tests, Carbon limitations and known crashes
   - name: "💬 Ask the community"
     url: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions
-    about: General questions, testing impressions and suggestions
+    about: General questions, feedback and testing impressions

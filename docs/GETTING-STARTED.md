@@ -1,67 +1,50 @@
-# 🚀 First-time setup: your own soundtrack in five steps
+# 🚀 Get started with XNFS Playlist Builder 3.2 Beta 1.6
 
-[← Home](../README.md) · [Download Beta 1.5](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip) · [Pictures](../screenshots/README.md)
-
-**XNFS Playlist Builder 3.2 Beta 1.5** creates custom playlists for **Most Wanted (2005)** and **Carbon (2006)**. You don't need to know programming.
+[← Home](../README.md) · [Download releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Help](TROUBLESHOOTING.md)
 
 > [!WARNING]
-> **Beta 1.5 is an experimental prerelease.** Back up your game folder before making changes. Do not assume every in-game feature has been freshly tested. [Current known limits](WHATS-NEW-BETA-1.5.md).
+> Beta 1.6 remains **experimental**. Back up the complete game folder first. Some compatibility and Carbon event scenarios have **not** been accepted in gameplay.
 
-## Before you begin
+## Before you start
 
-You need **Windows 10 or 11 (64-bit)**, your own copy of one of the supported games, local music files, and a **compatible ASI loader** for game integration. An ASI loader is a component that allows compatible mods to load in a game. The builder helps check your setup but does **not** automatically replace an unknown third-party loader. **Close the game** before player installation or playlist writes.
+Use **Windows 10/11 x64** and supply your own legally obtained Most Wanted (2005) or Carbon (2006) installation and music library. In-game integration needs a **compatible existing ASI loader**. The builder will not silently replace an unknown third-party proxy loader. Close the game before installing features or writing playlists.
 
-## 1. Download the correct ZIP
+### 1. Download and install the Windows app
 
-[**⬇️ XNFS Playlist Builder 3.2 Beta 1.5 (Windows public package)**](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip)
+From [GitHub Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases), select **`XNFS-Playlist-Builder-3.2-Beta-1.6-Public.zip`** once the prerelease is posted. Extract the ZIP and run **`XNFS-Playlist-Builder-3.2-Beta-1.6-Setup.exe`**. It is an unsigned Windows installer, so check the origin and [SHA-256](SHA256-OF-BETA-1.6.txt). No Python installation is needed.
 
-The file name is `XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip`. Use Windows **Extract All** and run **`XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe`** from inside the extracted folder.
+**Do not download the automatic GitHub Source code ZIP to install Windows software.** Those archives contain documentation and screenshots, not the compiled app. The Developer ZIP is not the public installer.
 
-- The setup is currently **unsigned**, so Windows may ask you to verify the publisher. Use only the release linked above if you trust it.
-- The other ZIP named **GitHub.Screenshots.zip** is a temporary gallery handoff, **not the installer**.
-- GitHub's automatically generated **Source code (zip/tar.gz)** downloads are repository snapshots of docs/screenshots, **not the application or editable source project**.
-- The application does **not** require Python.
+### 2. Choose your game and folders
 
-## 2. Choose your game and folders
+Select **Most Wanted** (gold theme) or **Carbon** (cyan theme). Locate the game folder, your music library and any required player location. Verify Auto Detect before relying on it. Each game's settings are kept separately.
 
-Choose **Most Wanted** (gold) or **Carbon** (cyan). Use the Library/game setup section to select your **Game**, **Music library**, and any required XNFS/player folder. Auto Detect is available where supported, but **check the result** before trusting it.
+![Most Wanted library setup in the retained Beta 1.5 gallery](../screenshots/beta-1.5/most-wanted/02-library-setup.png)
 
-![Most Wanted Beta 1.5 game/music folder setup](../screenshots/beta-1.5/most-wanted/02-library-setup.png)
+### 3. Scan and assign music
 
-## 3. Scan songs and review your categories
+Scan your music. Review metadata-based category suggestions and use **Game configuration → Manual assignments** for direct per-track multi-category choices. Click **Save assignments** before using **Build / Save**. Automatic balancing is only a suggestion, not an audio genre detector.
 
-Click **Scan**. Track titles and genres come from available metadata; the app does **not** listen to waveforms to identify music genres.
+Most Wanted pools: **Safe House (also frontend menus), Free Roam, Race, Pursuit, Shared**. Carbon pools: **Menu, Muscle, Tuner, Exotic, Shared**.
 
-| Most Wanted | Carbon |
-| --- | --- |
-| **Safe House** (also game menus) | **Menu** |
-| **Free Roam** | **Muscle** |
-| **Race** | **Tuner** |
-| **Pursuit** | **Exotic** |
-| **Shared** fallback | **Shared** fallback |
+### 4. Review player options and install features
 
-Automatic assignments balance tracks, including unknown genres. Review suggested placements; use **Game configuration → Manual assignments** to switch categories per song, then **Save assignments**. When manual edits are saved, automatic assignment turns OFF to protect your choices. Choose **Build / Save** later to write the game playlists.
+With the game closed, open **Game configuration → Installation → Check setup**. Review editable installation options and file replacement warnings before choosing **Install selected features**. Keep your own original game backup.
 
-## 4. Review optional game-player features
+![Installation review from the unchanged Beta 1.5 screenshot collection](../screenshots/beta-1.5/most-wanted/14-install-selection-review.png)
 
-Open **Game configuration → Installation**, use **Check setup**, then choose **Install / repair player** or **Install selected features** as appropriate. Review all options and the replacement warning before committing any game-file changes. A compatible ASI loader remains your responsibility; do not overwrite existing proxy DLLs without checking them.
+**Most Wanted original adaptive soundtrack:** enable the original interactive option, install the native components and **then launch the game**. The native **in-game installer** extracts your own soundtrack assets and shows progress. It is not performed separately inside the Windows builder. This original score is **not T-skippable**.
 
-![Beta 1.5 install selection review](../screenshots/beta-1.5/most-wanted/14-install-selection-review.png)
+**Most Wanted custom/ordinary music:** choose the appropriate pursuit mode and library tracks. **T** skips ordinary/custom continuous tracks; original and custom interactive modes should not be combined. Set the independent music volume for your audio mix (Beta 1.6 defaults to 65%).
 
-**Most Wanted original pursuit soundtrack:** choose **Install original interactive music** and install the selected feature. Then launch Most Wanted. The **native in-game installer** extracts your own soundtrack, showing progress and estimated time by stage. It may close the game after completion, so start it again. **Do not expect the Windows builder itself to extract the original score.**
+**Carbon:** choose class pools, optional **F9** skip and crew audio options. Carbon 1.4 game playback and original Canyon/Pursuit/Drift event options remain unverified. Custom event buckets for Canyon/Pursuit are not implemented.
 
-**Most Wanted custom pursuit:** choose a custom mode and songs from your scanned library. Original/native and custom mode should not be played together. The **T** key skips ordinary/custom continuous songs but **not** the original adaptive score.
+### 5. Build, save and test
 
-**Carbon:** car-class music, optional **F9** skip and optional crew music ducking can be configured. Original Canyon/Pursuit and Drift modes are experimental; custom Canyon/Pursuit-specific track buckets aren't implemented. Carbon 1.4 needs full gameplay verification.
+Use **Build / Save** to write the chosen playlists while the game is closed, then launch it. Loudness leveling, when enabled, prepares separate audio copies. Test the relevant music context, not just the installer status screen. Never assume a successful file write guarantees correct in-game sound.
 
-## 5. Save and check in your game
+## Need help?
 
-With the game closed, click **Build / Save** in the main window. Read the save receipt. If optional loudness leveling is enabled, it prepares **separate playback copies**, not destructive changes to your original music. Launch the game and test each relevant state.
+Use the **Support** button to preview Plain English/JSON details and save a single diagnostic ZIP for an issue. You decide whether to attach it. For missing playback, return to **Check setup** rather than blindly reinstalling. Do not post unredacted raw logs.
 
-**If the builder closes unexpectedly:** open it again, go to **Game configuration → Installation → Check setup**, and check **Open troubleshooting logs**. Do not immediately reinstall over a possibly successful previous file commit.
-
-## Backups matter
-
-**Restore backup** returns to a prior tracked setup. **Restore original game** previews a return to the recorded original. Both rely on intact records and neither is guaranteed when other modifications have changed files. Complete restore coverage for files created by the native in-game original-audio extractor still needs an end-to-end test.
-
-[Restoration details](BACKUPS-AND-RESTORE.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Full status](WHATS-NEW-BETA-1.5.md)
+[Known tests and limits](WHATS-NEW-BETA-1.6.md) · [Restore guide](BACKUPS-AND-RESTORE.md) · [Open a bug report](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)

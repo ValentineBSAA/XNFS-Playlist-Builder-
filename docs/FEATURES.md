@@ -1,40 +1,37 @@
-# 🎛️ Features: plain-English guide to Beta 1.5
+# 🎛️ Features and limitations | Beta 1.6
 
-[← Home](../README.md) · [New screens](../screenshots/README.md) · [Testing matrix](WHATS-NEW-BETA-1.5.md)
+[← Home](../README.md) · [Test evidence](WHATS-NEW-BETA-1.6.md) · [Screenshots](../screenshots/README.md)
 
-## Build a soundtrack from your music
+## Music library and organization
 
-**Scan songs** in a folder and view track name, artist, length and available genre information. The builder remembers folders. The **final compiled build** completed five real-library scans/profile switches with **178 tracks** during automated/isolated acceptance.
+Select local music folders, scan audio, inspect available metadata, preview/pause/seek and search. Browse categories, identify possible duplicate tracks, adjust song order or shuffle with early-repeat avoidance. The builder does **not** recognize music genres by listening to waveforms; it uses song tags and balancing, so review imperfect tags. There is **no artificial playlist track cap**.
 
-**Preview songs**, pause/stop/seek, filter by category, search, inspect possible duplicate tracks and choose playback ordering. Preview playback is separate from in-game playback.
+**Game configuration → Manual assignments** offers a per-track multi-category matrix with bulk controls. Assign songs to more than one relevant driving pool if desired. **Shared** is fallback, not an extra driving state. For Carbon, Menu/Shared rules apply as described in the Carbon guide. **Save assignments** saves your choices; **Build / Save** later writes game playlists. Manual choices should not be silently replaced by automatic assignment.
 
-**Auto assignment** uses song metadata and balancing, not waveform-based genre recognition. It may place songs outside ideal genre categories. Songs without reliable genre tags deserve a manual review. There is **no artificial per-playlist song cap**.
+## Game-specific music
 
-**Manual assignment** is under **Game configuration → Manual assignments**. Assign a track to more than one driving pool when helpful; **Shared** is a fallback, not an extra music state. Carbon Menu and Shared are exclusive choices. **Save assignments** saves the manual matrix; **Build / Save** separately writes playlists for your game. Manual edits disable auto-assignment until you choose to turn it back on.
-
-## Music in game
-
-| | Most Wanted | Carbon |
+| | Most Wanted (2005) | Carbon (2006) |
 | --- | --- | --- |
-| Music groups | Safe House (menus too), Free Roam, Race, Pursuit, Shared | Menu, Muscle, Tuner, Exotic, Shared |
-| Skip control | **T** for custom/continuous tracks; not native adaptive score | Configurable optional **F9** |
-| Special music | Original/default native score or custom pursuit; experimental advanced mapping | Car-class routing; optional crew-dialogue ducking |
-| Experimental | Custom pursuit transitions and node mapping require extensive listening tests | Original Canyon/Pursuit and Drift modes require event testing; no separate custom Canyon/Pursuit buckets |
+| Categories | Safe House / menus, Free Roam, Race, Pursuit, Shared | Menu, Muscle, Tuner, Exotic, Shared |
+| Skip | **T** on ordinary/custom continuous songs | Configurable **F9** |
+| Original music | Native adaptive pursuit score (not T-skippable) | Canyon/Pursuit original music choices experimental |
+| Custom dynamic music | Custom interactive pursuit from user's library; advanced node/segment editing experimental | Class pools confirmed earlier on 1.2; custom Canyon/Pursuit-specific buckets not implemented |
+| Mixing | Independent music gain defaults to 65%; fades, finish-current-song option | Crew speech ducking and balance settings (partly experimental) |
 
-**Shuffle** can reduce early repeats until a pool is exhausted. Songs in multiple pools may be heard in multiple contexts.
+**Most Wanted testing improved in Beta 1.6:** prologue audio, Safe House fades, Free Roam, ordinary Pursuit routing, custom pursuit tracks, T skipping, EA Trax titles and original score exit fade have live-session confirmations. They do not establish general compatibility for all mods and saves.
 
-**EA Trax notifications** exist for Most Wanted and have earlier user confirmation, but historical late-notification issues have not been comprehensively retested.
+**Carbon testing remains limited:** earlier gameplay confirmed class music, F9 and crew ducking on 1.2. The 1.4 player passed isolated packaging/installer checks, **not** live-game acceptance. Original Canyon/Pursuit and Drift mode controls remain experimental.
 
-## Audio leveling and mixing
+## Sound and loudness
 
-Optional loudness leveling prepares **separate playback copies**; originals are preserved. It may take time and disk space. It does not magically lower engines, police-radio voices or other sound effects.
+Configurable song fade-in/fade-out and complete-song state transitions are part of the Most Wanted path. The original score has its own authored timing; custom continuous song skipping is a different feature.
 
-Carbon's music ducking during crew speech was confirmed in earlier gameplay. Crew/speech balance sliders remain experimental; **do not silently turn ducking back ON** when the saved setting is OFF.
+Optional loudness leveling uses FFmpeg to create **playback copies** at a selected target and peak ceiling. It does not overwrite your library or change the volume of car engines, police radio or other game sound effects. Native original/mapped score components preserve their authored levels.
 
-## Install, restore and diagnose
+## Install, backup and diagnose
 
-**Install selected features** makes the game-file changes requested in Game configuration; **Build / Save** writes playlists. The redesigned installation screen shows status, available setup/repair actions, component review, replacement warnings, expandable errors and **Open troubleshooting logs**.
+Use **Game configuration → Installation** to check player components, review editable options, install/repair a compatible player and examine restoration actions. The Windows Setup EXE only installs the builder. **Install selected features**, **Build / Save**, and restore actions can change your game files.
 
-**Restore backup** returns to a tracked saved player/playlist setup. **Restore original game** attempts to recover the recorded original baseline; both require valid records. Native-generated original soundtrack files need more complete restoration testing. See [backup warnings](BACKUPS-AND-RESTORE.md).
+The **Support** button lets you preview either Plain English or JSON diagnostics and save both formats into one local ZIP; it never submits it automatically. The report omits raw logs, paths, song names, media and game saves. Independent screenshots and manually attached logs still require privacy review.
 
-**Important:** successful file checks, configuration tests, and fixture installations are **not** proof of real gameplay. [See exactly what is and isn't tested](WHATS-NEW-BETA-1.5.md).
+[Installation guide](GETTING-STARTED.md) · [Backups](BACKUPS-AND-RESTORE.md) · [Detailed acceptance matrix](WHATS-NEW-BETA-1.6.md)
