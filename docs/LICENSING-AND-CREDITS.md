@@ -11,7 +11,7 @@
 ## Upstream XNFSMusicPlayer and native installer
 
 - Original **XNFSMusicPlayer** and native in-game soundtrack installer: **Lovro Pleše (xan1242)**, [upstream repository](https://github.com/xan1242/XNFSMusicPlayer).
-- The XNFSMusicPlayer source and runtime notices included in the developer/public packages identify an **MIT License, Copyright (c) 2021 Lovro Pleše**. Retain that attribution and copyright/permission notice when redistributing relevant portions.
+- The XNFSMusicPlayer source and runtime notices included in the developer/public packages identify an **MIT License, Copyright (c) 2021 Lovro Pleše**. Retain that attribution and copyright/permission notice when redistributing relevant portions. A copy of the upstream license is preserved in [\`licenses/XNFSMusicPlayer-MIT.txt\`](../licenses/XNFSMusicPlayer-MIT.txt).
 - This upstream MIT grant **does not** itself assign an MIT license to unrelated valentine-authored builder code or to other dependencies.
 
 ## Other bundled components
