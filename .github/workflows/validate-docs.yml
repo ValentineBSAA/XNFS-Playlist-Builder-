@@ -1,0 +1,56 @@
+name: Validate current documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'RELEASE_NOTES.md'
+      - 'LICENSE.md'
+      - 'docs/**'
+      - 'screenshots/**'
+      - '.github/**'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'RELEASE_NOTES.md'
+      - 'LICENSE.md'
+      - 'docs/**'
+      - 'screenshots/**'
+      - '.github/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check local Markdown links and retained screenshot gallery
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, urllib.parse
+          candidates=[Path('README.md'),Path('RELEASE_NOTES.md'),Path('LICENSE.md')]
+          candidates += list(Path('docs').glob('*.md'))
+          candidates += [Path('screenshots/README.md')]
+          broken=[]
+          for file in candidates:
+              body=file.read_text(encoding='utf8')
+              for dest in re.findall(r'\]\(([^)]+)\)',body):
+                  dest=dest.split('#',1)[0].split('?',1)[0].strip()
+                  if not dest or '://' in dest or dest.startswith(('mailto:','#','data:')): continue
+                  file_path=(file.parent/urllib.parse.unquote(dest))
+                  if not file_path.exists(): broken.append(f'{file}: {dest}')
+          if broken: raise SystemExit('Missing local targets:\n'+'\n'.join(broken))
+          shots=list(Path('screenshots/beta-1.5').rglob('*.png'))
+          mw=[f for f in shots if f.parent.name=='most-wanted']
+          carbon=[f for f in shots if f.parent.name=='carbon']
+          if len(shots)!=45 or len(mw)!=24 or len(carbon)!=21:
+              raise SystemExit('Existing 45-image Beta 1.5 gallery unexpectedly changed.')
+          assert Path('docs/WHATS-NEW-BETA-1.6.md').is_file()
+          assert Path('docs/SHA256-OF-BETA-1.6.txt').is_file()
+          print(f'Checked {len(candidates)} documents and retained {len(shots)} existing screenshots.')
+          PY

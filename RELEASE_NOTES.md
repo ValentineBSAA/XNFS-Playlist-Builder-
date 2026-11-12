@@ -1,84 +1,65 @@
-# 🏁 XNFS Playlist Builder 3.2 | Beta 1.5 (experimental prerelease)
+# 🏁 XNFS Playlist Builder 3.2 Beta 1.6
 
-**Your music. Your drive. Your soundtrack.**
+**Experimental Windows prerelease for Most Wanted (2005) and Carbon (2006)**
 
-A significantly redesigned Windows music-playlist studio for **Need for Speed Most Wanted (2005)** and **Need for Speed Carbon (2006)**.
+> Beta 1.6 expands the amount of **real Most Wanted gameplay confirmation**. It is not a blanket claim of compatibility or bug-free gameplay. Publish this as a **prerelease** with tag `v3.2-beta.1.6`.
 
-> **This is a public experimental beta, not a stable or completely gameplay-regression-tested release.** Please read the confirmed/experimental distinctions below before downloading.
+## Download and installation
 
-## ⬇️ Download and install
+On the [Releases page](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases), choose `XNFS-Playlist-Builder-3.2-Beta-1.6-Public.zip` once posted. Extract it and run `XNFS-Playlist-Builder-3.2-Beta-1.6-Setup.exe`. Requires Windows 10/11 x64, a legal copy of either game, your own music and a compatible existing ASI loader for the game. The Windows installer is **unsigned**. Close the game and independently back up its folder before modifying files.
 
-**[Get XNFS Playlist Builder 3.2 Beta 1.5 for Windows](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/download/Beta-1.5/XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip)**
+**Release attachment:** Public ZIP, including Setup EXE, user guide, changelog and third-party notices. The Developer ZIP is **not** the public download. GitHub's automatic Source code links contain only the repository's docs and screenshots.
 
-**Download:** `XNFS-Playlist-Builder-3.2-Beta-1.5-Public.zip` (about 100 MB). Extract it and run **`XNFS-Playlist-Builder-3.2-Beta-1.5-Setup.exe`**.
+## What's new
 
-Requires **Windows 10/11 x64**, your own music, your own compatible copy of the game and a suitable **ASI loader** for game integration. Python is not needed. This unsigned installer may show a Windows unknown-publisher warning. **Back up your game folder and close the game before installing features.**
+### Most Wanted
 
-The public ZIP contains the installer, README, changelog, verification notes, and before/after application screenshots. GitHub's automatic **Source code** archives are documentation snapshots, **not** the Windows app or editable application code.
+- Configurable fade-in and fade-out, plus an option to **finish the current complete song** before switching playlists.
+- Better scripted prologue and pursuit routing; **original adaptive**, **custom interactive** and **ordinary pursuit playlist** are separate modes.
+- Pursuit-to-Free-Roam fade-out/fade-in improved. The **original-score exit** passed listening acceptance, although its timing can still feel slow.
+- Custom interactive library music supports **T skipping** and correctly displayed **EA Trax** song titles. T does **not** skip the game's original adaptive score.
+- Default independent music level is **65%**. Optional loudness leveling accepts a target and peak ceiling, using playback copies rather than changing originals.
+- Modified `speed.exe` can be accepted when all **61 native music-hook signatures** match. **Actual PLAK gameplay is not verified.**
 
-## ✨ What's new in Beta 1.5
+### Carbon
 
-- **Hybrid Performance Studio:** redesigned frameless dark interface, **Rockport Gold** Most Wanted theme, **Midnight Cyan** Carbon theme, more readable configuration and installation screens.
-- **Full music library workflow:** scan remembered folders; preview/pause/seek; search, category filters and ordering; genre review and duplicate checking.
-- **Manual assignments inside Game configuration:** per-song category switches, bulk tools and explicit **Save assignments**. **Build / Save** remains the separate action that writes game playlists.
-- **Improved setup manager:** pre-install component/settings review, guided repair/status checks, backup warnings, errors with next steps and expandable diagnostics.
-- **Optional playback-copy loudness leveling:** source music remains unchanged. Hardened cancellation/close handling.
-- **Most Wanted pursuit settings:** separate original/default, custom interactive and continuous pursuit-playlist choices; experimental node mapping/segment editing and packs.
-- **Carbon event configuration:** original Canyon/Pursuit mode choices and Drift playlist/original ambience/silent options. The underlying event behavior still needs in-game verification.
-- **Packaging fix for Beta 1.4's missing `uuid` runtime:** dependency verified in the final compiled build and fixture installer.
-- **Installation crash hardening:** persistent Qt timer ownership, queued GUI updates and safer cleanup. **Not a confirmed complete fix for every intermittent crash.**
-- **Updated real-application screenshots**, new help pages and clearer user-facing status labels.
+- Menu, Muscle, Tuner, Exotic and Shared pools, optional F9 skipping, crew balance and ducking controls.
+- Matching player payloads for the inspected **Carbon 1.2 and 1.4** executables. **Earlier 1.2 gameplay** confirmed class routing; **1.4 live gameplay is not yet verified**.
+- Original Canyon and Pursuit and Drift audio options remain **experimental**; distinct custom Canyon/Pursuit pools are not implemented. The intermittent **Load Complete** crash remains unresolved.
 
-## 🟡 Most Wanted: what currently works, and the limits
+### Builder and support
 
-**Soundtrack pools:** **Safe House** (includes menus), **Free Roam**, **Race**, **Pursuit**, plus **Shared** fallback.
+- Guided per-game installation/review, manual multi-category assignments, backup and original-restoration tools, and improved interface responsiveness.
+- The new **Support** button previews a plain-English or JSON report and exports one local ZIP containing both formats. Users decide whether and where to share it; it excludes raw logs, personal paths, song titles, music files and saves.
+- No screenshots have been changed for Beta 1.6; the Beta 1.5 gallery remains available.
 
-**Earlier developer gameplay confirmed** state-based music, **T** skipping for ordinary/custom continuous tracks, EA Trax notifications, the original native interactive pursuit score and custom-library pursuit playback.
+## What was actually tested
 
-**Original interactive soundtrack setup:** select **Game configuration → Installation → Install original interactive music → Install selected features**, then launch the game and use the **native in-game XNFS installation/extraction flow**. The game extracts from your own game audio banks and shows percent/progress and stage ETA. **The builder does not independently extract the original score.** A valid game-audio and node baseline is required.
+**Reported in actual Most Wanted gameplay:** first three Safe House song fades; prologue audibility; Free Roam track playback; complete-song Free Roam → ordinary Pursuit switching; custom interactive pursuit playing all three selected songs (39 node requests logged without playback errors); T skip; corrected EA Trax titles; 65% mix with car and police radio; and the revised **original** pursuit-score exit fade.
 
-**Choose one original/default or custom pursuit mode at a time.** The **T** key does **not** skip the original native adaptive score or advanced mapped segments. Saved custom-song selections should survive mode changes.
+**Build and isolated verification (not game sessions):** clean Windows Setup install, installed-app smoke test and uninstall; both game-mode packaged smoke checks; **10** disposable install/backup/restore review cycles split between the games; **17** core regressions; diagnostics TXT/JSON ZIP export; and native playlist-transition tests. The supplied handoff also records real-output loudness tests and compiled 61-signature hook matching. These findings are taken from the supplied developer verification records; they are not all independently rerun here.
 
-**Still needs focused gameplay tests:** extended pursuits, custom authored transitions, start/exit events, playlist save/reopen, and overlap between original and custom audio. **Police-radio ducking is not implemented.** Do not treat short playback confirmation as proof of a complete new regression.
+**Still outstanding:** revised **custom** pursuit-mode exit-fade retest; incoming fade at every natural custom-song boundary; first music pool after switching save files; extended regression of all pursuit and mod combinations; PLAK gameplay; Carbon 1.4 and event-mode playback; Carbon Load Complete crash investigation; and a rendering issue seen with a heavily modded Most Wanted installation. Full restoration of all audio generated later by the native extractor is not guaranteed.
 
-## 🔵 Carbon: what currently works, and the limits
+## Safety and compatibility
 
-**Soundtrack pools:** **Menu, Muscle, Tuner, Exotic**, plus **Shared**. The builder uses metadata/genre preferences, not waveform classification; automatic balancing can place a song outside its preferred genre.
+The desktop Setup installer does not automatically alter the game. **Install selected features**, **Build / Save**, and restoration commands can affect game files. Review replacement warnings and backups, particularly on modded installations. A successful file check is not proof of in-game playback. For the original Most Wanted score, extraction runs **inside the game** after the native component is installed, not independently in the Windows builder.
 
-**Earlier gameplay confirmed** car-class routing on Carbon 1.2, optional/configurable **F9** skipping and music lowering during crew dialogue. Do not silently re-enable ducking when a user's saved setting is OFF.
+## Checksums
 
-**Carbon 1.2 and 1.4 installation payloads** passed isolated checks. **Carbon 1.4 has not received a complete live-game verification.** Crew/speech balance remains experimental.
+```text
+8bf8d69cfaeef2d8759ff172694747fbaebef39661088f1b99bc46110fc3cfd8  XNFS-Playlist-Builder-3.2-Beta-1.6-Public.zip
+334ee6a3c55e65e4531bfd8f15036d003a33c20ed71f16133e838c15cdf70511  XNFS-Playlist-Builder-3.2-Beta-1.6-Setup.exe
+```
 
-**Experimental event controls:** original Canyon and Pursuit scores; Drift playlist, original ambience or silence. Actual event transitions need gameplay tests. **There are no independent custom Canyon/Pursuit track buckets yet**: existing custom modes use car-class pools.
+Checksums checked against the supplied Public ZIP and extracted installer, and match the Developer ZIP's manifest.
 
-**Known issue:** an intermittent crash near **Load Complete** remains unresolved. Its root cause is not proven to be the playlist plugin.
+## Read more
 
-## 🧪 What was actually tested?
+[First-time setup](docs/GETTING-STARTED.md) · [Most Wanted](docs/MOST-WANTED.md) · [Carbon](docs/CARBON.md) · [Complete Beta 1.6 testing matrix](docs/WHATS-NEW-BETA-1.6.md) · [Troubleshooting](docs/TROUBLESHOOTING.md) · [Licensing and credits](docs/LICENSING-AND-CREDITS.md) · [Screenshot gallery](screenshots/README.md).
 
-**Automated / isolated checks, not gameplay:**
-- Final compiled executable: five 178-track library scans/profile switches.
-- Ten installer/UI fixture cycles across Most Wanted and Carbon; backups, dialogs and installer worker paths exercised against disposable folders.
-- Configuration, playlist output, manual assignment, save/reload, mode combinations and restore/rollback fixtures.
-- 30 rapid normalization cancel/close cycles with no remaining workers; 150 animated review cycles.
-- UI checks across 1280×720 to 2560×1440 and 100–200% scaling.
-- Compiled packaging inspection confirms the missing `uuid` module is included.
-
-**Not completed:** comprehensive new in-game regressions for either game; fresh extraction/reinstall/original restoration that includes all native-generated media; Carbon Load Complete crash reproduction and root-cause fix; full custom pursuit overlap/transition listening; live Carbon 1.4 and event-mode verification.
-
-## 🛡️ Install and restoration safety
-
-Installing the Windows app **does not itself modify game files**. **Install selected features** and **Build / Save** can. Read replacement prompts and preserve original game files and tracked backups.
-
-**Restore backup** recovers a compatible saved player setup; **Restore original game** aims to undo tracked changes. Neither is guaranteed when the baseline is missing or files were edited externally. Original soundtrack files generated later by the native in-game installer require additional end-to-end restore testing.
-
-If the application closes while installing, **reopen → Game configuration → Installation → Check setup** before reinstalling. **Open troubleshooting logs** and include a *redacted* log in a bug report when possible.
-
-## 🔗 Guide and help
-
-[First-time installation](docs/GETTING-STARTED.md) · [Most Wanted](docs/MOST-WANTED.md) · [Carbon](docs/CARBON.md) · [Beta 1.5 full status](docs/WHATS-NEW-BETA-1.5.md) · [Screenshots](screenshots/README.md) · [Known issues](docs/TROUBLESHOOTING.md) · [Report a bug](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
-
-**The historical Beta 1.4 notice remains true for Beta 1.4:** its advertised complete interactive pursuit feature was not actually implemented. **Beta 1.5 is a different experimental build** with new implementation and additional outstanding verification. We will not retroactively label Beta 1.4 as working.
+Historical Beta 1.4 and Beta 1.5 notes are retained. In particular, Beta 1.4's advertised complete interactive pursuit system was not delivered in that earlier build; this note does not retroactively change that history.
 
 ---
 
-Created by **valentine**. Original XNFSMusicPlayer and native in-game soundtrack installer work by **Lovro Pleše (xan1242)**. Independent fan tool, not affiliated with Electronic Arts. Commercial game/audio assets are not included.
+Built by **valentine**, incorporating original XNFSMusicPlayer and native installer work by **Lovro Pleše (xan1242)**. Independent fan-made tool. No Electronic Arts affiliation or bundled commercial game/music assets.
