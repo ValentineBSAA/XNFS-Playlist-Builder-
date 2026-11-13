@@ -4,6 +4,10 @@
 
 ![Most Wanted library, existing Beta 1.5 screenshot](../screenshots/beta-1.5/most-wanted/01-library.png)
 
+## November 13, 2026: Windows 11 Black Edition 1.3 gameplay verification
+
+**Developer valentine reports that XNFS Playlist Builder 3.2 Beta 1.7 worked correctly for all features they exercised on a physical Windows 11 PC running Need for Speed: Most Wanted (2005) Black Edition, version 1.3.** No issues were observed in that test session. This is a later hands-on pass, separate from the previously recorded 45-track category tests. It does **not** establish identical results for every modified executable or every player. [Dated verification record](PC-VALIDATION-BETA-1.7.md).
+
 ## The music categories
 
 | Pool | Used for |
@@ -46,6 +50,6 @@ Optional loudness leveling processes **copies** of your own music at the desired
 - An intermittent car-body rendering problem on a heavily modified installation has no proven cause or XNFS attribution.
 - **Police-radio ducking is not implemented**. Original-score extraction/media restoration is not guaranteed in every external-mod situation.
 
-**The Beta 1.7 test handoff does not claim in-game testing of the final packaged EXE**, even though earlier and current Most Wanted gameplay scenarios were reported passed.
+**Verification chronology:** The original Beta 1.7 Developer ZIP marked gameplay on the final packaged EXE as not performed *at handoff*. The developer has **since** confirmed successful hands-on Beta 1.7 gameplay on Windows 11 / Black Edition 1.3 (November 13). An exact executable hash was not supplied, so byte-for-byte identity with the public installer is not independently verified. [Full explanation](PC-VALIDATION-BETA-1.7.md).
 
 [Full verified matrix](WHATS-NEW-BETA-1.7.md) · [Compatibility](GAMES-AND-COMPATIBILITY.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Historical Beta 1.4 disclosure](WHATS-NEW-BETA-1.4.md)

@@ -20,7 +20,7 @@ The public release asset is **`XNFS-Playlist-Builder-3.2-Beta-1.7-Public.zip`**,
 4. Run **Build / Save**, then launch the game.
 5. In Most Wanted, try ordinary music before testing advanced pursuit modes. In Carbon, use known class pools for initial verification.
 
-**Gameplay proof:** the developer reported 45 tracks successfully playing in each of **Most Wanted custom Pursuit, Safe House and Free Roam** during Beta 1.7 tests. A successful file check alone does not prove your own game/mod configuration works.
+**Gameplay evidence:** the developer reported 45 tracks successfully playing in each of **Most Wanted custom Pursuit, Safe House and Free Roam** during Beta 1.7 tests. **On November 13, the developer also confirmed that all personally exercised features worked on a Windows 11 PC with Most Wanted Black Edition 1.3.** A successful file check or test on one machine does not prove every other game/mod configuration works. [Exact PC record](PC-VALIDATION-BETA-1.7.md).
 
 ## Which Most Wanted pursuit mode?
 

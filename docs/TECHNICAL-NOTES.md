@@ -34,7 +34,7 @@ Beta 1.7 shows per-song analysis/leveling percentage if sufficient duration data
 
 **Windows upgrade issue:** Beta 1.6's earlier runtime could leave incompatible Qt/Shiboken DLLs when upgraded in place. The Developer ZIP reports reproduction and subsequent successful in-place repair after using versioned runtime dependencies. It does not prove all native/Qt failures eliminated.
 
-The Developer ZIP records **10 completion-review-and-return cycles**, packaged game view checks and an embedded app icon. Earlier automated tests included a 47-file generated install workflow and 17 core regressions. **The final compiled Beta 1.7 EXE was not itself exercised in actual game play**, per `VERIFICATION.json` (`gameplay_on_final_exe: false`).
+The Developer ZIP records **10 completion-review-and-return cycles**, packaged game view checks and an embedded app icon. Earlier automated tests included a 47-file generated install workflow and 17 core regressions. **At the original packaging-test snapshot**, the final compiled Beta 1.7 EXE was not exercised in actual gameplay (`VERIFICATION.json` had `gameplay_on_final_exe: false`). **Later**, on November 13, developer valentine reported successful hands-on Beta 1.7 gameplay with all personally exercised features on a **Windows 11 PC running Most Wanted Black Edition 1.3**. The latest tested EXE's exact hash was not supplied, so identity with the public installer has not been independently established. [Test chronology](PC-VALIDATION-BETA-1.7.md).
 
 ## Loudness leveling and diagnostics
 

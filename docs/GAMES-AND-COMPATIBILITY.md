@@ -11,12 +11,12 @@
 | Unique custom event pools | Custom interactive Pursuit exists | **No separate custom Canyon/Pursuit pools** |
 | Audio controls | Independent Music gain defaults 65%; car engine level adjusted **manually in game** | Crew ducking and audio balance controls |
 | Player builds | Accepts inspected hook layouts with 61 matching signatures | Inspected 1.2 and 1.4 version-matched player files |
-| Real gameplay test | **45-track** custom Pursuit, Safe House, Free Roam developer confirmations | Earlier **1.2** class/F9/ducking confirmations |
+| Real gameplay test | Developer-confirmed Beta 1.7 **Windows 11 + Black Edition 1.3 PC** pass for all personally exercised features (Nov 13); separate 45-track category confirmations | Earlier **1.2** class/F9/ducking confirmations |
 | Outstanding | Save-switch first track, custom fade paths, PLAK, modded rendering report | 1.4 game test, event-music test, intermittent Load Complete crash |
 
 ### Most Wanted testing distinction
 
-The developer reported successfully playing **45 tracks in each of three contexts** in Beta 1.7. Earlier sessions confirmed prologue audio, T skipping, EA Trax titles and the original pursuit-score exit fade. These results do not establish compatibility with all saves or modified executables. **Matching 61 music-hook signatures is an installation check, not a PLAK game test.**
+On **November 13, 2026**, the developer reported successfully using Beta 1.7 during hands-on gameplay on a Windows 11 PC with **Most Wanted (2005) Black Edition 1.3**; all personally exercised features worked without issues. Separately, the developer previously reported successfully playing **45 tracks in each of three contexts** in Beta 1.7. Earlier sessions confirmed prologue audio, T skipping, EA Trax titles and the original pursuit-score exit fade. These results do not establish compatibility with all saves or modified executables. **Matching 61 music-hook signatures is an installation check, not a PLAK game test.**
 
 **Manual sound balance verified by valentine:** use Most Wanted's **Audio options → Car Volume** for engine sound. The builder's Music level is independent. This is a required manual adjustment, **not an unresolved test**.
 
@@ -28,6 +28,6 @@ Carbon 1.2 class music, F9 skip and crew ducking have earlier live-session confi
 
 Requires **Windows 10/11 x64**, user-supplied supported game/music and compatible existing **ASI loader**. Close the game before installation/playlist writes. The builder must not silently replace unfamiliar loader/proxy files. Back up your entire game installation, particularly when using additional mods.
 
-The Beta 1.7 Developer ZIP reports packaged app checks but `gameplay_on_final_exe: false`. See [the exact evidence](WHATS-NEW-BETA-1.7.md).
+The original Developer ZIP reports packaged app checks but `gameplay_on_final_exe: false` **at its test snapshot**; the latest developer Windows 11 / Black Edition 1.3 gameplay confirmation was supplied afterward. The exact tested executable hash was not supplied. See [the dated verification](PC-VALIDATION-BETA-1.7.md) and [full test matrix](WHATS-NEW-BETA-1.7.md).
 
 [Most Wanted guide](MOST-WANTED.md) · [Carbon guide](CARBON.md) · [Technical notes](TECHNICAL-NOTES.md)

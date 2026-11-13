@@ -2,7 +2,7 @@
 
 [← Home](../README.md) · [Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Screenshots](../screenshots/README.md)
 
-**Beta 1.7 is the current documentation baseline, prepared for public prerelease.** Most Wanted has extensive developer-reported game testing. Carbon-specific limitations and certain transitions remain explicitly identified rather than advertised as fully game-verified. The existing Beta 1.5 screenshot gallery has **not** been replaced.
+**Beta 1.7 is publicly released, with its Public ZIP attached.** Most Wanted has extensive developer-reported game testing. Carbon-specific limitations and certain transitions remain explicitly identified rather than advertised as fully game-verified. The existing Beta 1.5 screenshot gallery has **not** been replaced.
 
 | Question or task | Documentation |
 | --- | --- |
@@ -11,7 +11,8 @@
 | Configure Carbon car-class music | [Carbon guide](CARBON.md) |
 | See features and what each control does | [Features](FEATURES.md) |
 | Compare versions and compatibility | [Game compatibility](GAMES-AND-COMPATIBILITY.md) |
-| Read what valentine verified in gameplay | [Beta 1.7 test matrix](WHATS-NEW-BETA-1.7.md) |
+| Read the November 13 Windows 11 + Black Edition 1.3 hardware test | [Developer PC verification](PC-VALIDATION-BETA-1.7.md) |
+| Read the full historical gameplay and package test matrix | [Beta 1.7 test matrix](WHATS-NEW-BETA-1.7.md) |
 | Read the release announcement | [Release notes](../RELEASE_NOTES.md) |
 | See changes since earlier betas | [Changelog](../CHANGELOG.md) |
 | Diagnose problems or export Support ZIP | [Troubleshooting](TROUBLESHOOTING.md) |
@@ -27,7 +28,7 @@
 
 ### Beta 1.7 verification in brief
 
-Developer-reported Most Wanted gameplay passed with **45 tracks each in custom Pursuit, Safe House and Free Roam**, and live custom-song preparation progress completed. The Developer ZIP also records 10 installer completion-review cycles. Importantly, it marks **gameplay on the final packaged EXE as not performed**, so these results should not be conflated.
+**New November 13 verification:** developer valentine reports that **all personally exercised Beta 1.7 features worked on a Windows 11 PC running Most Wanted (2005) Black Edition 1.3**. Earlier 45-track Custom Pursuit, Safe House and Free Roam gameplay tests are documented separately, as are 10 automated installer completion-review cycles. The Developer ZIP's `gameplay_on_final_exe: false` describes its earlier packaging-test snapshot, **before** this latest real-PC confirmation; the tested EXE's exact hash remains unprovided.
 
 Carbon 1.4 gameplay, experimental Canyon/Pursuit/Drift playback, PLAK, some custom fade boundaries, and first-track behavior after changing saves remain unverified. Custom Carbon event-specific track pools are not implemented.
 

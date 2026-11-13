@@ -47,7 +47,7 @@ Use **Build / Save** while the game is closed, launch it and test relevant music
 
 **Developer-verified requirement:** change the **car engine sound volume manually** using **Most Wanted → Audio options → Car Volume**, adjusting it relative to your music. This is the correct procedure and **not an outstanding feature test**.
 
-The developer reported successful playback tests with **45 custom Pursuit songs**, **45 Safe House songs** and **45 Free Roam songs**. These tests do not establish full compatibility for every executable.
+The developer reported successful playback tests with **45 custom Pursuit songs**, **45 Safe House songs** and **45 Free Roam songs**. **Subsequent November 13 PC verification:** all personally exercised Beta 1.7 features also worked on **Windows 11 / Most Wanted Black Edition 1.3**. This is a configuration-specific developer confirmation, not a guarantee for every executable. See [hardware test record](PC-VALIDATION-BETA-1.7.md).
 
 ## If an older installation fails
 
