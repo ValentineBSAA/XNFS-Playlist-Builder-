@@ -1,28 +1,33 @@
-# 🎮 Game support and compatibility: Beta 1.6
+# 🎮 Games and compatibility | Beta 1.7
 
-[← Home](../README.md) · [Full test record](WHATS-NEW-BETA-1.6.md) · [Installation](GETTING-STARTED.md)
+[← Home](../README.md) · [Verified test matrix](WHATS-NEW-BETA-1.7.md) · [Setup](GETTING-STARTED.md)
 
-| Feature | Most Wanted (2005) | Carbon (2006) |
+| Area | Most Wanted (2005) | Carbon (2006) |
 | --- | --- | --- |
-| Core categories | Safe House, Free Roam, Race, Pursuit, Shared | Menu, Muscle, Tuner, Exotic, Shared |
-| Routing | Driving state | Menu and car class |
-| Skip key | **T** for ordinary/custom continuous audio | Optional/configurable **F9** |
-| Original dynamic music | Native adaptive pursuit score; earlier and revised fade gameplay confirmed | Original Canyon/Pursuit and Drift controls **unverified in event gameplay** |
-| Custom music | Ordinary pursuit pool or custom interactive selected songs | Class pools; **no independent custom Canyon/Pursuit pools** |
-| Leveling | Source-preserving audio copies and adjustable target/peak | Source-preserving audio copies and adjustable target/peak |
-| Dialogue options | Independent mix, EA Trax titles; **no police radio ducking** | Crew speech ducking and balance (partly experimental) |
-| Installation | Existing ASI loader and accepted hook signatures needed | Version-matched player for inspected 1.2 and 1.4 |
-| Live verification | Numerous **specific Beta 1.6 MW sessions** accepted | Earlier **Carbon 1.2** class/F9/ducking gameplay only |
-| Known issues | Save switching, some custom fades, modified-game compatibility, heavily modded rendering report | Event playback, 1.4 game test and unresolved Load Complete crash |
+| Core pools | Safe House, Free Roam, Race, Pursuit, Shared | Menu, Muscle, Tuner, Exotic, Shared |
+| Routing | In-game driving state | Menu / active vehicle class |
+| Skip button | **T** ordinary/custom continuous; not native adaptive score | Optional/configurable **F9** |
+| Dynamic music | Original native adaptive or custom interactive pursuit | Original Canyon/Pursuit and Drift modes experimental |
+| Unique custom event pools | Custom interactive Pursuit exists | **No separate custom Canyon/Pursuit pools** |
+| Audio controls | Independent Music gain defaults 65%; car engine level adjusted **manually in game** | Crew ducking and audio balance controls |
+| Player builds | Accepts inspected hook layouts with 61 matching signatures | Inspected 1.2 and 1.4 version-matched player files |
+| Real gameplay test | **45-track** custom Pursuit, Safe House, Free Roam developer confirmations | Earlier **1.2** class/F9/ducking confirmations |
+| Outstanding | Save-switch first track, custom fade paths, PLAK, modded rendering report | 1.4 game test, event-music test, intermittent Load Complete crash |
 
-## Executable and compatibility boundaries
+### Most Wanted testing distinction
 
-**Most Wanted:** modified executables can pass installer checking **if all 61 native music-hook signatures match**. Modified or PLAK gameplay has **not** been accepted merely by matching signatures. Scripted prologue and standard pursuit routing were heard in the tested installation; other installs/mod combinations may differ.
+The developer reported successfully playing **45 tracks in each of three contexts** in Beta 1.7. Earlier sessions confirmed prologue audio, T skipping, EA Trax titles and the original pursuit-score exit fade. These results do not establish compatibility with all saves or modified executables. **Matching 61 music-hook signatures is an installation check, not a PLAK game test.**
 
-**Carbon 1.2:** earlier gameplay confirmed core car-class playback, F9 and crew ducking. **Carbon 1.4:** its inspected payload and fixture installation pass but real gameplay remains unverified. Other region/version builds are not automatically declared compatible.
+**Manual sound balance verified by valentine:** use Most Wanted's **Audio options → Car Volume** for engine sound. The builder's Music level is independent. This is a required manual adjustment, **not an unresolved test**.
 
-**Windows:** 10/11 x64, game/music provided by the user, compatible existing ASI loader. The installer must not silently overwrite unrecognized third-party proxy loaders or assume an unknown mod stack is safe.
+### Carbon testing distinction
 
-**Safe changes:** Close the game, back up its whole folder, inspect options and use **Check setup** after any uncertain interruption. Install/restore operations can modify game files, while uninstalling the desktop app does not revert those changes.
+Carbon 1.2 class music, F9 skip and crew ducking have earlier live-session confirmation; 1.4 installer checks are isolated. Original event soundtrack and Drift choices still need in-game listening. Separate custom Canyon/Pursuit pools remain unimplemented. No root cause has been proven for the intermittent Load Complete crash.
 
-[Most Wanted guide](MOST-WANTED.md) · [Carbon guide](CARBON.md) · [Troubleshooting](TROUBLESHOOTING.md)
+### Safe setup
+
+Requires **Windows 10/11 x64**, user-supplied supported game/music and compatible existing **ASI loader**. Close the game before installation/playlist writes. The builder must not silently replace unfamiliar loader/proxy files. Back up your entire game installation, particularly when using additional mods.
+
+The Beta 1.7 Developer ZIP reports packaged app checks but `gameplay_on_final_exe: false`. See [the exact evidence](WHATS-NEW-BETA-1.7.md).
+
+[Most Wanted guide](MOST-WANTED.md) · [Carbon guide](CARBON.md) · [Technical notes](TECHNICAL-NOTES.md)

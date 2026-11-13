@@ -1,27 +1,38 @@
-# 📚 XNFS Playlist Builder 3.2 Beta 1.6 help center
+# 📚 XNFS Playlist Builder 3.2 Beta 1.7 | Help center
 
-[← Home](../README.md) · [Windows releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Existing screenshot gallery](../screenshots/README.md)
+[← Home](../README.md) · [Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Screenshots](../screenshots/README.md)
 
-**Beta 1.6 is an experimental prerelease with fresh Most Wanted gameplay confirmations.** Carbon experimental event modes and 1.4 gameplay still require testing. The screenshots are intentionally retained from Beta 1.5.
+**Beta 1.7 is the current documentation baseline, prepared for public prerelease.** Most Wanted has extensive developer-reported game testing. Carbon-specific limitations and certain transitions remain explicitly identified rather than advertised as fully game-verified. The existing Beta 1.5 screenshot gallery has **not** been replaced.
 
-| What would you like to do? | Read this |
+| Question or task | Documentation |
 | --- | --- |
-| Install and make your first soundtrack | [Get started](GETTING-STARTED.md) |
-| Learn Most Wanted routing and pursuit modes | [Most Wanted](MOST-WANTED.md) |
-| Configure Carbon car-class music | [Carbon](CARBON.md) |
-| Understand ordinary and advanced features | [Features](FEATURES.md) |
-| Compare games and executable compatibility | [Compatibility](GAMES-AND-COMPATIBILITY.md) |
-| Read exactly what was heard in gameplay | [Beta 1.6 testing matrix](WHATS-NEW-BETA-1.6.md) |
-| Find the release notes | [Release notes](../RELEASE_NOTES.md) |
-| Fix missing music or a crash | [Troubleshooting](TROUBLESHOOTING.md) |
-| Recover previous settings and game files | [Backups and restore](BACKUPS-AND-RESTORE.md) |
-| See detailed installation and runtime notes | [Technical notes](TECHNICAL-NOTES.md) |
-| Verify a download | [Beta 1.6 SHA-256](SHA256-OF-BETA-1.6.txt) |
-| Understand third-party licenses and credit | [Licensing and credits](LICENSING-AND-CREDITS.md) |
-| View the unchanged Beta 1.5 UI gallery | [Screenshots](../screenshots/README.md) |
+| Install the app for the first time | [Getting started](GETTING-STARTED.md) |
+| Set up Most Wanted music and engine sound | [Most Wanted guide](MOST-WANTED.md) |
+| Configure Carbon car-class music | [Carbon guide](CARBON.md) |
+| See features and what each control does | [Features](FEATURES.md) |
+| Compare versions and compatibility | [Game compatibility](GAMES-AND-COMPATIBILITY.md) |
+| Read what valentine verified in gameplay | [Beta 1.7 test matrix](WHATS-NEW-BETA-1.7.md) |
+| Read the release announcement | [Release notes](../RELEASE_NOTES.md) |
+| See changes since earlier betas | [Changelog](../CHANGELOG.md) |
+| Diagnose problems or export Support ZIP | [Troubleshooting](TROUBLESHOOTING.md) |
+| Restore player or game setup | [Backups and restore](BACKUPS-AND-RESTORE.md) |
+| Understand installer/runtime requirements | [Technical notes](TECHNICAL-NOTES.md) |
+| Check the public installer checksum | [Beta 1.7 SHA-256](SHA256-OF-BETA-1.7.txt) |
+| Understand rights and credits | [Licensing and credits](LICENSING-AND-CREDITS.md) |
+| Browse the unchanged UI screenshots | [Screenshots](../screenshots/README.md) |
 
-**Most Wanted:** Safe House, prologue, ordinary/free-roam pursuit switching, custom interactive songs, EA Trax notifications, T skip, 65% mixing and original pursuit-exit fade have session-based gameplay acceptance. Custom exit fade and save switching still need targeted tests.
+### Developer-verified audio note
 
-**Carbon:** earlier real Carbon 1.2 class/F9/ducking tests succeeded, but 1.4 gameplay, original event modes and the reported intermittent Load Complete crash are not resolved.
+**Car engine volume must be changed manually in Most Wanted's in-game Audio options (Car Volume).** The builder controls music separately. Developer **valentine** has verified that this adjustment is necessary; it is **not an open test item or an automatic feature**. The app's 65% music mix is a starting point.
 
-[Historical Beta 1.5 record](WHATS-NEW-BETA-1.5.md) · [Historical Beta 1.4 disclosure](WHATS-NEW-BETA-1.4.md) · [Open an issue](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose) · [Discussions](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions)
+### Beta 1.7 verification in brief
+
+Developer-reported Most Wanted gameplay passed with **45 tracks each in custom Pursuit, Safe House and Free Roam**, and live custom-song preparation progress completed. The Developer ZIP also records 10 installer completion-review cycles. Importantly, it marks **gameplay on the final packaged EXE as not performed**, so these results should not be conflated.
+
+Carbon 1.4 gameplay, experimental Canyon/Pursuit/Drift playback, PLAK, some custom fade boundaries, and first-track behavior after changing saves remain unverified. Custom Carbon event-specific track pools are not implemented.
+
+### Historical notes
+
+[Beta 1.6](WHATS-NEW-BETA-1.6.md) · [Beta 1.5](WHATS-NEW-BETA-1.5.md) · [Beta 1.4 disclosure](WHATS-NEW-BETA-1.4.md)
+
+[Ask in Discussions](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/discussions) · [Open a bug report](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)

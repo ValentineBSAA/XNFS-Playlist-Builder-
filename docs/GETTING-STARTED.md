@@ -1,50 +1,58 @@
-# 🚀 Get started with XNFS Playlist Builder 3.2 Beta 1.6
+# 🚀 First-time setup | 3.2 Beta 1.7
 
-[← Home](../README.md) · [Download releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Help](TROUBLESHOOTING.md)
+[← Home](../README.md) · [Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Tests and limitations](WHATS-NEW-BETA-1.7.md)
 
 > [!WARNING]
-> Beta 1.6 remains **experimental**. Back up the complete game folder first. Some compatibility and Carbon event scenarios have **not** been accepted in gameplay.
+> **Experimental public beta.** Keep an independent backup of the complete game folder, including existing mods and XNFS files, before installing game-side components.
 
-## Before you start
+### Before installation
 
-Use **Windows 10/11 x64** and supply your own legally obtained Most Wanted (2005) or Carbon (2006) installation and music library. In-game integration needs a **compatible existing ASI loader**. The builder will not silently replace an unknown third-party proxy loader. Close the game before installing features or writing playlists.
+You need **Windows 10/11 x64**, a legally obtained **Need for Speed: Most Wanted (2005)** or **Carbon (2006)** installation, your own music files and a compatible **existing ASI loader**. The setup manager checks compatibility but does not silently overwrite an unknown third-party loader/proxy.
 
-### 1. Download and install the Windows app
+### 1. Download the correct file
 
-From [GitHub Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases), select **`XNFS-Playlist-Builder-3.2-Beta-1.6-Public.zip`** once the prerelease is posted. Extract the ZIP and run **`XNFS-Playlist-Builder-3.2-Beta-1.6-Setup.exe`**. It is an unsigned Windows installer, so check the origin and [SHA-256](SHA256-OF-BETA-1.6.txt). No Python installation is needed.
+After it is uploaded, download **`XNFS-Playlist-Builder-3.2-Beta-1.7-Public.zip`** from [Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases). Extract it with Windows **Extract All** and run **`XNFS-Playlist-Builder-3.2-Beta-1.7-Setup.exe`**.
 
-**Do not download the automatic GitHub Source code ZIP to install Windows software.** Those archives contain documentation and screenshots, not the compiled app. The Developer ZIP is not the public installer.
+The installer is **unsigned** and does not require you to install Python. See [SHA-256](SHA256-OF-BETA-1.7.txt) to check the download. Automatic GitHub **Source code** archives are *documentation snapshots*, not the installer. The separate Developer ZIP is not the public package.
 
-### 2. Choose your game and folders
+### 2. Choose the game and music folders
 
-Select **Most Wanted** (gold theme) or **Carbon** (cyan theme). Locate the game folder, your music library and any required player location. Verify Auto Detect before relying on it. Each game's settings are kept separately.
+Choose Most Wanted (gold) or Carbon (cyan). Point the builder to the installed game directory and your music library. Check the game executable and any auto-detected folder before continuing. Game/profile preferences remain separate.
 
-![Most Wanted library setup in the retained Beta 1.5 gallery](../screenshots/beta-1.5/most-wanted/02-library-setup.png)
+![Most Wanted folder setup from unchanged Beta 1.5 screenshots](../screenshots/beta-1.5/most-wanted/02-library-setup.png)
 
-### 3. Scan and assign music
+### 3. Scan and review songs
 
-Scan your music. Review metadata-based category suggestions and use **Game configuration → Manual assignments** for direct per-track multi-category choices. Click **Save assignments** before using **Build / Save**. Automatic balancing is only a suggestion, not an audio genre detector.
+Scan the music library and inspect suggested categories. Genre-based placement is approximate, not waveform recognition. Use **Game configuration → Manual assignments** to place songs in multiple appropriate pools, then **Save assignments**. **Build / Save** is a separate game-playlist write operation.
 
-Most Wanted pools: **Safe House (also frontend menus), Free Roam, Race, Pursuit, Shared**. Carbon pools: **Menu, Muscle, Tuner, Exotic, Shared**.
+| Most Wanted | Carbon |
+| --- | --- |
+| Safe House (also menus), Free Roam, Race, Pursuit, Shared | Menu, Muscle, Tuner, Exotic, Shared |
 
-### 4. Review player options and install features
+### 4. Install the selected game-side features
 
-With the game closed, open **Game configuration → Installation → Check setup**. Review editable installation options and file replacement warnings before choosing **Install selected features**. Keep your own original game backup.
+**Close the game first.** Go to **Game configuration → Installation → Check setup** and review your chosen player options, backup details and replacement warning. Install only the components you want.
 
-![Installation review from the unchanged Beta 1.5 screenshot collection](../screenshots/beta-1.5/most-wanted/14-install-selection-review.png)
+**Most Wanted original interactive music:** enable the native original installer; on game startup, extraction of the **user's own game audio** takes place **inside Most Wanted**, with stages/progress. The Windows builder does not itself extract that native score.
 
-**Most Wanted original adaptive soundtrack:** enable the original interactive option, install the native components and **then launch the game**. The native **in-game installer** extracts your own soundtrack assets and shows progress. It is not performed separately inside the Windows builder. This original score is **not T-skippable**.
+**Most Wanted custom music:** choose ordinary/custom mode, songs and fading options. T skips ordinary/custom continuous music but **not** original adaptive score nodes.
 
-**Most Wanted custom/ordinary music:** choose the appropriate pursuit mode and library tracks. **T** skips ordinary/custom continuous tracks; original and custom interactive modes should not be combined. Set the independent music volume for your audio mix (Beta 1.6 defaults to 65%).
+**Carbon:** choose Menu/Muscle/Tuner/Exotic categories and optional F9 / crew ducking. Version-matched inspected 1.2/1.4 installer payloads are available, but 1.4 gameplay and event soundtrack choices need verification.
 
-**Carbon:** choose class pools, optional **F9** skip and crew audio options. Carbon 1.4 game playback and original Canyon/Pursuit/Drift event options remain unverified. Custom event buckets for Canyon/Pursuit are not implemented.
+**New in Beta 1.7:** per-song leveling/analysis progress, item count, named post-audio install stages and an ETA when timing is available. After the completion review, choose **OK** to return to the main workspace.
 
-### 5. Build, save and test
+### 5. Balance music, save and test in game
 
-Use **Build / Save** to write the chosen playlists while the game is closed, then launch it. Loudness leveling, when enabled, prepares separate audio copies. Test the relevant music context, not just the installer status screen. Never assume a successful file write guarantees correct in-game sound.
+Use **Build / Save** while the game is closed, launch it and test relevant music states. Most Wanted's independent **Music** level defaults to 65%, but that does not control engine audio.
 
-## Need help?
+**Developer-verified requirement:** change the **car engine sound volume manually** using **Most Wanted → Audio options → Car Volume**, adjusting it relative to your music. This is the correct procedure and **not an outstanding feature test**.
 
-Use the **Support** button to preview Plain English/JSON details and save a single diagnostic ZIP for an issue. You decide whether to attach it. For missing playback, return to **Check setup** rather than blindly reinstalling. Do not post unredacted raw logs.
+The developer reported successful playback tests with **45 custom Pursuit songs**, **45 Safe House songs** and **45 Free Roam songs**. These tests do not establish full compatibility for every executable.
 
-[Known tests and limits](WHATS-NEW-BETA-1.6.md) · [Restore guide](BACKUPS-AND-RESTORE.md) · [Open a bug report](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+## If an older installation fails
+
+A previous Windows upgrade could leave conflicting runtime DLLs and produce a **Shiboken** error. The Beta 1.7 handoff reports that the versioned-runtime fix and an in-place repair completed successfully. Close the error and run the current Setup EXE over the existing app installation. Preserve your game backup and inspect **Check setup** before reinstalling game components.
+
+Use **Support → Save ZIP** for a local diagnostics bundle with a reviewed Plain English/JSON report. It is **not automatically uploaded**.
+
+[Backups](BACKUPS-AND-RESTORE.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Tested versus untested](WHATS-NEW-BETA-1.7.md)

@@ -1,37 +1,39 @@
 # 🔵 Carbon (2006): Midnight Cyan
 
-[← Home](../README.md) · [Get started](GETTING-STARTED.md) · [Tests and limits](WHATS-NEW-BETA-1.6.md)
+[← Home](../README.md) · [Setup guide](GETTING-STARTED.md) · [Beta 1.7 test matrix](WHATS-NEW-BETA-1.7.md)
 
 ![Carbon library, unchanged Beta 1.5 screenshot](../screenshots/beta-1.5/carbon/01-library.png)
 
-## Music pools for each car class
+## Soundtracks for each car class
 
-| Pool | Meaning |
-| --- | --- |
-| **Menu** | Game menus |
-| **Muscle** | Music for Muscle-class cars |
-| **Tuner** | Music for Tuner-class cars |
-| **Exotic** | Music for Exotic-class cars |
-| **Shared** | Fallback music |
+| Category | Music use | Example metadata preference |
+| --- | --- | --- |
+| **Menu** | Frontend and menus | Any |
+| **Muscle** | Muscle-class cars | Rock / alternative |
+| **Tuner** | Tuner-class cars | Electronic / pop |
+| **Exotic** | Exotic-class cars | Hip-hop / rap / grime |
+| **Shared** | Fallback | Any |
 
-Genre suggestions derive from song metadata and balancing, not audio waveform classification. Use Manual assignments when tags or automatic categories are wrong. There is no artificially limited playlist size.
+The automatic placement system is metadata-based, not waveform genre detection. Manual assignments provide exact control. There is no artificial playlist length cap.
 
-## Playback and audio controls
+## What is known to work
 
-Earlier **Carbon 1.2 real gameplay** confirmed car-class song routing, configurable **F9** skipping and optional ducking while crew members speak. Saved ducking OFF must remain OFF. Crew/voice and music balance adjustments are partly experimental; loudness leveling adjusts copied songs rather than game dialogue or engine volume.
+Earlier **Carbon 1.2 gameplay** confirmed car-class music switching, optional/configurable **F9** skipping and optional music ducking around crew speech. The builder retains separate Carbon settings and editable audio balance controls. Ducking should **not** silently turn itself on if the saved setting is OFF.
 
-Version-matched player files are bundled for the **inspected Carbon 1.2 and 1.4** executables. Isolated installation checks passed on both. **Carbon 1.4 has not been accepted through full live gameplay testing**.
+Installer payloads exist for the inspected **Carbon 1.2 and 1.4** executables; isolated installation checks passed, **but complete Carbon 1.4 gameplay has not**. The Developer ZIP for Beta 1.7 includes packaged game-view checks but explicitly states that the **final EXE was not gameplay-tested**.
 
-## Canyon, Pursuit and Drift remain experimental
+## Canyon, Pursuit and Drift are experimental
 
-![Carbon event music options from Beta 1.5 screenshot collection](../screenshots/beta-1.5/carbon/18-event-music.png)
+![Carbon event music options, retained Beta 1.5 screenshot](../screenshots/beta-1.5/carbon/18-event-music.png)
 
-Configuration allows original Canyon/Pursuit scoring and Drift choices such as class playlists, original ambience or silence. The configuration and install combinations passed isolated tests, **not in-game Canyon/Pursuit/Drift listening tests**.
+Configuration choices for original Canyon and Pursuit scoring and Drift playlist/original ambience/silent options exist, but their **event-by-event real playback remains unverified**. **Independent custom Canyon and custom Pursuit track buckets are not implemented**; custom event choices still rely on class-based pools.
 
-**Independent custom Canyon and custom Pursuit song buckets do not exist in the current player runtime.** Custom event modes still use the Menu/Muscle/Tuner/Exotic/Shared class masks. Please do not expect event-specific custom song lists. Carbon's original-score handling is experimental and should not be confused with Most Wanted's native in-game original installer.
+The original-score extraction is experimental and should not be equated with Most Wanted's game-side original score extraction flow.
 
-## Known crash
+## Remaining crash investigation
 
-An intermittent Carbon game crash around **Load Complete** is still **unresolved**. No verified root cause or fix has been established; it has not been demonstrated that this plugin is the cause. Record the exact game executable, loader and other mods if reporting it. Do not treat an isolated installation test as a crash fix.
+An intermittent game crash around **Load Complete** has been reported. Its root cause is **unverified**, and it has **not** been established that XNFS causes it. Do not describe the Windows installer upgrade fix as a fix for the Carbon game-side crash.
 
-[Compatibility matrix](GAMES-AND-COMPATIBILITY.md) · [Backups](BACKUPS-AND-RESTORE.md) · [Troubleshooting](TROUBLESHOOTING.md)
+Beta 1.7 improves shared installation progress, completion review and Windows app identity; these gains are not proof of new Carbon 1.4 gameplay compatibility.
+
+[Compatibility](GAMES-AND-COMPATIBILITY.md) · [Test record](WHATS-NEW-BETA-1.7.md) · [Troubleshooting](TROUBLESHOOTING.md)

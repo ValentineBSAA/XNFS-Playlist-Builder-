@@ -1,33 +1,35 @@
-# 🛡️ Backups and restore | Beta 1.6
+# 🛡️ Backups, installation and restore | Beta 1.7
 
 [← Home](../README.md) · [Installation](GETTING-STARTED.md) · [Troubleshooting](TROUBLESHOOTING.md)
 
-**Make an independent copy of the entire game folder first.** Preserve installed ASI loaders, other mods and any original XNFSMusicPlayer files. Automated tracking is helpful, but it is not a replacement for your own known-good baseline.
+**Before installing player features, copy your entire game folder somewhere safe.** Include existing game mods, proxy/ASI loaders, original music banks and any older XNFSMusicPlayer files. The builder's tracked backup is a convenience, not a replacement for your own known-good backup.
 
-## What modifies games?
+## What changes game files?
 
-**Installing the Windows desktop builder alone does not automatically modify game files.** Using **Install selected features** can install/replace game-side files; **Build / Save** writes playlists and can prepare separate playback copies; restore commands may replace or remove tracked files.
+Installing the **Windows desktop builder** alone does **not** automatically modify either game. Within the app, however, **Install selected features** may write or replace game-side player/configuration files, **Build / Save** writes playlist data, and restoration actions can modify tracked files. The game should be closed for these actions.
 
-| Function | Intention | Limitation |
+| Control | What it attempts | Boundary |
 | --- | --- | --- |
-| **Restore backup** | Restore a previously saved setup / playlist snapshot | Snapshot may already include mods or custom player files |
-| **Restore original game** | Preview and attempt to restore the first tracked baseline | Only as reliable as tracked originals and file-change records |
+| **Restore backup** | Return to a previously saved player/playlist configuration | The snapshot could itself contain mods |
+| **Restore original game** | Preview a return to the first recorded game baseline | Requires intact tracked originals and addition records |
 
-A restore may stop to protect files that changed outside the builder. **Do not bypass conflicts by deleting files blindly.**
+**Do not force-delete files or bypass safety prompts** when records are incomplete or changed externally.
 
-## Suggested recovery
+## Recovery procedure
 
-1. Close the game and verify the correct game/profile/folder.
-2. Open **Game configuration → Installation → Check setup** before attempting more changes.
-3. Review the chosen backup/original restoration preview.
-4. Confirm only the files that match your intended baseline.
-5. Launch the game and test the relevant music modes.
-6. Keep copies and tracking data until you confirm full recovery.
+1. Close the game and confirm the builder points to the right game and profile.
+2. Choose **Game configuration → Installation → Check setup**, particularly if a previous installation seemed to stop or crash.
+3. Open the correct restore option and read every file-change preview.
+4. Apply restoration only if the expected original files and backups exist.
+5. Restart the game and confirm the desired sound and other mods still work.
+6. Retain the independent backup and tracking data until you have tested thoroughly.
 
-**Special Most Wanted limitation:** the native original-score installer can generate music assets **later, inside the game**, after the desktop builder has committed. Complete end-to-end removal/restoration of *every* generated file has **not** been confirmed. Keep a full pre-install backup.
+## New installer feedback in Beta 1.7
 
-**If the builder appears to crash after installing components:** file changes may have already succeeded. Reopen → **Check setup** rather than reinstalling immediately. The Beta 1.6 handoff reports clean Windows Setup install/uninstall and 10 disposable game installer cycles, but those results do not prove every crash or recovery scenario is solved.
+Live audio-preparation percentage, completed-song count, post-audio installation stages and ETA (when available) help show that work continues **after the final song is prepared**. Completion review **OK** returns to the main workspace; the developer verification records **10 passing completion/return cycles**. These are UI/fixture tests, not complete game-restoration tests.
 
-**Uninstalling the desktop application does not undo in-game changes.** Recover files first, and retain your backup/receipt records.
+A previous Windows app upgrade could leave incompatible **Shiboken** runtime DLLs; the new versioned dependency layout was reported repaired on the affected installation. This is separate from Carbon's unresolved game-side Load Complete crash.
 
-[Testing evidence](WHATS-NEW-BETA-1.6.md) · [Open a bug report](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+**Native soundtrack caution:** Most Wanted's original score installer may generate soundtrack assets later, **inside the game**, after desktop installation. End-to-end restoration of every native-generated file remains incompletely tested. Uninstalling the desktop builder **does not** undo game modifications.
+
+[Complete Beta 1.7 evidence](WHATS-NEW-BETA-1.7.md) · [Report a problem](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
