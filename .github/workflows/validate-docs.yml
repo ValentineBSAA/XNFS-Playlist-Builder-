@@ -6,16 +6,20 @@ on:
     paths:
       - 'README.md'
       - 'RELEASE_NOTES.md'
+      - 'CHANGELOG.md'
       - 'LICENSE.md'
       - 'docs/**'
+      - 'licenses/**'
       - 'screenshots/**'
       - '.github/**'
   pull_request:
     paths:
       - 'README.md'
       - 'RELEASE_NOTES.md'
+      - 'CHANGELOG.md'
       - 'LICENSE.md'
       - 'docs/**'
+      - 'licenses/**'
       - 'screenshots/**'
       - '.github/**'
   workflow_dispatch:
@@ -28,29 +32,38 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check local Markdown links and retained screenshot gallery
+      - name: Check documentation links, Beta 1.7 evidence and original gallery
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re, urllib.parse
-          candidates=[Path('README.md'),Path('RELEASE_NOTES.md'),Path('LICENSE.md')]
-          candidates += list(Path('docs').glob('*.md'))
+          from urllib.parse import unquote
+          import re
+          candidates=[Path('README.md'),Path('RELEASE_NOTES.md'),Path('CHANGELOG.md'),Path('LICENSE.md')]
+          candidates += list(Path('docs').rglob('*.md'))
+          candidates += list(Path('.github').rglob('*.md'))
           candidates += [Path('screenshots/README.md')]
           broken=[]
           for file in candidates:
               body=file.read_text(encoding='utf8')
               for dest in re.findall(r'\]\(([^)]+)\)',body):
-                  dest=dest.split('#',1)[0].split('?',1)[0].strip()
-                  if not dest or '://' in dest or dest.startswith(('mailto:','#','data:')): continue
-                  file_path=(file.parent/urllib.parse.unquote(dest))
-                  if not file_path.exists(): broken.append(f'{file}: {dest}')
-          if broken: raise SystemExit('Missing local targets:\n'+'\n'.join(broken))
-          shots=list(Path('screenshots/beta-1.5').rglob('*.png'))
-          mw=[f for f in shots if f.parent.name=='most-wanted']
-          carbon=[f for f in shots if f.parent.name=='carbon']
-          if len(shots)!=45 or len(mw)!=24 or len(carbon)!=21:
-              raise SystemExit('Existing 45-image Beta 1.5 gallery unexpectedly changed.')
-          assert Path('docs/WHATS-NEW-BETA-1.6.md').is_file()
-          assert Path('docs/SHA256-OF-BETA-1.6.txt').is_file()
-          print(f'Checked {len(candidates)} documents and retained {len(shots)} existing screenshots.')
+                  path=dest.split('#',1)[0].split('?',1)[0].strip()
+                  if not path or '://' in path or path.startswith(('mailto:','#','data:')): continue
+                  target=file.parent/unquote(path)
+                  if not target.exists(): broken.append(f'{file}: {path}')
+          if broken: raise SystemExit('Broken local links:\n'+'\n'.join(broken))
+          required=['docs/WHATS-NEW-BETA-1.7.md','docs/SHA256-OF-BETA-1.7.txt','docs/LICENSING-AND-CREDITS.md','licenses/XNFSMusicPlayer-MIT.txt','.github/RELEASE-NOTES-BETA-1.7-FOR-GITHUB.md','.github/RELEASE-PUBLISHING-BETA-1.7.md']
+          missing=[name for name in required if not Path(name).is_file()]
+          if missing: raise SystemExit('Missing release docs: '+', '.join(missing))
+          png=list(Path('screenshots/beta-1.5').rglob('*.png'))
+          mw=[f for f in png if f.parent.name=='most-wanted']
+          carbon=[f for f in png if f.parent.name=='carbon']
+          if len(png)!=45 or len(mw)!=24 or len(carbon)!=21:
+              raise SystemExit('Original Beta 1.5 screenshot gallery unexpectedly changed')
+          both=Path('README.md').read_text(encoding='utf-8')+'\n'+Path('docs/WHATS-NEW-BETA-1.7.md').read_text(encoding='utf-8')
+          for word in ('Beta 1.7','45','Car Volume','manually','gameplay_on_final_exe'):
+              if word not in both: raise SystemExit('Missing release evidence: '+word)
+          checksum=Path('docs/SHA256-OF-BETA-1.7.txt').read_text(encoding='utf-8')
+          for sha in ('e2ffbf89173ceb01a54211da50ddd0367212a248e4277508c206586807c42609','d239b491a1d383e21607086da40a95f64543a4756e37719f8aded1b8fbc459fb'):
+              if sha not in checksum: raise SystemExit('Missing verified checksum')
+          print(f'Checked {len(candidates)} Markdown files and preserved {len(png)} existing screenshots.')
           PY
