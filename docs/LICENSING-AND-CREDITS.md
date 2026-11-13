@@ -35,3 +35,13 @@ For source references, see `Third-party notices/Sources.txt` **inside the Public
 No Need for Speed game binaries, copyrighted EA soundtrack or commercially released song library is included. Users supply their own games and audio. This project is **not affiliated with, supported by, or endorsed by Electronic Arts**.
 
 [Get the public package from Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) · [Report a licensing problem](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/issues/new/choose)
+
+## Beta 1.7 public package and redistribution
+
+The **Beta 1.7 Public ZIP** includes a compiled Windows setup installer, first-run help, release notes and a **Third-party notices** directory. It is distinct from the separate editable Developer ZIP; that source handoff is **not** being attached to the public release. GitHub's automatically generated Source code archives contain only this documentation/screenshot repository.
+
+The packaged Beta 1.7 notices identify a **GPL/version-3-enabled FFmpeg 9.0.2 build**, PySide6/Qt **6.12.0**, BASS and other separately licensed components. Upstream XNFSMusicPlayer's MIT copyright and permission notice remains preserved.
+
+**Redistribution compliance is not independently certified by this documentation review.** Publishers should confirm corresponding-source obligations, linking terms and any commercial/noncommercial restrictions for the exact bundled builds. A public GitHub repository and its third-party MIT notice do **not** grant a blanket license to valentine-authored builder code.
+
+[Beta 1.7 release notes](../RELEASE_NOTES.md) · [Publishing steps](../.github/RELEASE-PUBLISHING-BETA-1.7.md)
