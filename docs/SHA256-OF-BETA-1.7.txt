@@ -1,0 +1,23 @@
+XNFS Playlist Builder 3.2 Beta 1.7 — public distribution integrity
+GitHub release tag (to be created): v3.2-beta.1.7
+Repository releases: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases
+
+SHA-256, complete Public ZIP (independently recalculated):
+e2ffbf89173ceb01a54211da50ddd0367212a248e4277508c206586807c42609  XNFS-Playlist-Builder-3.2-Beta-1.7-Public.zip
+Size: 107217837 bytes
+
+SHA-256, Setup EXE extracted from Public ZIP (independently recalculated):
+d239b491a1d383e21607086da40a95f64543a4756e37719f8aded1b8fbc459fb  XNFS-Playlist-Builder-3.2-Beta-1.7-Setup.exe
+Size: 107125542 bytes
+
+SHA-256, installed app EXE (reported by Developer ZIP manifest; not independently extracted from the installer in this audit):
+81231184fcb4403ca82eadd5068cfcec46312ce3cc2d9d31ddd03b4d224528c7  XNFS Playlist Builder.exe
+Size: 3066687 bytes
+
+Both supplied ZIP archives passed CRC checks. The Public ZIP hash and extracted Setup EXE hash match the Beta 1.7 Developer ZIP manifest.
+
+Windows PowerShell:
+Get-FileHash -Algorithm SHA256 "XNFS-Playlist-Builder-3.2-Beta-1.7-Public.zip"
+
+Automatic GitHub Source code ZIP archives are not Windows installers.
+Hash matches detect changes or corruption; they do not prove unsigned software is safe.
