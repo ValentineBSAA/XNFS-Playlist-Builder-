@@ -4,6 +4,8 @@
 
 ## 3.2 Beta 1.7 · Public beta / prerelease
 
+**Post-release verification, November 13, 2026:** developer valentine reports a successful hands-on Beta 1.7 gameplay test on **Windows 11 / Need for Speed: Most Wanted (2005) Black Edition 1.3 (PC)**. Every feature exercised in that session worked as expected. See [dated PC test record](docs/PC-VALIDATION-BETA-1.7.md). Other systems/games are not implied.
+
 - Added per-song loudness level/progress, completed-song counters, named installer stages and ETA when timing is available.
 - Completion-review **OK** now returns to the workspace.
 - Embedded Windows app icon and consistent taskbar/shortcut identity.
@@ -11,7 +13,7 @@
 - Retained repair for older runtime DLL / Shiboken errors during upgrades.
 - Reported **45-song real Most Wanted** custom Pursuit, Safe House and Free Roam gameplay passes; custom Pursuit progress completed.
 - **Developer valentine confirmed:** Most Wanted car engine sound volume is **manually** adjusted with the in-game **Car Volume** control; independent builder music gain does not automatically adjust it.
-- Packaged installation and views passed reported checks. **Final compiled EXE gameplay not independently accepted in the Developer ZIP verification.**
+- Packaged installation and views passed reported checks. The **original Developer ZIP** marked final compiled EXE gameplay as not performed **at the time of that report**; developer PC gameplay verification was subsequently reported on November 13, with no tested EXE hash supplied.
 - Outstanding: Carbon 1.4 and event gameplay, PLAK, several custom fades, first track after save-switch, unresolved Carbon Load Complete crash.
 
 ## 3.2 Beta 1.6 · Documentation and previous test baseline

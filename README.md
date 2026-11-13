@@ -12,7 +12,7 @@
 </div>
 
 > [!IMPORTANT]
-> **Beta 1.7 documentation is prepared for publication.** The **Public ZIP** will appear under [GitHub Releases](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases) after the developer uploads it. Beta 1.7 has developer-confirmed *real Most Wanted gameplay*, including 45-song tests. Some Carbon features, modified executables and specific transitions have not received full game testing. Read [verified / needs testing](docs/WHATS-NEW-BETA-1.7.md).
+> **Beta 1.7 is published.** Developer **valentine** subsequently confirmed successful hands-on use of Beta 1.7 on a **Windows 11 PC running Most Wanted (2005) Black Edition 1.3** (November 13, 2026). Every feature exercised in that session worked as expected. Earlier 45-song category tests are documented separately; other executables, Carbon modes and independent user environments have not received equivalent confirmation. Read the [PC validation record](docs/PC-VALIDATION-BETA-1.7.md) and [full test matrix](docs/WHATS-NEW-BETA-1.7.md).
 
 ## Build the soundtrack you want
 
@@ -64,11 +64,11 @@ Select your own music folders, scan and preview songs, organize tracks by game s
 
 ## 🧪 Verified, limited and unresolved
 
-**Most Wanted, reported actual gameplay:** 45 custom interactive Pursuit, 45 Safe House and 45 Free Roam tracks; earlier acceptance of prologue audio, T skip, EA Trax titles, state-based song routing and original-score exit fade. The original-score fade can feel slow.
+**Most Wanted, reported actual gameplay:** 45 custom interactive Pursuit, 45 Safe House and 45 Free Roam tracks; earlier acceptance of prologue audio, T skip, EA Trax titles, state-based song routing and original-score exit fade. **New November 13 hardware verification:** all features exercised in Beta 1.7 on **Windows 11 + Most Wanted Black Edition 1.3 (PC)** worked correctly, according to the developer. The original-score fade can feel slow.
 
-**Automated / packaged checks:** clean Windows setup and upgrade repair evidence, 10 completion-review-and-return cycles, underlying installer/backup fixtures and checks on both packaged game profiles. The **Developer ZIP explicitly marks gameplay on the final packaged EXE as not performed**; these findings should not be reported as live-game testing of the final binary.
+**Automated / packaged checks:** clean Windows setup and upgrade repair evidence, 10 completion-review-and-return cycles, underlying installer/backup fixtures and checks on both packaged game profiles. The **original Developer ZIP** recorded no gameplay on the final packaged EXE **at handoff**. The developer later verified Beta 1.7 in real PC gameplay; an exact hash proving that the later-tested EXE matches the published installer was not provided. See the [dated validation record](docs/PC-VALIDATION-BETA-1.7.md).
 
-**Still unverified / unresolved:** Carbon 1.4 gameplay and Canyon/Pursuit/Drift playback, separate custom Carbon Canyon/Pursuit pools (not implemented), actual PLAK gameplay, first track after switching saves, latest custom pursuit exit fade, all natural-song incoming fades, intermittent Carbon Load Complete crash and a rendering issue on a heavily modded Most Wanted installation.
+**Still unverified / unresolved outside the new PC confirmation:** Carbon 1.4 gameplay and Canyon/Pursuit/Drift playback; separate custom Carbon Canyon/Pursuit pools (not implemented); PLAK gameplay; independently isolated tests of every save-switch or custom fade boundary; the intermittent Carbon Load Complete crash; and a rendering issue on a heavily modded Most Wanted installation. These are **scope limits**, not problems observed in the developer's latest Black Edition 1.3 test.
 
 [See the detailed Beta 1.7 test matrix](docs/WHATS-NEW-BETA-1.7.md).
 

@@ -6,6 +6,14 @@
 
 This page separates (a) actual gameplay reported by the **developer valentine**, (b) results carried forward from earlier versions, (c) packaged/automated checks and (d) outstanding compatibility or unimplemented features. The data comes from the Beta 1.7 Developer ZIP: `GITHUB-HANDOFF.json`, `GITHUB-HANDOFF.txt`, `VERIFICATION.json` and the distribution's `CHANGELOG.md`, supplemented by valentine's direct engine-volume confirmation.
 
+## New developer verification: Windows 11 + Most Wanted Black Edition 1.3
+
+**Reported November 13, 2026 by valentine:** XNFS Playlist Builder **3.2 Beta 1.7** was tested during actual gameplay on a Windows 11 PC using **Need for Speed: Most Wanted (2005) Black Edition, version 1.3**. The developer confirms **every feature exercised in that session worked correctly**, with no observed problems on that configuration.
+
+This is a newer developer hardware test that occurred **after** the Developer ZIP's packaging-verification snapshot. The snapshot's `gameplay_on_final_exe: false` refers to its original test run, not a permanent claim that no subsequent Beta 1.7 gameplay ever occurred. The latest session did **not include a tested EXE checksum**, so byte-for-byte equivalence to the published Public ZIP's installed executable is unverified. The report also does not enumerate each individually exercised feature, and must not be presented as an independent third-party test.
+
+[Read the full dated developer PC validation record](PC-VALIDATION-BETA-1.7.md).
+
 ## What's changed from Beta 1.6
 
 - **Live per-song loudness leveling and preparation percentage** when source duration is available, plus completed-file count, named install stages and an ETA once sufficient progress exists.
@@ -27,6 +35,7 @@ In **Need for Speed: Most Wanted (2005)**, **car engine sound volume must be adj
 
 | Scenario | Evidence / test source | Classification |
 | --- | --- | --- |
+| Overall Beta 1.7 gameplay on Windows 11, MW Black Edition 1.3 PC | Developer reports all personally exercised features behaved correctly on November 13; individual feature list and EXE hash not supplied | **Latest developer hardware pass for this configuration** |
 | Custom interactive Pursuit, 45 songs | Developer reports completed real-game playback, including a manually added selection | **Developer-confirmed pass, Beta 1.7 handoff** |
 | Safe House, 45 tracks | Developer reports working playlist playback | **Developer-confirmed pass, Beta 1.7 handoff** |
 | Free Roam, 45 tracks | Developer reports working playlist playback | **Developer-confirmed pass, Beta 1.7 handoff** |
@@ -70,7 +79,7 @@ In **Need for Speed: Most Wanted (2005)**, **car engine sound volume must be adj
 | Packaged views | Most Wanted and Carbon pass in developer verification |
 | Completion-review and main-window return | **10 cycles** in developer verification |
 | Overall packaged verification | `passed: true` in developer `VERIFICATION.json` |
-| Actual gameplay on final packaged EXE | `gameplay_on_final_exe: false` in developer `VERIFICATION.json` |
+| Actual gameplay on final packaged EXE **at original handoff** | `gameplay_on_final_exe: false` in original developer `VERIFICATION.json`; **newer Windows 11 + Black Edition 1.3 gameplay confirmation received November 13**, but exact tested EXE hash not provided |
 | Previous core regression suite | 17 tests reported passing in earlier handoff, **not newly run here** |
 | 47-file generated custom installer | Earlier isolated regression passed; original 1.4 GB source workload not fully rerun in that fixture |
 | Native hook layout | 61 signature checks can accept a matching modified executable, without proving gameplay |
@@ -87,6 +96,6 @@ Most Wanted's original adaptive soundtrack installation/extraction happens **ins
 
 A majority of the *reported* Most Wanted scenarios are working. The remaining explicitly unverified items are **Carbon 1.4**, experimental Carbon Canyon/Pursuit/Drift event playback, PLAK gameplay, the first song after save switching, certain custom pursuit fade paths, and full-game restoration of native-generated audio. Independent custom Canyon/Pursuit buckets are **not implemented**. The intermittent Carbon Load Complete crash and the heavily modded Most Wanted rendering report have no verified root cause.
 
-The manual **Car Volume** requirement is **not** an open issue.
+The manual **Car Volume** requirement is **not** an open issue. The later Windows 11 + Black Edition 1.3 success report is **configuration-specific**; remaining entries denote missing isolated/other-game verification, not failures observed on that tested PC.
 
 [Detailed Most Wanted guide](MOST-WANTED.md) · [Carbon](CARBON.md) · [Compatibility](GAMES-AND-COMPATIBILITY.md) · [Troubleshooting](TROUBLESHOOTING.md) · [Checksum](SHA256-OF-BETA-1.7.txt) · [Previous Beta 1.6 record](WHATS-NEW-BETA-1.6.md)

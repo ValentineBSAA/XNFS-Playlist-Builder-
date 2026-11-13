@@ -37,6 +37,12 @@ Menu, Muscle, Tuner, Exotic and Shared playlists, optional/configurable **F9** s
 
 Original Canyon/Pursuit scoring and Drift audio controls remain **experimental**. The runtime has **no independent custom Canyon/Pursuit song pools**. The intermittent **Load Complete** crash remains unresolved; its cause has not been established.
 
+## ✅ November 13 developer PC gameplay validation
+
+**valentine tested XNFS Playlist Builder 3.2 Beta 1.7 on a physical Windows 11 PC with Need for Speed: Most Wanted (2005) Black Edition, version 1.3.** The developer reports that **all features exercised during the session worked correctly**, with no issues observed on that setup. This is a subsequent hands-on verification; it supplements the earlier 45-song category tests and automated installer evidence.
+
+The original Developer ZIP recorded no gameplay of the final packaged EXE *at the time of handoff*. That report remains historically accurate. The newer PC test proves developer use of Beta 1.7 in that configuration, but **the exact installed executable checksum was not provided** to establish byte-for-byte identity with the Public ZIP. This is **not a claim of Carbon, PLAK or universal multi-PC verification**. [See the dated PC verification record](docs/PC-VALIDATION-BETA-1.7.md).
+
 ## 🧪 Evidence and limitations
 
 | Validation | Reported result |
@@ -47,7 +53,7 @@ Original Canyon/Pursuit scoring and Drift audio controls remain **experimental**
 | Windows app installation / upgrade | Handoff reports successful clean install and repaired in-place upgrade |
 | Completion review → main window | **10 automated cycles passed** |
 | Packaged game views | Most Wanted and Carbon smoke checks passed |
-| Final packaged EXE gameplay retest | **Not performed** according to Developer ZIP verification record |
+| Gameplay on final packaged EXE **at handoff** | **Not performed** per original Developer ZIP verification record; subsequent Beta 1.7 Windows 11 / Black Edition 1.3 PC gameplay reported passing, exact EXE hash not supplied |
 | Carbon 1.4, event music, PLAK | **Gameplay not verified** |
 
 Earlier tests of 17 core regressions, 47-file generated-install fixture and 61-signature matching remain useful **isolated evidence**. These should not be described as a fresh hardware-playthrough of Beta 1.7.
