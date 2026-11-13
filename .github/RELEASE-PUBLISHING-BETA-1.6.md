@@ -1,3 +1,5 @@
+> **Archived Beta 1.6 reference only.** Do **not** use this file to publish the current release. For Beta 1.7 use [the updated publishing checklist](RELEASE-PUBLISHING-BETA-1.7.md) and [release description](RELEASE-NOTES-BETA-1.7-FOR-GITHUB.md).
+
 # Publish XNFS Playlist Builder 3.2 Beta 1.6
 
 **Documentation state:** Beta 1.6 docs, checksum, support templates and licensing disclosures have been committed. Screenshots are unchanged. The prior Beta 1.5 release and its tag should remain untouched.
