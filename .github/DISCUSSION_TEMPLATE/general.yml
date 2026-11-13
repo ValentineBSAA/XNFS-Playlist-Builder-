@@ -3,19 +3,21 @@ body:
   - type: markdown
     attributes:
       value: |
-        Welcome to **XNFS Playlist Builder 3.2 Beta 1.6**!
+        Welcome to **XNFS Playlist Builder 3.2 Beta 1.7**.
 
-        Most Wanted testing has confirmed Safe House, prologue, ordinary and custom pursuit music, T skipping, EA Trax titles and the original pursuit exit fade in specific sessions. The latest custom exit-fade and save-switch behavior still need testing.
+        Developer-reported Most Wanted game tests include **45 tracks each** in custom Pursuit, Safe House and Free Roam. Earlier game tests include T skipping, EA Trax titles, prologue audio and the original pursuit exit fade.
 
-        Carbon 1.2 had earlier class/F9/ducking gameplay acceptance. Carbon 1.4 gameplay, event modes, and the intermittent Load Complete crash remain open. Separate custom Canyon/Pursuit buckets are not implemented.
+        **Verified manual configuration:** To balance car engine sound, change **Most Wanted → Audio options → Car Volume** in the game. The builder's music volume is independent.
 
-        **One-sentence reports help:** game version, what you tried, and whether it worked. See https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.6.md
+        Carbon 1.4, original event modes and PLAK gameplay remain unverified. Custom Carbon Canyon/Pursuit buckets are not implemented; the intermittent Load Complete crash is unresolved.
 
-        For crashes, use Issues. The in-app Support ZIP can be reviewed before you share it; redact extra screenshots or manually attached logs.
+        Read https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.7.md.
+
+        Please include the game/executable, music mode and what you experienced. Use Issues for reproducible technical bugs. Redact additional logs/screenshots before posting.
   - type: textarea
     id: message
     attributes:
       label: What would you like to share?
-      placeholder: "I tried Beta 1.6 with Most Wanted. The pursuit fade ... "
+      placeholder: "I tested Beta 1.7 with Most Wanted and custom pursuit music..."
     validations:
       required: true
