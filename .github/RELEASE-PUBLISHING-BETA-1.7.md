@@ -1,21 +1,21 @@
-# 🏁 Beta 1.7 | GitHub prerelease publishing checklist
+# 🏁 Beta 1.7 | Published release reference and verification handoff
 
 **Release:** XNFS Playlist Builder 3.2 Beta 1.7  
 **New tag:** `v3.2-beta.1.7`  
 **Target:** `main`  
 **Mark:** **Prerelease**  
 
-The GitHub repository's documentation is prepared for Beta 1.7. The **Public ZIP is to be uploaded by the repository owner**; the Developer ZIP contains editable code and must not be uploaded as the public installer. Screenshots from the older gallery remain unchanged.
+**Beta 1.7 is already published** under the historical tag **`Beta-1.7`**, with `XNFS-Playlist-Builder-3.2-Beta-1.7-Public.zip` attached. No further ZIP upload or replacement tag is required for this documentation update. The separate Developer ZIP contains editable code and is **not** a public release asset. The screenshot gallery remains unchanged.
 
-## Publish in GitHub
+## Historical publication checklist (already completed)
 
-1. Visit [New release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/new).
-2. Create the new **`v3.2-beta.1.7`** tag from the current `main` branch. Do not move or repurpose the historical Beta 1.5 or Beta 1.6 references.
-3. Set title **XNFS Playlist Builder 3.2 Beta 1.7**.
-4. Paste the [GitHub-ready release notes](RELEASE-NOTES-BETA-1.7-FOR-GITHUB.md) into the description.
-5. Attach **`XNFS-Playlist-Builder-3.2-Beta-1.7-Public.zip`**. It **already contains** `XNFS-Playlist-Builder-3.2-Beta-1.7-Setup.exe`. Do not attach the Developer ZIP.
-6. Check **Set as a pre-release** and publish.
-7. After publication, verify the download filename, content and SHA-256 on your release page. The README's Releases link should lead to your new release.
+1. **Already completed:** [Beta 1.7 published release](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/releases/tag/Beta-1.7).
+2. **Actual published tag:** `Beta-1.7` (not the originally proposed `v3.2-beta.1.7`). Do not create a duplicate tag or move the old historical releases.
+3. Published release title: **XNFS Playlist Builder 3.2 beta 1.7**.
+4. [GitHub-ready release notes](RELEASE-NOTES-BETA-1.7-FOR-GITHUB.md) now include the **November 13 Windows 11 / Black Edition 1.3 developer verification**; the separate published release description is not automatically synced by this documentation-only GitHub update.
+5. The Public ZIP **is already attached** and includes `XNFS-Playlist-Builder-3.2-Beta-1.7-Setup.exe`. Do not attach the Developer ZIP.
+6. The release is already published. No new release needs to be created.
+7. Confirm the existing public download's name and checksum against the verification below before any future asset replacement.
 
 A standalone Setup EXE is **optional**, not necessary when distributing the verified Public ZIP.
 
@@ -32,7 +32,8 @@ Public ZIP size: **107217837 bytes**. ZIP integrity and installer hashes were in
 
 - **Hardware-reported pass:** developer valentine's 45-track Most Wanted custom Pursuit, Safe House and Free Roam gameplay sessions; live preparation percentage and completion.
 - **Verified manual setting:** engine sound is adjusted manually via **Most Wanted → Audio options → Car Volume**; builder music gain is separate.
-- **Packaged testing:** 10 installer completion-review/return cycles; the handoff states `gameplay_on_final_exe: false`.
+- **Newer PC gameplay confirmation:** developer valentine reports all personally exercised Beta 1.7 features worked on **Windows 11 / Most Wanted Black Edition 1.3 (PC)** on November 13. See [dated PC validation](../docs/PC-VALIDATION-BETA-1.7.md).
+- **Packaged testing snapshot:** 10 installer completion-review/return cycles; the original handoff states `gameplay_on_final_exe: false` **at handoff**, prior to the latest reported PC gameplay; exact executable hash for the later test not provided.
 - **Not fully verified:** Carbon 1.4, Canyon/Pursuit/Drift event playback, PLAK, selected custom transition paths, first song after changing saves.
 - **Not implemented:** independent custom Carbon Canyon/Pursuit music buckets.
 - **Unresolved:** Carbon Load Complete crash and heavily modded Most Wanted rendering report.

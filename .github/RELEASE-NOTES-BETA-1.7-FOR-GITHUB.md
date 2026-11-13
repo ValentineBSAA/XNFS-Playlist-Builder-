@@ -37,6 +37,12 @@ Menu, Muscle, Tuner, Exotic and Shared playlists, optional/configurable **F9** s
 
 Original Canyon/Pursuit scoring and Drift audio controls remain **experimental**. The runtime has **no independent custom Canyon/Pursuit song pools**. The intermittent **Load Complete** crash remains unresolved; its cause has not been established.
 
+## ✅ Additional developer PC verification (November 13, 2026)
+
+Developer **valentine** reports successful hands-on **XNFS Playlist Builder 3.2 Beta 1.7** gameplay testing on a **Windows 11 PC with Need for Speed: Most Wanted (2005) Black Edition, version 1.3**. **All features personally exercised during this session worked correctly**, with no problems observed. Earlier 45-track category passes are recorded separately.
+
+This verification came **after** the Developer ZIP's original packaging report, which recorded `gameplay_on_final_exe: false` at that earlier point in time. An executable hash for the new gameplay session was not provided, so byte-for-byte identity with the GitHub Public ZIP installer is **not independently established**. The new result applies to the reported Windows 11 / Black Edition 1.3 PC configuration, **not every modified executable, Carbon build or other PC**. [Dated PC test record](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/PC-VALIDATION-BETA-1.7.md).
+
 ## 🧪 Evidence and limitations
 
 | Validation | Reported result |
@@ -47,7 +53,7 @@ Original Canyon/Pursuit scoring and Drift audio controls remain **experimental**
 | Windows app installation / upgrade | Handoff reports successful clean install and repaired in-place upgrade |
 | Completion review → main window | **10 automated cycles passed** |
 | Packaged game views | Most Wanted and Carbon smoke checks passed |
-| Final packaged EXE gameplay retest | **Not performed** according to Developer ZIP verification record |
+| Gameplay on final packaged EXE **at initial handoff** | **Not performed** according to original Developer ZIP; later November 13 Beta 1.7 hands-on PC gameplay passed for Windows 11 / Black Edition 1.3 (tested EXE hash not provided) |
 | Carbon 1.4, event music, PLAK | **Gameplay not verified** |
 
 Earlier tests of 17 core regressions, 47-file generated-install fixture and 61-signature matching remain useful **isolated evidence**. These should not be described as a fresh hardware-playthrough of Beta 1.7.
