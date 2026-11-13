@@ -1,80 +1,83 @@
 name: "🐛 Report an XNFS bug"
-description: "Help investigate installation, music playback or crashes"
+description: "Help investigate installation, playback or runtime problems"
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for testing XNFS Playlist Builder. **3.2 Beta 1.6 is an experimental prerelease.**
-        For a support attachment, open **Support → preview Plain English or JSON → Save ZIP** in the app. It contains diagnostics.txt and diagnostics.json and is **not uploaded automatically**.
-        The in-app report excludes raw logs, personal paths and song titles. Review any *other* attachments, screenshots and manually gathered logs for personal data before posting.
-        See the [exact tested / untested matrix](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.6.md).
+        Thank you for testing **XNFS Playlist Builder 3.2 Beta 1.7**.
+
+        Most Wanted developer reports include **45-track gameplay passes** for custom Pursuit, Safe House and Free Roam. The result may vary with executable, loader or mods.
+
+        **Audio balance note, already developer-verified:** To change engine sound in Most Wanted, adjust **Audio options → Car Volume in the game**. The builder's music volume does not control the engine.
+
+        Use **Support → preview Plain English or JSON → Save ZIP** to create a local `diagnostics.txt` / `diagnostics.json` package if useful. Nothing uploads automatically. Review any additional raw logs or screenshots for personal paths and metadata.
+
+        [Beta 1.7 test matrix](https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/WHATS-NEW-BETA-1.7.md).
   - type: dropdown
     id: application-version
     attributes:
-      label: Application version
+      label: Builder version
       options:
+        - 3.2 Beta 1.7
         - 3.2 Beta 1.6
         - 3.2 Beta 1.5
-        - 3.2 Beta 1.4
-        - 3.0 Beta 1.2
-        - Other / unknown
+        - Older / other
     validations:
       required: true
   - type: dropdown
     id: game
     attributes:
-      label: Which game or app component?
+      label: Game or app component
       options:
         - Most Wanted (2005)
         - Carbon (2006)
-        - Windows builder / installer
+        - Windows application / installer / Support
     validations:
       required: true
   - type: input
-    id: game-version
+    id: game-executable
     attributes:
-      label: Exact game executable and version
-      placeholder: "Carbon 1.2 / 1.4, Most Wanted 2005, modified EXE details"
+      label: Game executable and version
+      placeholder: "Most Wanted speed.exe, modified/PLAK, Carbon 1.2 or 1.4"
   - type: input
     id: windows
     attributes:
-      label: Windows version and display scaling
-      placeholder: "Windows 11, 125% scaling"
+      label: Windows build and scaling
+      placeholder: "Windows 11, 125%"
   - type: textarea
-    id: options
+    id: setup
     attributes:
-      label: Relevant options and other mods
-      description: "Pursuit mode, fades, level settings, game loader, executable mods or Carbon event mode"
+      label: Music mode, volume settings, ASI loader and other mods
+      description: "Include relevant pursuits/events, fade settings, and any installed modifications."
   - type: textarea
     id: steps
     attributes:
       label: Steps to reproduce
-      placeholder: "1. Open the builder ...\n2. Select ...\n3. Launch the game ..."
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected result
+      label: Expected behavior
     validations:
       required: true
   - type: textarea
     id: actual
     attributes:
-      label: Actual result / error / crash stage
+      label: Observed behavior / exact error
     validations:
       required: true
   - type: dropdown
-    id: reproducible
+    id: repeats
     attributes:
-      label: Does the issue reproduce after restarting?
+      label: Does it happen again after restarting?
       options:
         - Yes
         - No
-        - Not tested / cannot retest safely
+        - Haven't retested
   - type: textarea
-    id: diagnostics
+    id: evidence
     attributes:
-      label: Support ZIP or redacted evidence
-      description: "Attach your saved diagnostics ZIP via GitHub. Never post unreviewed raw logs, usernames, local paths or private song metadata."
+      label: Optional Support ZIP or redacted evidence
+      description: "Attach your local diagnostics ZIP or reviewed screenshots/logs; do not share personal paths, private song metadata, game saves or audio."

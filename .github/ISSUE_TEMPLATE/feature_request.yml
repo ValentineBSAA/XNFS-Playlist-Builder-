@@ -1,19 +1,25 @@
-name: "💡 Share an idea"
-description: Suggest improvements for a future release
+name: "💡 Suggest an improvement"
+description: "Propose an enhancement for a future XNFS Playlist Builder version"
 labels: ["enhancement"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Before requesting automatic engine balance, please note that **Most Wanted Car Volume is currently set manually in the game's Audio options**. The builder's independent Music level does not adjust engine sound. This is confirmed by the developer.
+        Current features: https://github.com/ValentineBSAA/XNFS-Playlist-Builder-/blob/main/docs/FEATURES.md
   - type: dropdown
     id: game
     attributes:
-      label: Which part?
+      label: Area
       options:
-        - Carbon
         - Most Wanted
-        - Both games / the app overall
+        - Carbon
+        - Both games
+        - Windows builder, installer, or diagnostics
   - type: textarea
     id: idea
     attributes:
-      label: What would you like to see?
-      description: Tell us in everyday terms.
+      label: What would you improve?
+      description: "Explain the current experience, desired behavior and the benefit."
     validations:
       required: true
